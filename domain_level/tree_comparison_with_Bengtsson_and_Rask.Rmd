@@ -1,0 +1,147 @@
+---
+title: "Supplementary domain trees"
+author: "Gerry Tonkin-Hill"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    fig_width: 12
+    fig_height: 8
+---
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.width=12, fig.height=8,
+                      echo=TRUE, warning=FALSE, message=FALSE,
+                      tidy=TRUE)
+```
+
+##Load libraries
+```{r}
+library(ggtree)
+library(ggplot2)
+library(ape)
+wd = "/home/users/allstaff/tonkin-hill.g/var_differential_analysis/domain_level/data"
+```
+
+#Phylogentic method
+Protein domains were aligned using MUSCLE v3.8.31 and phylogentic trees were constructed using FastTree version 2.1.7 SSE3
+```
+muscle -in domains.fasta -out MA_domains.fasta
+FastTree < MA_domains.fasta > MA_domains.tree
+```
+
+#DC5 Comparison
+Bengtsson et al. found that DC4 may be related to PfEMP1 proteins binding to ICAM-1. In particular they identified a ditinct clade of DBLb3 domains that bound to ICAM-1. The tree drawn below indicates that the first DBLb3 domain of PFD125w (one of those found in the clade) clusters closest to the severe cluster DBLb.s.2
+
+Lavsten et al 2012 also found DBLb3 to be more expressed in children with severe malaria.
+```{r}
+setwd(wd)
+
+dbl_b3 <- read.tree("./compare_DBLb3/combined_vardom_severe_DBLb3.phylip")
+
+labels <- "black"
+labels[grepl("\\.s\\.1", dbl_b3$tip.label)] <- "#4daf4a"
+labels[grepl("\\.s\\.2", dbl_b3$tip.label)] <- "#f781bf"
+labels[grepl("PFD1235w", dbl_b3$tip.label)] <- "#e41a1c"
+
+plot.phylo(dbl_b3, type="phylogram",
+            use.edge.length = FALSE,
+           show.node.label = TRUE,
+           cex=0.5,
+           tip.color=labels,
+           align.tip.label=TRUE)
+legend(1, -1, legend=c("DBLb3", "DBLb3.s.1", "DBLb3.s.2", "PFD1235w - Bengsston"),
+                   fill=c("black", "#4daf4a" ,"#f781bf","#e41a1c"), 
+       xpd=NA,
+       cex=0.5)
+```
+
+#DC8 Comparison
+
+Domain cassette 8, first decribed by Rask et al has been associated with severe forms of malaria. Here, the severe clusters identified in the domain analysis are clustered with those from domain cassette 8 of Rask et al. Specifically we look at DBLb12.s.1, DBLd1.s.1-4 and CIDRb1.s.1
+
+##DBLd1
+The DBLd1 domains from DC8 containing proteins of Rask et al are failry well distributed amoungst the remaining DBLd1 domains of Rask et al. Notably, two DC8 DBLd1 domains cluster closely with severe domain clusters DBLd1.s.3 and DBLd1.s.4.
+
+Severe clusters DBLd1.s.1 and DBLd1.s.2 also have DC8 DBLd1 domains nearby but are more closely clustered to a number of non DC8 DBLd1 domains.
+
+```{r}
+setwd(wd)
+
+tree <- read.tree("./compare_DC8/MA_combined_raskDBLd1_DBLd1s.fasta.phy")
+
+labels <- "black"
+labels[grepl("\\.s\\.1", tree$tip.label)] <- "#f781bf"
+labels[grepl("\\.s\\.2", tree$tip.label)] <- "#984ea3"
+labels[grepl("\\.s\\.3", tree$tip.label)] <- "#cab2d6"
+labels[grepl("\\.s\\.4", tree$tip.label)] <- "#ff7f00"
+labels[grepl("^DC8", tree$tip.label)] <- "#e41a1c"
+
+
+plot.phylo(tree, type="phylogram",
+            use.edge.length = FALSE,
+           show.node.label = TRUE,
+           cex=0.5,
+           tip.color=labels,
+           align.tip.label=TRUE)
+legend(1, -1, legend=c("DBLd1", "DBLd1.s.1", "DBLd1.s.2", "DBLd1.s.3", "DBLd1.s.4", "DBLd1 from DC8"),
+                   fill=c("black", "#f781bf","#984ea3","#cab2d6","#ff7f00","#e41a1c"), 
+       xpd=NA,
+       cex=0.5)
+```
+
+##DBLb12
+The tree below is not very informative due to the very high level of conservation found in the de novo assembled DBLb12 transcripts. However the DBLb12 transcripts from PFEMP1 domains of Rask et al split into two groups which are equally distant from each other as they are from the tightly clustered severe group. This suggests that the severe DBLb12 cluster could be grouped with those from DC8 as there is just as much variation between DC8 DBLb12 domains as there is between the severe group and DC8 DBLb12 domains.
+
+
+```{r}
+setwd(wd)
+
+tree <- read.tree("./compare_DC8/MA_combined_raskDBLb12_DBLb12s.fasta.phy")
+
+labels <- "black"
+labels[grepl("\\.s\\.1", tree$tip.label)] <- "#ff7f00"
+labels[grepl("^DC8", tree$tip.label)] <- "#e41a1c"
+
+
+plot.phylo(tree, type="phylogram",
+            use.edge.length = FALSE,
+           show.node.label = TRUE,
+           cex=0.5,
+           tip.color=labels,
+           align.tip.label=TRUE)
+legend(1, -1, legend=c("DBLb12", "DBLb12", "DBLb12 from DC8"),
+                   fill=c("black", "#ff7f00","#e41a1c"), 
+       xpd=NA,
+       cex=0.5)
+```
+
+##CIDRb1
+
+The severe CIDRb1 domain clusters together with one DC8 CIDRb1 domain from Rask et al. The remaining CIDRb1 domains from proteins that conatin DC8 in Rask et al are distributed across the remianing CIDRb1 domains from Rask et al and don't form a disctinct group.
+
+```{r}
+setwd(wd)
+
+tree <- read.tree("./compare_DC8/MA_combined_raskCIDRb1_CIDRb1s.fasta.phy")
+
+labels <- "black"
+labels[grepl("\\.s\\.1", tree$tip.label)] <- "#ff7f00"
+labels[grepl("^DC8", tree$tip.label)] <- "#e41a1c"
+
+
+plot.phylo(tree, type="phylogram",
+            use.edge.length = FALSE,
+           show.node.label = TRUE,
+           cex=0.5,
+           tip.color=labels,
+           align.tip.label=TRUE)
+legend(1, -1, legend=c("CIDRb1", "CIDRb1.s.1", "CIDRb1 from DC8"),
+                   fill=c("black", "#ff7f00","#e41a1c"), 
+       xpd=NA,
+       cex=0.5)
+```
+
+###System Info
+```{r}
+sessionInfo()
+```
