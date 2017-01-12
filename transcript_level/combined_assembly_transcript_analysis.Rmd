@@ -1,0 +1,231 @@
+---
+title: "Combined assembly VAR Transcript DE Analysis"
+author: "Gerry Tonkin-Hill"
+date: "22/10/2015"
+output: html_document
+---
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.width=12, fig.height=8,
+                      echo=TRUE, warning=FALSE, message=FALSE,
+                      tidy=TRUE)
+```
+
+###Load Libraries
+```{r}
+library(limma)
+library(edgeR)
+library(DESeq2)
+library(genefilter)
+library(EDASeq)
+library(RColorBrewer)
+library(VennDiagram)
+library(knitr)
+library(reshape2)
+
+library(pheatmap)
+library(dynamicTreeCut)
+library(moduleColor)
+library(ggplot2)
+
+wd = "./"
+colors <- c("#0571b0","#ca0020")
+```
+
+
+###Load Data
+We load the read counts from the all gene analysis as well as the resulting design matrix. We also aligned each sample to a reference which included human, non-VAR falciparum, non-VAR vivax and our VAR gene transcripts from the combined sample assembly. Read counts that aligned to our transcripts were then retrieved. We use the previous all gene counts to achieve better estimates of the dispersion parameters in our model.
+```{r}
+setwd(wd)
+load("./data/geneWithoutVivax_and_VARgene_countDB_subread_uH.RData")
+var_gene_names <- read.delim("./data/var_gene_names.txt")
+var_gene_names <- var_gene_names$X.Gene.ID.
+#Load Non-var_genes
+fc2 <- fc_genes_aligned_w_Pfhuman_withoutVivax
+t <- fc2$counts
+
+#Rename samples to something more sensible
+# colnames(t) <- gsub("alignment\\.sam","",colnames(t))
+# colnames(t) <- gsub(".*vivax\\.","",colnames(t))
+# colnames(t) <- gsub("_S.*","", colnames(t))
+nonVar <- t
+nonVar.annot <- fc2$annotation
+
+var <- var_counts$counts
+var.annot <- var_counts$annotation
+# colnames(var) <- gsub(".*alignments\\.","",colnames(var))
+# colnames(var) <- gsub("alignment.sam","",colnames(var))
+# colnames(var) <- gsub("_L00.*", "", colnames(var))
+# colnames(var) <- gsub("_S.*", "", colnames(var))
+var_names <- rownames(var)
+
+stopifnot(colnames(var)==colnames(nonVar))
+combined_counts <- rbind(nonVar, var)
+combined_annot <- rbind(nonVar.annot, var.annot)
+```
+
+Again we remove samples SFD1, SFM9 and SFC.025 as they were not sequenced to a sufficient depth.
+```{r}
+combined_counts <- combined_counts[,!(colnames(combined_counts) %in% c('SFD1.CM', 'SFM9', 'SFC.025'))]
+```
+
+###Filter Low Count Genes
+```{r}
+stopifnot(rownames(combined_counts)==combined_annot$GeneID)
+dge <- DGEList(counts=combined_counts, genes=combined_annot)
+dge_combined <- dge
+
+cpm(10, mean(dge_combined$samples$lib.size))
+
+keep <- rowSums(cpm(dge)>1) >= 5
+dge <- dge[keep,,keep.lib.sizes=FALSE]
+
+categories <- as.factor(substring(colnames(combined_counts),1,1))
+
+modRUV <- modRUV[match(colnames(dge), rownames(modRUV)),]
+stopifnot(colnames(dge)==rownames(modRUV))
+```
+We filter out genes with low coverage. As many of the VAR gene transcripts are short in length and as there is still some redundancy in the transcripts (although small) the threshold for removal was reduced compared to the all gene analysis. Genes were kept if they had more than 0.5 reads per million in at least 10 samples. Before filtering there was a total of `r dim(dge_combined$counts)[1]` genes. After filtering `r dim(dge$counts)[1]` remained. Of the initial `r sum(rownames(dge_combined) %in% var_names)` VAR gene transcripts `r sum(rownames(dge) %in% var_names)` remained.
+
+###All Gene PCA
+To enable a comparison a plot of the all gene PCA is given. Note that this is slightly different to the one in the all gene analysis due to the less stringent filter.
+```{r}
+categories<- as.factor(substring(rownames(dge$samples),1,1))
+dge <- calcNormFactors(dge, method="TMM")
+dge$samples$group <- categories
+design <- model.matrix(~group, data=dge$samples)
+
+v <- voom(dge, design=design, plot=FALSE)
+
+norm_counts_ring_ruv <- removeBatchEffect(v$E, covariates=modRUV[,3:ncol(modRUV)], design=modRUV[,1:2])
+plotPCA(norm_counts_ring_ruv[!(rownames(norm_counts_ring_ruv) %in% c(var_gene_names,var_names)),], col=colors[categories], cex=0.8, isLog=TRUE)
+title("Non-VAR PCA")
+```
+
+###VAR Transcript PCA (normalised for Ring and RUV-4 factors)
+The remaining VAR gene transcripts are investigated in the following PCA plot. Interestingly we can see that although the non-severe samples are very spread out, the severe samples remain close together. This suggested that there is something in common in the VAR gene expression profiles of the severe samples. Exactly what produces this grouping is not clear from this PCA and further investigation is given later. However the grouping is consistent with the immune response we see in human populations where by people become immune to severe forms of malaria relatively quickly but take much longer to develop immunity to non-severe forms.
+```{r}
+plotPCA(norm_counts_ring_ruv[rownames(norm_counts_ring_ruv) %in% var_names,], col=colors[categories], cex=0.8, isLog=TRUE)
+```
+
+###VAR Transcript PCA (only normalised for library size)
+Although using voom and RUV4 is robust to sources of unwanted variation it is conservative. Furthermore, VAR genes are generally expressed during the XXX stage and thus variation due to life-cycle is less of an issue when investigating VAR genes. To this effect the PCA plot below indicates the separation of the samples due to the VAR gene transcripts without accounting for life-cycle or the RUV-4 factors. Although the separation between the severe and non-severe samples is reduced the same grouping effect is apparent. By ignoring these factors we are also able to increase the sensitivity of our analysis. This potentially could increase the FDR, however it returns a number of genes that is appropriate for further biological analysis whilst including the majority of the genes found by the voom approach.
+```{r}
+plotPCA(cpm(dge,normalized.lib.sizes=TRUE, log=T, prior.count=1)[rownames(dge) %in% var_names,], col=colors[categories], cex=0.8, isLog=TRUE)
+```
+
+###Voom Analysis (including RUV-4 and Ring factors)
+Initially we performed the analysis using the same approach as the all gene analysis. After running Voom the adjusted p-values for the VAR gene transcripts were then recalculated using the Benjamini-Hochberg approach, only taking into account the VAR transcripts.
+```{r}
+stopifnot(colnames(dge)==rownames(modRUV))
+v2 <- voom(dge, design=modRUV, plot=F)
+fit <- lmFit(v2, modRUV)
+fit <- eBayes(fit)
+deVoom <- decideTests(fit, adjust.method="BH", p.value=0.05)
+
+top_ring_ruv <- topTable(fit, coef=2, p.value=1, sort.by="p", number=Inf, adjust.method="none", confint=TRUE)
+top_ring_ruv_var <- top_ring_ruv[rownames(top_ring_ruv) %in% var_names,]
+top_ring_ruv_var$adj.P.Val <- p.adjust(top_ring_ruv_var$adj.P.Val, method = "BH")
+top_ring_ruv_var <- top_ring_ruv_var[top_ring_ruv_var$adj.P.Val<=0.05,]
+
+voomUp <- rownames(top_ring_ruv_var[top_ring_ruv_var$logFC > 0,])
+voomDown <- rownames(top_ring_ruv_var[top_ring_ruv_var$logFC < 0,])
+voomUpDown <- c(voomUp, voomDown)
+```
+This identified `r length(voomUpDown)` VAR transcripts as being differentially expressed. Of these `r length(voomUp)` were upregulated in severe disease.
+
+###DESeq2 Analysis (simplified design matrix)
+In order to achieve a higher sensitivity we looked at the VAR gene transcripts using DESeq2 ignoring the Ring and RUV-4 factors. Note that we used the default DESeq2 pipeline for this analysis. This included using DESeq2 to filter out genes with low expression. It's default filter was less stringent to the one used in the voom analysis. Unlike the voom approach, only the VAR gene counts were used in this analysis. This reduced any dependancy that life-cycle might play on overall VAR expression and increased the sensitivity of the analysis. This approach is likely to have a higher FDR however in this case we are interested in identifying a larger number of VAR genes for further biological analysis.
+```{r}
+colData <- data.frame(disease=as.factor(substring(rownames(dge_combined$samples),1,1)))
+rownames(colData) <- rownames(dge_combined$samples)
+dds <- DESeqDataSetFromMatrix(countData = dge_combined$counts[rownames(dge_combined) %in% var_names,]
+                              , colData = colData
+                              , design = ~disease)
+dds <- estimateSizeFactors(dds)
+dds <- DESeq(dds) 
+res <- results(dds,contrast=c("disease","S","I"))
+
+resVar <- res[rownames(res) %in% var_names,]
+simpleDE_resVar <- data.frame(resVar)
+resOrdered <- resVar
+resOrdered <- resOrdered[!is.na(resOrdered$padj),]
+resOrdered <- resOrdered[resOrdered$padj<0.05,]
+```
+
+A summary of the DESeq2 analysis on the VAR gene transcripts is given below.
+```{r}
+summary(resVar, alpha=0.05)
+```
+
+Genes identified as significantly differentially expressed are then grouped according to LFC.
+```{r}
+de_varOnlyGenesUpDown <- rownames(resOrdered)
+
+resUp <- resOrdered[resOrdered$log2FoldChange>0,]
+resDown <- resOrdered[resOrdered$log2FoldChange<0,]
+DESeqUp <- rownames(resUp)
+DESeqDown <- rownames(resDown)
+DESeqUpDown <- c(DESeqUp, DESeqDown)
+```
+Using this simplified approach a total of `r length(DESeqUpDown)` VAR transcripts were identified as differentially expressed. Of these `r length(DESeqUp)` were upregulated. This set of upregulated transcripts included the one identified by the voom analysis. Further, of the `r length(voomDown)` genes identified as down regulated by the voom analysis, `r length(intersect(voomDown, DESeqDown))` were found using DESeq2. 
+
+##Heatmap of up-regulated segment clusters
+
+```{r}
+setwd(wd)
+
+
+select <- order(rowMeans(counts(dds, normalized=TRUE)), decreasing=TRUE)
+
+nt <- normTransform(dds)
+log2.norm.counts <- assay(nt)[select,]
+log2.norm.counts <- assay(nt)[rownames(nt) %in% rownames(resUp),]
+# log2.norm.counts <- log2.norm.counts[,colData$disease=="S"]
+annotData <- colData
+
+disease        <- colors
+names(disease) <- c("non-severe", "severe")
+anno_colors <- list(phenotype = disease)
+annotData$phenotype[annotData$disease=="I"] <- "non-severe" 
+annotData$phenotype[annotData$disease=="S"] <- "severe"
+# annotData <- annotData[annotData$disease=="S",]
+annotData$disease <- NULL
+pheatmap(log2.norm.counts, cluster_rows=TRUE, show_rownames=T, cluster_cols=TRUE, annotation_col=annotData, annotation_colors = anno_colors)
+```
+
+##Heatmap of down-regulated segment clusters
+
+```{r}
+setwd(wd)
+
+select <- order(rowMeans(counts(dds, normalized=TRUE)), decreasing=TRUE)
+
+nt <- normTransform(dds)
+log2.norm.counts <- assay(nt)[select,]
+log2.norm.counts <- assay(nt)[rownames(nt) %in% rownames(resDown),]
+# log2.norm.counts <- log2.norm.counts[,colData$disease=="S"]
+annotData <- colData
+
+disease        <- colors
+names(disease) <- c("non-severe", "severe")
+anno_colors <- list(phenotype = disease)
+annotData$phenotype[annotData$disease=="I"] <- "non-severe" 
+annotData$phenotype[annotData$disease=="S"] <- "severe"
+# annotData <- annotData[annotData$disease=="S",]
+annotData$disease <- NULL
+pheatmap(log2.norm.counts, cluster_rows=TRUE, show_rownames=FALSE, cluster_cols=TRUE, annotation_col=annotData, annotation_colors = anno_colors)
+```
+
+#DESeq2 Transcript Results
+```{r}
+#Now print the table
+resVar$pvalue <- format(resVar$pvalue, scientific=TRUE, digits=3)
+resVar$padj <- format(resVar$padj, scientific=TRUE, digits=3)
+kable(resVar, digits=3)
+```
+
+##Session Information
+```{r}
+sessionInfo()
+```

@@ -1,0 +1,164 @@
+---
+title: "Seperate assembly VAR Transcripts (Corset) DE Analysis"
+author: "Gerry Tonkin-Hill"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    fig_width: 12
+    fig_height: 8
+---
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.width=12, fig.height=8,
+                      echo=TRUE, warning=FALSE, message=FALSE,
+                      tidy=TRUE)
+```
+
+##Load libraries
+```{r}
+library(DESeq2)
+library(ggplot2)
+library(edgeR)
+library(knitr)
+library(pheatmap)
+library(EDASeq)
+
+wd <- "./"
+colors <- c("#0571b0","#ca0020")
+```
+
+##Running CORSET
+CORSET requires that reads are mapped to the transcripts allowing for multiple mappings of the same read. To achieve this bowtie verion 0.12.9 was run with options to allow for multiple mapping
+```
+bowtie-build comma_seperated_list_of_fasta_files bowtie_REF_VAR_seperate_assembly
+
+bowtie -S --all --threads 30 bowtie_REF_VAR_seperate_assembly -1 read1.fq -2 read2.fq alignment_output.sam
+```
+
+CORSET verion 1.03 was then run with a distance threshold of 0.3 and samples grouped in to severe and non-severe groups.
+```
+corset -d 0.3 -g S,S,S,S,S,S,S,S,S,S,S,S,S,S,S,S,S,S,S,S,S,S,S,I,I,I,I,I,I,I,I,I,I,I,I,I,I,I,I,I,I,I,I,I *severe.bam *non_severe.bam
+```
+
+
+##Load clustered transcript counts
+We first load the resulting clusters and their respective counts into R.
+
+```{r}
+setwd(wd)
+
+clusters <- read.delim("./data/clusters-0.3.txt", header=FALSE)
+colnames(clusters) <- c("Transcript", "Cluster")
+
+transcriptCounts <- read.table("./data/counts-0.3.txt", header=TRUE, sep="\t", row.names=1)
+colnames(transcriptCounts) <- gsub("_S.*","",colnames(transcriptCounts))
+```
+
+##Remove low count samples
+As was done previously we remove those samples with low coverage.
+
+```{r}
+setwd(wd)
+transcriptCounts <- transcriptCounts[,!(colnames(transcriptCounts) %in% c('SFD1.CM', 'SFM9', 'SFC.025'))]
+```
+
+##PCA plot of Transcripts
+Next we perfrom look at a PCA plot of the samples based on the log normalised counts of the reads assigned to each of the clusters. Clusters with low coverage, specifically less than 180 reads per million in at least 5 samples were filtered prior to performing PCA.
+
+Notably unlike the all gene analysis the severe samples are more closely clustered together. In contrast the non-severe samples do not cluster so tightly. This is consistent with a more conserved set of genes being present in the severe malaria cases. A similar result was also observed in the combined assembly analysis.
+
+```{r}
+dge <- DGEList(counts=transcriptCounts)
+cpm(10, mean(dge$samples$lib.size))
+keep <- rowSums(cpm(dge)>180) >= 5
+dge <- dge[keep,,keep.lib.sizes=FALSE]
+categories <- as.factor(substring(rownames(dge$samples),1,1))
+plotPCA(cpm(calcNormFactors(dge, method="RLE"), normalized.lib.sizes=TRUE, log=T), col=colors[categories], cex=0.8, isLog=TRUE)
+```
+
+##Differential Analysis
+The default DESeq2 differential analysis pipeline is then used to investigate differential expression.
+
+```{r}
+#create design matrix
+colData <- data.frame(disease=as.factor(substring(colnames(transcriptCounts),1,1)))
+rownames(colData) <- colnames(transcriptCounts)
+
+#create DESeq2 dataset
+dds <- DESeqDataSetFromMatrix(countData = transcriptCounts
+                            , colData = colData
+                            , design = ~disease)
+
+##estimate Sizefactors
+dds <- estimateSizeFactors(dds)
+
+#run DESeq2 pipeline
+dds <- DESeq(dds)
+res <- results(dds,contrast=c("disease","S","I"), pAdjustMethod = "BH")
+summary(res, alpha=0.05)
+
+Sig <- res[!is.na(res$padj),]
+Sig <- Sig[Sig$padj<0.05,]
+
+SigUp <- Sig[Sig$log2FoldChange>0,]
+SigDown <- Sig[Sig$log2FoldChange<0,]
+```
+
+After Benjamini-Hochberg correction for multiple testing, `r dim(Sig)[1]` clusters were found to be differentially expressed. Of these `r dim(SigUp)[1]` were upregulated in severe disease.
+
+##Heatmap of up-regulated transcripts
+A heatmap of the log normalised samplewise read counts for each cluster is given below. It indicates that Cluster-10.1182 is expressed in the majority of samples. It also suggests that Clusters 10.583, 10.839 and 10.1147 are influenced by the same three severe samples.
+
+```{r}
+select <- order(rowMeans(counts(dds, normalized=TRUE)), decreasing=TRUE)
+
+nt <- normTransform(dds)
+log2.norm.counts <- assay(nt)[select,]
+log2.norm.counts <- assay(nt)[rownames(nt) %in% rownames(SigUp),]
+
+disease <- colors
+names(disease) <- c("non-severe", "severe")
+anno_colors <- list(phenotype = disease)
+colData$phenotype[colData$disease=="I"] <- "non-severe"
+colData$phenotype[colData$disease=="S"] <- "severe"
+colData$disease <- NULL
+
+pheatmap(log2.norm.counts, cluster_rows=TRUE, show_rownames=TRUE, cluster_cols=TRUE, annotation_col=colData, annotation_colors = anno_colors)
+```
+
+##Heatmap of down-regulated transcripts
+The larger number of clusters that are reported as downregulated may be a result of the increased diversity in the non-severe transcripts. The heatmap suggests there are a number of transcript clusters that are not present very often in the severe samples.
+
+```{r}
+select <- order(rowMeans(counts(dds, normalized=TRUE)), decreasing=TRUE)
+
+nt <- normTransform(dds)
+log2.norm.counts <- assay(nt)[select,]
+log2.norm.counts <- assay(nt)[rownames(nt) %in% rownames(SigDown),]
+
+
+pheatmap(log2.norm.counts, cluster_rows=TRUE, show_rownames=FALSE, cluster_cols=TRUE, annotation_col=colData, annotation_colors = anno_colors)
+```
+
+##Table of results
+Finally a table of the results of the differential expression analysis is given for every cluster.
+
+```{r}
+#Collect sequence labels for each cluster
+getTrans <- function(x) {
+  return(paste(clusters$Transcript[clusters$Cluster==x], collapse=","))
+}
+
+final <- res
+final$transcripts <- lapply(rownames(final), getTrans)
+#Now print the table
+final <- final[order(final$padj),]
+final$padj <- format(final$padj, scientific=TRUE, digits=3)
+final$pvalue <- format(final$pvalue, scientific=TRUE, digits=3)
+kable(final, digits=3)
+```
+
+##Session Information
+```{r}
+sessionInfo()
+```

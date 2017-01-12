@@ -1,0 +1,638 @@
+---
+title: "Segment Level Analysis"
+author: "Gerry Tonkin-Hill"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    fig_width: 12
+    fig_height: 8
+---
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.width=12, fig.height=8,
+                      echo=TRUE, warning=FALSE, message=FALSE,
+                      tidy=TRUE)
+```
+
+##Load libraries
+
+```{r}
+library(DESeq2)
+library(ggplot2)
+library(edgeR)
+library(Rsubread)
+library(data.table)
+library(RFLPtools)
+library(EDASeq)
+library(igraph)
+library(knitr)
+library(pheatmap)
+library(plyr)
+library(dplyr)
+library(stringr)
+library(dynamicTreeCut)
+library(moduleColor)
+
+colors <- c("#0571b0","#ca0020")
+wd <- "./"
+```
+
+##Homology blocks of Rask et al
+
+Reads are aligned using Subread v1.4.6, mapping each read to its best match from a combined reference of the seperate sample denovo assembled contigs, the human reference (GRCh38) and the Pfalciparum reference genome (plasmoDB-11.1_Pfalciparum3D7_Genome) with the VAR gene regions masked out. 
+```
+subread-buildindex -o ref_index GRCh38.fasta plasmoDB-11.1_Pfalciparum3D7_Genome.fasta seperate_denovo_VAR.fasta
+subread-align -i ref_index -r read_1.fastq -R read_2.fastq -o output.sam 
+```
+
+The homology blocks of Rask et al were identified in the translated seperate sample VAR contigs using HMMER v3.1b1. A score threshold of 9.7 was chosen as was used in Rask et al.
+
+Note: homology blocks 37, 214, 300, 330, 337, 362, 485, 511, 528, 548, 552, 566, 598, 627 and 628 were not succesfully downloaded from http://www.cbs.dtu.dk/services/VarDom/ and were excluded from the analysis.
+
+```
+hmmsearch --nonull --noali --max --incdomT 9.97 --domT 9.97 --domtblout output.txt rask_hmm_file.hmm translated_seperate_denovo_VAR.fasta
+```
+
+The locations of these hits were then transformed to their respective locations in the original contigs fasta file and a SAF annotation file was generated. RfeatureCounts was then used to obtain read counts for each of these hits. Counts from hits to the same homology block were then combined.
+
+```{r}
+setwd(wd)
+# files <- Sys.glob("/home/users/allstaff/tonkin-hill.g/gene_level_var_analysis/alignments_seperate_assemblies_best1/*.sam")
+# block_counts <- featureCounts(files, annot.ext = "./data/rask_blocks/rask_blocks_in_seperate_assembly.SAF"
+#                             , isPairedEnd=TRUE, isGTFAnnotationFile=FALSE
+#                             , countChimericFragments=TRUE
+#                             , allowMultiOverlap=TRUE
+#                             , useMetaFeatures=FALSE
+#                             , nthreads=20)
+# 
+# #combine counts for different runs of the same sample
+# colnames(block_counts$counts) <- gsub(".*_best1\\.","",colnames(block_counts$counts))
+# colnames(block_counts$counts) <- gsub("_S.*","",colnames(block_counts$counts))
+# temp <- block_counts
+# temp$counts <- t(rowsum(t(temp$counts), group = rownames(t(temp$counts))))
+# dim(temp$counts)
+# rask_block_counts <- temp
+# 
+# saveRDS(rask_block_counts, "./data/rask_block_counts.rds")
+
+rask_block_counts <- readRDS("./data/rask_block_counts.rds")
+```
+
+Again we remove samples SFD1, SFM9 and SFC.025 as they were not sequenced to a sufficient depth.
+```{r}
+rask_block_counts$counts <- rask_block_counts$counts[,!(colnames(rask_block_counts$counts) %in% c('SFD1.CM', 'SFM9', 'SFC.025'))]
+```
+
+##Investigate block classifications of Rask et al
+Combine counts based on homology block annotations.
+```{r}
+prev_block_counts <- data.frame(rask_block_counts$counts)
+prev_block_counts$blockType <- unlist(lapply(rownames(prev_block_counts), function(x){
+  temp <- unlist(strsplit(x, "_"))
+  return(paste("block",temp[length(temp)-1],sep="_"))
+  }))
+prev_block_counts <- ddply(prev_block_counts, "blockType", numcolwise(sum))
+rownames(prev_block_counts) <- prev_block_counts$blockType
+prev_block_counts$blockType <- NULL
+prev_block_counts <- as.matrix(prev_block_counts)
+
+x_blocks <- DGEList(counts=prev_block_counts)
+x_blocks <- calcNormFactors(x_blocks, method="RLE")
+categories <- as.factor(substring(rownames(x_blocks$samples),1,1))
+```
+A total of `r dim(x_blocks)[1]` blocks from the those of Rask et al are identified in the samples.
+
+##PCA plot for homology blocks
+
+Below is a PCA plot from the normalised counts for the homology blocks of Rask et al.
+
+```{r}
+plotPCA(cpm(x_blocks,normalized.lib.sizes=TRUE, log=T, prior.count=0.5), col=colors[categories], cex=0.8, isLog=TRUE)
+title("VAR PCA - Rask Homology Blocks")
+```
+
+##Investigate differential expression
+
+Differential expression analysis was conducted with the default settings for DESeq2. 
+
+```{r}
+colData <- data.frame(disease=categories)
+rownames(colData) <- colnames(x_blocks$counts)
+dds_block <- DESeqDataSetFromMatrix(countData = x_blocks$counts
+                              , colData = colData
+                              , design = ~disease)
+dds_block <- estimateSizeFactors(dds_block)
+dds_block <- DESeq(dds_block) 
+res <- results(dds_block,contrast=c("disease","S","I"), pAdjustMethod = "BH")
+summary(res, alpha=0.05)
+```
+
+In total `r sum(res$padj[!is.na(res$padj)]<0.05)` blocks were found to be differentially expressed, with `r sum(res$padj[!is.na(res$padj) & (res$log2FoldChange>0)]<0.05)` upregulated in severe disease.
+
+
+##A heatmap of the Up-regulated homology blocks
+
+To investigate the expression of homology blocks at a higher resolution, we can look at a heatmap of expression. Here samples are clustered by average linkage hierarchical clustering.
+
+```{r}
+res_blocks <- res
+resOrdered <- res_blocks[order(res_blocks$padj),]
+resSig <- subset(resOrdered, padj < 0.05)
+
+resSigLFC <- data.frame(subset(resSig, log2FoldChange > 0))
+
+select <- order(rowMeans(counts(dds_block, normalized=TRUE)), decreasing=TRUE)
+
+nt <- normTransform(dds_block)
+log2.norm.counts <- assay(nt)[select,]
+log2.norm.counts <- assay(nt)[rownames(nt) %in% rownames(resSigLFC),]
+annotData <- colData
+
+disease        <- colors
+names(disease) <- c("non-severe", "severe")
+anno_colors <- list(phenotype = disease)
+annotData$phenotype[annotData$disease=="I"] <- "non-severe" 
+annotData$phenotype[annotData$disease=="S"] <- "severe"
+annotData$disease <- NULL
+pheatmap(log2.norm.counts, 
+         cluster_rows=TRUE, show_rownames=TRUE, 
+         cluster_cols=TRUE, annotation_col=annotData, 
+         annotation_colors = anno_colors,
+         clustering_method = "average")
+```
+
+#Novel segment investigation
+
+To define novel segments we aligned each of the major domain classes identified using gismo v2.0. The alignments were then segmented by defining conserved regions where there were 7 or more consecutive columns with greater than 95% occupancy. A seperate fasta file was constructed for each conserved region and each region inbetween the conserved regions. Gap positions were removed from these protein segments and each segment was kept if it was at least 7aa in length. 
+
+The resulting position of these protein segements was then translated into a position in the original contigs file and a SAF annotaion file was created.
+
+Hierarchical clustering was performed on each of the seperated protein fasta files using CD-HIT at levels 0.97,0.95,0.9,0.85,0.8,0.75,0.7,0.65,0.6 and 0.5. Global pairwise identity was required by running CD-HIT as
+```
+cd-hit -n 2 -d 1000 -l 2 -G 0 -aS 1 -aL 1 -c identity_threshold -i input_fasta -o output -g 1 -AL 99999999
+```
+A python script available in the github repository implements this stage.
+
+By ensuring that segments are only clustered with those from the same region on each of the domain classes we are better able to infer the relationships between these segments and the domains. Furthermore, by investigating each of the regions at different clustering resolutions we are better able to distinguish those segements that may relate to severe disease.
+
+##Assign read counts to segements
+
+Read counts are assigned to segments in the same manner as for the block annotations of Rask et al.
+
+```{r}
+setwd(wd)
+# files <- Sys.glob("/home/users/allstaff/tonkin-hill.g/gene_level_var_analysis/alignments_seperate_assemblies_best1/*.sam")
+# block_counts <- featureCounts(files, annot.ext = "./combined_blocks.SAF"
+#                             , isPairedEnd=TRUE, isGTFAnnotationFile=FALSE
+#                             , countChimericFragments=TRUE
+#                             , allowMultiOverlap=TRUE
+#                             , useMetaFeatures=FALSE
+#                             , nthreads=20)
+# 
+# #combine counts for different runs of the same sample
+# colnames(block_counts$counts) <- gsub(".*_best1\\.","",colnames(block_counts$counts))
+# colnames(block_counts$counts) <- gsub("_S.*","",colnames(block_counts$counts))
+# temp <- block_counts
+# temp$counts <- t(rowsum(t(temp$counts), group = rownames(t(temp$counts))))
+# dim(temp$counts)
+# gismo_block_counts <- temp
+# 
+# saveRDS(gismo_block_counts, "./gismo_block_counts.rds")
+gismo_block_counts <- readRDS("./data/gismo_block_counts.rds")
+```
+
+##Remove low coverage samples
+
+Again we remove samples SFD1, SFM9 and SFC.025 as they were not sequenced to a sufficient depth.
+
+```{r}
+gismo_block_counts <- gismo_block_counts$counts[,!(colnames(gismo_block_counts$counts) %in% c('SFD1.CM', 'SFM9', 'SFC.025'))]
+```
+
+##Summarise at different clustering heights
+
+Here we merge the clustering obtained using cd-hit with the count information obtained for each segment.
+
+```{r}
+clusters <- fread("./data/combined_blocks_clustered.csv", data.table = FALSE, header = TRUE)
+stopifnot(nrow(gismo_block_counts)==nrow(clusters))
+gismo_block_clusters <- merge(gismo_block_counts, clusters, by.x=0 , by.y="Transcript")
+```
+
+##Create hierarchical structure
+
+Starting with no clustering, individual domain counts are combined at the different hierarchical clustering levels.
+
+
+```{r}
+#first create an edgelist
+edges <- list()
+
+#Add in root node to edge list
+edges <- rbind(edges,cbind("root", paste(as.character(clusters[,2]), colnames(clusters)[2], sep="_")))
+
+#Add in remaining edges at successive levels of the hierarhcy
+for (j in 3:(ncol(clusters))){
+      edges <- rbind(edges,cbind(paste(as.character(clusters[,j-1]), colnames(clusters)[j-1], sep="_"), paste(as.character(clusters[,j]), colnames(clusters)[j], sep="_")))
+}
+
+#Remove duplicate edges caused by the similar sequences propogating up the tree together.
+edges <- edges[!duplicated(edges),]
+edges <- apply(as.matrix(edges), 2,as.character)
+
+#now sum counts at the different clustering heights
+results <- data.frame()
+pca.df <- data.frame()
+all_clusters.matrix <- data.frame()
+for (c in colnames(clusters)[2:(ncol(clusters))]) {
+  #First sum based upon cluster at level c
+  gismo_block_clusters.dt <- data.table(gismo_block_clusters)
+  gismo_block_clusters.dt <- gismo_block_clusters.dt[,lapply(.SD, sum, na.rm=TRUE)
+                                                       , by=c
+                                                       , .SDcols=colnames(gismo_block_clusters)[2:42]]
+  
+  #Add summed counts to the all_clusters matrix
+  gismo_block_clusters.matrix <- as.matrix(gismo_block_clusters.dt)
+  gismo_block_clusters.matrix <- gismo_block_clusters.matrix[,2:ncol(gismo_block_clusters.matrix)]
+  rownames(gismo_block_clusters.matrix) <- paste(gismo_block_clusters.dt[[1]], c, sep="_")
+  
+  #check columns are the same after first
+  if (c!=colnames(clusters)[[2]]){
+    stopifnot(colnames(all_clusters.matrix)==colnames(gismo_block_clusters.matrix))
+  }
+  
+  all_clusters.matrix <- rbind(all_clusters.matrix, gismo_block_clusters.matrix)
+  
+  
+  #generate points for PCA
+  dgePCA <- DGEList(counts=gismo_block_clusters.matrix)
+  colData <- data.frame(disease=as.factor(substring(colnames(gismo_block_clusters.matrix),1,1)))
+  rownames(colData) <- rownames(dgePCA$samples)
+  ddsPCA <- DESeqDataSetFromMatrix(countData = dgePCA$counts#dom_counts_clusters.matrix
+                            , colData = colData
+                            , design = ~disease)
+  cts <- counts(ddsPCA)
+  
+  ddsPCA <- estimateSizeFactors(ddsPCA)
+  pca <- plotPCA(varianceStabilizingTransformation(ddsPCA), intgroup=c("disease"), returnData = TRUE)
+  pca$level <- c
+  pca.df <- rbind(pca.df, pca)
+}
+```
+
+##PCA plots at different levels
+
+Below PCA plots are shown for each of the different clustering levels based off of the normalised counts for that level. It inidicates that the severe samples are most tightly clustered at the 50% identity level.
+
+```{r}
+pca.df$phenotype[pca.df$disease=='S'] <- "severe"
+pca.df$phenotype[pca.df$disease=='I'] <- "non-severe"
+gg <- ggplot(pca.df, aes(PC1, PC2, color=phenotype)) + scale_color_manual(values=colors)
+gg <- gg + geom_point()
+gg <- gg + facet_wrap(~level)
+gg <- gg + theme_bw() 
+gg
+```
+
+##PCA plot for segment clusters at 50% identity
+```{r}
+#group counts at the 50% ID level
+gismo_block_clusters.dt <- data.table(gismo_block_clusters)
+gismo_block_clusters.dt <- gismo_block_clusters.dt[,lapply(.SD, sum, na.rm=TRUE)
+                                                       , by='0.5'
+                                                       , .SDcols=colnames(gismo_block_clusters)[2:42]]
+  
+gismo_block_clusters.matrix <- as.matrix(gismo_block_clusters.dt)
+gismo_block_clusters.matrix <- gismo_block_clusters.matrix[,2:ncol(gismo_block_clusters.matrix)]
+rownames(gismo_block_clusters.matrix) <- paste(gismo_block_clusters.dt[[1]], c, sep="_")
+  
+#generate points for PCA
+my_domains <- DGEList(counts=gismo_block_clusters.matrix)
+my_domains <- calcNormFactors(my_domains, method="RLE")
+plotPCA(cpm(my_domains,normalized.lib.sizes=TRUE, log=T, prior.count=0.5), col=colors[categories], cex=0.8, isLog=TRUE)
+title("VAR PCA - Segments clustered at 50% identity")
+```
+
+##Differential expression testing
+
+First, to speed up computation and focus on only the most interesting domain clusters we remove clusters with less than 1 read per million which appear in less than 5 samples.
+
+```{r}
+dge_clust <- DGEList(counts=as.matrix(all_clusters.matrix))
+
+#create design matrix
+colData <- data.frame(disease=as.factor(substring(rownames(dge_clust$samples),1,1)))
+rownames(colData) <- rownames(dge_clust$samples)
+
+cpm(10, mean(dge_clust$samples$lib.size))
+
+keep <- rowSums(cpm(dge_clust)>10) >= 5
+dim(dge_clust)
+dge_clust <- dge_clust[keep,,keep.lib.sizes=FALSE]
+dim(dge_clust)
+```
+
+DESeq2 is now run with default parameters using the Benjamini-Yekutieli procedure for multiple testing correction. 
+
+```{r, cache=FALSE}
+setwd(wd)
+
+#create DESeq2 dataset
+stopifnot(colnames(dge_clust)==rownames(colData))
+dds <- DESeqDataSetFromMatrix(countData = dge_clust$counts
+                            , colData = colData
+                            , design = ~disease)
+
+#estimate size factors
+dds <- estimateSizeFactors(dds)
+
+#run DESeq2 pipeline
+dds <- DESeq(dds)
+
+results <- results(dds, contrast=c("disease","S","I"), pAdjustMethod = "BY")
+summary(results, alpha=0.05)
+```
+
+Match up p-values with edges in the tree structure.
+
+```{r}
+#Only look at significant nodes after multiple testing adjustment
+Sig <- results[!is.na(results$padj),]
+Sig <- Sig[Sig$padj<0.05,]
+
+#Create tree from edge list.
+tree <- graph.edgelist(edges)
+
+#If nodes aren't tested (i.e didn't pass the conservartion filter) set there significane to NA
+naNodes <- V(tree)$name[!(V(tree)$name %in% rownames(results))]
+na1s = rep(1, length(naNodes))
+
+#Create vectors of p-value with and without multiple testing adjustment.
+unadjp <- c(na1s, results$pvalue)
+adjp <- c(rep(NA, length(naNodes)), results$padj)
+names(unadjp) <- c(naNodes, rownames(results))
+names(adjp) <- c(naNodes, rownames(results))
+
+#Check we've accounted for all nodes in tree
+if (!all(names(unadjp) %in% unique(as.vector(edges)))) {
+        stop("Names of elements in unadjp do not match names of tree nodes")
+    }
+if (!all(unique(as.vector(edges)) %in% names(unadjp))) {
+        stop("Names of elements in unadjp do not match names of tree nodes")
+    }
+
+p.vals <- data.frame(unadjp, adjp = adjp)
+rownames(p.vals) <- names(unadjp)
+
+cluster_names <- clusters
+for (i in 2:ncol(clusters)){
+  cluster_names[,i] <- paste(as.character(cluster_names[,i]), colnames(clusters)[i], sep="_")
+}
+
+#Clean up segment names from transcript
+rnames <- gsub(".*_DBL", "DBL", clusters$Transcript)
+rnames <- gsub(".*_CIDR", "CIDR", rnames)
+rnames <- gsub(".*_NTS", "NTS", rnames)
+rnames <- gsub("_domNum.*_", "_", rnames)
+rnames <- gsub("[0-9]*_", "_", rnames)
+
+#Rename clusters with major domain class and location within domain
+cluster_names <- apply(cluster_names, 2, paste, rnames, sep="_")
+```
+
+##Functions to explore the tree
+
+These function return the ancestors and children of a given node in the hierarchical tree.
+
+```{r}
+#return the children of a node
+get_children <- function(node, edges) {
+    if (is.null(node)){
+      return(NULL)
+    }
+    tree.el.tmp <- data.frame(parent = edges[, 1], child = edges[, 2], stringsAsFactors = F)
+    children <- tree.el.tmp[which(tree.el.tmp$parent == node), "child"]
+    children <- unlist(c(children, lapply(children, get_children, edges)))
+    return(children)
+}
+
+#return the anscestors of a node
+get_parents <- function(node, edges){
+  if (is.null(node)){
+      return(NULL)
+    }
+    tree.el.tmp <- data.frame(parent = edges[, 1], child = edges[, 2], stringsAsFactors = F)
+    parent <- tree.el.tmp[which(tree.el.tmp$child == node), "parent"]
+    parent <- unlist(c(parent, lapply(parent, get_parents, edges)))
+    return(parent)
+}
+
+```
+
+##Get significant nodes in trees
+
+From those nodes that are found to be significant after multiple testing correction we keep only the most signifcant from one path through the tree. That is, if a node has an ancestor or child that has a smaller p-value, it will not be considered. This is achieved by iteratively selecting the most significant node and removing it's ancestors and children from the list of signifcant nodes.
+
+```{r}
+tempSig <- Sig
+tempSig$cluster <- as.numeric(gsub(".*_","",rownames(tempSig)))
+tempSig <- tempSig[order(tempSig$cluster),]
+SigFilteredResults <- data.frame()
+while (nrow(tempSig)>0){
+  #Get most significant and add to final results
+  trow <- tempSig[which.min(tempSig$padj),]
+  SigFilteredResults <- rbind(SigFilteredResults, trow)
+  
+  #Find parents and child nodes of the current most significant node
+  t <- rownames(trow)
+  tChildren <- get_children(t, edges)
+  tParents <- get_parents(t, edges)
+  
+  #Remove these nodes from those available for selection
+  tempSig <- tempSig[!(rownames(tempSig) %in% c(t, tChildren, tParents)),]
+  tempSig <- tempSig[order(tempSig$cluster),]
+}
+
+#Split into up and downregulated nodes
+resUp <- SigFilteredResults[SigFilteredResults$log2FoldChange>0,]
+resDown <- SigFilteredResults[SigFilteredResults$log2FoldChange<0,]
+```
+
+Overall we have found `r nrow(SigFilteredResults)` significantly DE clusters of which `r sum(SigFilteredResults$log2FoldChange>0)` are up-regulated.
+
+Update final results to include information on the transcripts that contain them
+```{r}
+#Collect sequence labels for each cluster
+final <- data.frame(SigFilteredResults)
+sig_clusters <- as.numeric(gsub("_.*","", rownames(SigFilteredResults)))
+levels <- gsub(".*_","", rownames(SigFilteredResults))
+significantClusters <- list()
+for (i in 1:length(levels)){
+  significantClusters[[i]] <- clusters[clusters[,colnames(clusters)==levels[i]]==sig_clusters[i],]$Transcript
+}
+final$sequences <- I(significantClusters)
+
+getBlock <- function(x){
+  x <- x[[1]][1]
+  x <- toString(x)
+  x <- gsub(".*_DBL", "DBL", x)
+  x <- gsub(".*_CIDR", "CIDR", x)
+  x <- gsub(".*_NTS", "NTS", x)
+  x <- gsub("_domNum.*_", "_", x)
+  x <- gsub("[0-9]*_", "_", x)
+  x <- gsub("[0-9]\\._", "_", x)
+  return(x)
+}
+cluster_block_type <- unlist(lapply(final$sequences, getBlock))
+names(cluster_block_type) <- rownames(final)
+```
+
+##Clustering significant domains based on co-expression
+```{r}
+# expression <- cpm(dge_clust, normalized.lib.sizes=TRUE, log=TRUE)[rownames(dge_clust) %in% rownames(resUp),]
+select <- order(rowMeans(counts(dds, normalized=TRUE)), decreasing=TRUE)
+
+nt <- normTransform(dds)
+expression <- assay(nt)[rownames(nt) %in% rownames(resUp),]
+
+dissim = dist(expression)
+dendro = hclust(dissim, method = "complete")
+
+AutoColor = NULL
+for (deepSplit in 0:3)
+  AutoColor = cbind(AutoColor, labels2colors(cutreeDynamic(dendro = dendro,
+                    minClusterSize = 2,
+                    cutHeight = NULL, method = "hybrid", deepSplit = deepSplit,
+                    distM = as.matrix(dissim))))
+AutoLabels = paste("Hybrid 'auto': dS =", c(0:3))
+
+cut <- cutreeDynamic(dendro = dendro,
+                    minClusterSize = 2,
+                    cutHeight = NULL, method = "hybrid", deepSplit = 3,
+                    distM = as.matrix(dissim))
+
+rowLabels <- dendro$labels
+# rowLabels <- rowLabels[dendro$order]
+rowsAnnot <- data.frame(group=labels2colors(cut))
+rownames(rowsAnnot) <- rowLabels
+
+
+par(mfrow=c(2,1))
+par(cex = 1.4);
+par(mar = c(0,8.5,2,0));
+plot(dendro,labels=F,main="Co-expression clustering with dynamic tree cut", sub="", xlab="")
+par(mar = c(1,8.5,0,0));
+plotHclustColors(dendro, AutoColor, 
+            AutoLabels, 
+            main = "")
+```
+
+
+##Heatmap of up-regulated clusters
+
+```{r}
+select <- order(rowMeans(counts(dds, normalized=TRUE)), decreasing=TRUE)
+
+nt <- normTransform(dds)
+log2.norm.counts <- assay(nt)[select,]
+log2.norm.counts <- assay(nt)[rownames(nt) %in% rownames(resUp),]
+annotData <- colData
+
+disease        <- colors
+names(disease) <- c("non-severe", "severe")
+anno_colors <- list(phenotype = disease)
+annotData$phenotype[annotData$disease=="I"] <- "non-severe"
+annotData$phenotype[annotData$disease=="S"] <- "severe"
+annotData$disease <- NULL
+
+log2.norm.counts <- log2.norm.counts[dendro$order,]
+pheatmap(log2.norm.counts, cluster_rows=FALSE, show_rownames=TRUE, cluster_cols=TRUE
+         , annotation_col=annotData, annotation_colors = anno_colors
+         , clustering_method = "average", cutree_rows=9
+         , labels_row=paste(rownames(log2.norm.counts), cluster_block_type[rownames(log2.norm.counts)] ,sep=" - ")
+         , annotation_row=rowsAnnot, fontsize_row=7)
+```
+
+##Heatmap of down-regulated clusters
+
+```{r}
+setwd(wd)
+
+nt <- normTransform(dds)
+expression <- assay(nt)[rownames(nt) %in% rownames(resDown),]
+dissim = dist(expression)
+dendro = hclust(dissim, method = "complete")
+cut <- cutreeDynamic(dendro = dendro,
+                    minClusterSize = 2,
+                    cutHeight = NULL, method = "hybrid", deepSplit = 0,
+                    distM = as.matrix(dissim))
+rowLabels <- dendro$labels
+rowsAnnot <- data.frame(group=labels2colors(cut))
+rownames(rowsAnnot) <- rowLabels
+
+select <- order(rowMeans(counts(dds, normalized=TRUE)), decreasing=TRUE)
+
+nt <- normTransform(dds)
+log2.norm.counts <- assay(nt)[select,]
+log2.norm.counts <- assay(nt)[rownames(nt) %in% rownames(resDown),]
+annotData <- colData
+
+disease        <- colors
+names(disease) <- c("non-severe", "severe")
+anno_colors <- list(phenotype = disease)
+annotData$phenotype[annotData$disease=="I"] <- "non-severe"
+annotData$phenotype[annotData$disease=="S"] <- "severe"
+annotData$disease <- NULL
+
+log2.norm.counts <- log2.norm.counts[dendro$order,]
+pheatmap(log2.norm.counts, cluster_rows=FALSE, show_rownames=TRUE, cluster_cols=TRUE
+         , annotation_col=annotData, annotation_colors = anno_colors
+         , clustering_method = "complete", cutree_rows=10
+         , labels_row=paste(rownames(log2.norm.counts), cluster_block_type[rownames(log2.norm.counts)] ,sep=" - ")
+         , annotation_row=rowsAnnot, fontsize_row=6)
+```
+
+##Table of results
+```{r}
+setwd(wd)
+# Now print the table
+rownames(final) <- paste(rownames(final), cluster_block_type[rownames(final)] ,sep="-")
+final$padj <- format(final$padj, scientific=TRUE, digits=3)
+final$pvalue <- format(final$pvalue, scientific=TRUE, digits=3)
+final$sequences <- unlist(lapply(final$sequences, paste, collapse=","))
+kable(final, digits=3)
+```
+
+##Code for generating the tree plots
+```{r}
+setwd(wd)
+
+write.table(results, file="./data/tree_figures/results.csv", sep=",", quote=F)
+clust <- data.frame(clusters)
+clust$transcript <- clust$Transcript
+clust$Transcript <- NULL
+write.table(clust, file="./data/tree_figures/segement_clusters_complete.csv", sep=",", quote=F, row.names=F)
+
+get_root <- function(node, edges){
+  parents = get_parents(node, edges)
+  if (length(parents)==1){
+    return(node)
+  }
+  else{
+    return(parents[length(parents)-1])
+  }
+}
+
+resSig <- results[!is.na(results$padj),]
+resSig <- resSig[resSig$padj<=0.05,]
+
+sig <- data.frame(clusters=rownames(SigFilteredResults), root=gsub("_.*", "", unlist(lapply(rownames(SigFilteredResults), get_root, edges))))
+write.table(sig, file="./data/tree_figures/sig_clusters.csv", sep=",", row.names=FALSE, quote = FALSE)
+```
+
+=======
+##System Information
+```{r}
+sessionInfo()
+```
+

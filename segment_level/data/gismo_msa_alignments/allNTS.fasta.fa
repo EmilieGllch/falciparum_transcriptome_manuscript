@@ -1,0 +1,2337 @@
+>allNTS.fasta_gmb1_consensus  {<Consensus(C)>} 
+G--G-G-----------------G---------------------------------E-S-D-K-----DA---KHLLDRIGKKVYK-E--V-K-KD---------A-ET--Y--KS-ELKGDLSKA-TFS---G
+
+>IFM23_S4_Contig576  {|3(0)|}frame_-1_NTSA domNum1 
+S--P-Si----------------I---------------------------------E-S-Q-N-----SP---RNVLERYAEDIMI-K--E-K-NE---------A-RI--Y--EN-SLKGQLKQA-KFR---G
+
+>IFM23_S4_Contig474  {|3(0)|}frame_2_NTSA domNum1 
+G--Q-St----------------Ndtksptis-------------------------E-S-H-N-----SA---RNVLEGFAKDIKG-K--A-S-SD---------A-EK--H--AY-SLKGNLKDA-KFY---N
+
+>IFM57_S30_L002_Contig993  {|1(0)|}frame_3_NTSA domNum1 
+-----------------------------------------------------------S-H-K-----SA---RNVLEKFALRIKN-K--A-T-ND---------A-KN--Y--AS-SLKGNLKRA-KFN---H
+
+>IFM57_S30_L002_Contig995 frame_2_NTSA domNum1 
+-----------------------------------------------------------------------------LENIGIGIYN-Q--E-K-IK---------K-NP--Y--EQ-QLKGTLSNA-RFH---D
+
+>IFM061_S15_Contig554  {|6(0)|}frame_3_NTSA domNum1 
+-----------------------------------------------------------S-H-N-----SA---RNALEKIGIGIYK-E--E-K-KK---------V-NG--Y--AS-QLRGNLSRA-TFC---D
+
+>IFM061_S15_Contig334  {|6(0)|}frame_2_NTSA domNum1 
+S--S-Se----------------Gdkipsii--------------------------E-S-Q-N-----SA---RNVLERYAKNIRR-H--P-S-KD---------A-KK--H--VD-SLKGDLTKA-EFR---G
+
+>IFM061_S15_Contig912  {|8(0)|}frame_-1_NTSA domNum1 
+R--K-Gvk---------------I---------------------------------E-S-S-L-----SA---RDVLEKIGLEIYN-K--E-I-EK---------T-IP--Y--NS-ELVGILRKA-RFA---D
+
+>IFC63_S16_L001_Contig796  {|8(0)|}frame_1_NTSA domNum1 
+R--K-Gvk---------------I---------------------------------E-S-S-L-----SA---RDVLEKIGLEIYN-K--E-I-EK---------T-IP--Y--NS-ELVGILRKA-RFA---D
+
+>IFM050_S11_7722_soapGraphK61  {|3(0)|}frame_3_NTSA domNum1 
+A--E-Sg----------------G---------------------------------Q-G----------A---RDVLEEIGGNIQK-K--V-H-KE---------V-DD--Y--RE-KLKGNLSLA-EFI---D
+
+>IFM050_S11_Contig3760  {|4(0)|}frame_2_NTSA domNum1 
+S--S-Se----------------Geaktpslt-------------------------E-S-H-N-----SA---RNVLENVARLIKA-K--A-T-KD---------V-KR--H--RN-VLKGNLGNA-QFY---H
+
+>IFM050_S11_Contig3372  {|3(0)|}frame_2_NTSA domNum1 
+A--E-Sg----------------G---------------------------------Q-G----------A---RDVLEEIGGNIQK-K--V-H-KE---------V-DD--Y--RE-KLKGNLSLA-EFI---D
+
+>IFM047_S10_Contig1416  {|4(0)|}frame_1_NTSA domNum1 
+S--S-Se----------------Geaktpslt-------------------------E-S-H-N-----SA---RNALEKIGIGIYK-E--E-K-KK---------V-NG--Y--AS-QLRGNLSRA-TFC---D
+
+>IFM047_S10_4260_soapGraphK61  {|4(0)|}frame_-2_NTSA domNum1 
+S--S-Se----------------Geaktpslt-------------------------E-S-H-N-----SA---RNALEKIGIGIYK-E--E-K-KK---------V-NG--Y--AS-QLRGNLSRA-TFC---D
+
+>IFM047_S10_Contig649  {|6(0)|}frame_3_NTSA domNum1 
+S--S-Se----------------Gdkipsii--------------------------E-S-Q-N-----SA---RNVLERYAKNIRR-H--P-S-KD---------A-KK--H--VD-SLKGDLTKA-EFR---G
+
+>IFM047_S10_Contig1651  {|1(0)|}frame_2_NTSA domNum1 
+---------------------------------------------------------------------------DVLEEFGGIIQQ-Q--A-D-NA---------A-KQ--Y--SS-ELKGDLLRV-QFS---K
+
+>IFM047_S10_Contig1422 frame_2_NTSA domNum1 
+-------------------------------------------------------------E-R-----SA---KHLLDSIGGIIEK-Q--A-K-ED---------A-KI--Y--QK-VLKGNLAEA-QFR---T
+
+>IFD8_S2_Contig164  {|2(0)|}frame_-1_NTSA domNum1 
+---S-Se----------------Gdkipsii--------------------------E-S-Q-N-----SA---RNVLERYAKNIRR-H--P-S-KD---------A-KK--H--VD-SLKGDLTKA-EFR---G
+
+>IFM12_S16_Contig240  {|6(0)|}frame_2_NTSA domNum1 
+S--S-Se----------------Gdkipsii--------------------------E-S-Q-N-----SA---RNVLERYAKNIRR-H--P-S-KD---------A-KK--H--VD-SLKGDLTKA-EFR---G
+
+>IFM12_S16_Contig495  {|2(0)|}frame_3_NTSA domNum1 
+---------------------------------------------------------------------SA---RDILEGYGGTIQQ-K--A-K-EN---------A-VP--Y--QN-DLKGNLSNV-IFS---D
+
+>IFM12_S16_Contig226  {|3(0)|}frame_1_NTSA domNum1 
+G--S-Sipsvpkdvk--------N---------------------------------E-S-E-K-----SA---RNVLENIGIKIYN-E--E-K-NK---------V-NG--Y--TS-QLRGDLSRA-KFC---D
+
+>IFM12_S16_Contig664  {|2(0)|}frame_-2_NTSA domNum1 
+Q--S-Skpsepsvdt--------N---------------------------------E-S-Y-K-----SA---RNVLENFAKYIKG-K--A-S-ND---------A-NR--H--GK-ILKGNLRQA-KFH---H
+
+>IFM26_S8_Contig650  {|2(0)|}frame_-3_NTSA domNum1 
+---------------------------------------------------------------------SA---RDILEGYGGTIQQ-K--A-K-EN---------A-VP--Y--QN-DLKGNLSNV-IFS---D
+
+>IFM26_S8_Contig266  {|3(0)|}frame_-1_NTSA domNum1 
+Q--T-Skfsktvvg---------N---------------------------------E-T-H-N-----SA---RNVLEKIAL-----E--T-K-GDinvk-----A-NK--Y--EG-KLKGNLKDA-KFY---N
+
+>IFM21_S3_Contig355  {|6(0)|}frame_1_NTSA domNum1 
+S--S-Se----------------Gdkipsii--------------------------E-S-Q-N-----SA---RNVLERYAKNIRR-H--P-S-KD---------A-KK--H--VD-SLKGDLTKA-EFR---G
+
+>IFM53_S14_L001_Contig2718  {|6(0)|}frame_-2_NTSA domNum1 
+S--S-Se----------------Gdkipsii--------------------------E-S-Q-N-----SA---RNVLERYAKNIRR-H--P-S-KD---------A-KK--H--VD-SLKGDLTKA-EFR---G
+
+>IFM53_S14_L001_Contig1129  {|3(0)|}frame_-3_NTSA domNum1 
+S--H-St----------------Ndtksptls-------------------------E-S-H-N-----SA---RNALEKIGIGIYK-E--E-K-KK---------V-NG--Y--AS-QLRGNLSRA-TFC---D
+
+>IFM53_S14_L001_Contig2106  {|4(0)|}frame_-1_NTSA domNum1 
+S--S-Se----------------Geaeipfik-------------------------D-S-E-K-----SP---RNVFERYAEHIKK-Q--A-E-ND---------A-KK-----KGiSLKGDLKRA-KFY---H
+
+>IFM054_S12_Contig1069  {|5(0)|}frame_1_NTSA domNum1 
+S--S-Se----------------Geaktpslt-------------------------E-S-H-K-----SA---RNVLEKIGRHIKD-E--I-N-KN---------S-N---H--TN-KLKGTLSNA-QFL---D
+
+>IFM054_S12_Contig1089  {|12(0)|}frame_-2_NTSA domNum1 
+-------------------------------------------------------------E-K-----SP---RNVFERYAEHIKK-Q--A-E-ND---------A-KK-----KGiSLKGDLKRA-KFY---H
+
+>IFM054_S12_Contig502  {|6(0)|}frame_-3_NTSA domNum1 
+S--S-Se----------------Gdkipsii--------------------------E-S-Q-N-----SA---RNVLERYAKNIRR-H--P-S-KD---------A-KK--H--VD-SLKGDLTKA-EFR---G
+
+>IFM24_S5_Contig538  {|8(0)|}frame_-2_NTSA domNum1 
+R--K-Gvk---------------I---------------------------------E-S-S-L-----SA---RDVLEKIGLEIYN-K--E-I-EK---------T-IP--Y--NS-ELVGILRKA-RFA---D
+
+>IFM-049_S6_Contig31541  {|19(0)|}frame_1_NTSA domNum1 
+---------------------------------------------------------------------------DVLEKIALEIYN-Q--E-K-EK---------T-IP--H--KD-QLIGTLRNA-RFA---D
+
+>IFM-049_S6_Contig3843  {|6(0)|}frame_3_NTSA domNum1 
+S--S-Se----------------Gdkipsii--------------------------E-S-Q-N-----SA---RNVLERYAKNIRR-H--P-S-KD---------A-KK--H--VD-SLKGDLTKA-EFR---G
+
+>IFM058_S13_Contig449  {|6(0)|}frame_3_NTSA domNum1 
+G--R-St----------------N---------------------------------E-I-E-L-----SA---RDVLENIGIGIYN-Q--E-K-IK---------K-NP--Y--EQ-QLKGTLSKA-QFL---D
+
+>IFM058_S13_Contig1077  {|6(0)|}frame_-2_NTSA domNum1 
+S--S-Se----------------Gdkipsii--------------------------E-S-Q-N-----SA---RNVLERYAKNIRR-H--P-S-KD---------A-KK--H--VD-SLKGDLTKA-EFR---G
+
+>IFM27_S9_Contig328  {|6(0)|}frame_1_NTSA domNum1 
+G--R-St----------------N---------------------------------E-I-E-L-----SA---RDVLENIGIGIYN-Q--E-K-IK---------K-NP--Y--EQ-QLKGTLSNA-RFH---D
+
+>SFC13_S23_L002_Contig472  {|6(0)|}frame_2_NTSA domNum1 
+K--G-Rli---------------N---------------------------------E-I-E-L-----SA---RDVLEKIGLEIYN-K--E-K-DK---------T-IP--H--KD-QLIGTLRNA-RFA---D
+
+>SFC13_S23_L002_Contig2386  {|1(0)|}frame_1_NTSA domNum1 
+-----G-----------------G---------------------------------Q-G----------A---RDVLEQFGEIVQK-K--A-H-NE---------V-DA--Y--RE-ELKGKLWEA-KFV---G
+
+>SFU-3_S21_L002_Contig615  {|3(0)|}frame_2_NTSA domNum1 
+G--S-Stpsvpkdvk--------N---------------------------------E-S-E-K-----SA---RNVLEKIGLEIYN-K--E-I-EK---------T-IP--H--KD-QLIGTLSNA-QFH---D
+
+>SFU2_S5_L001_Contig1896  {|8(0)|}frame_-3_NTSA domNum1 
+R--K-Gvk---------------I---------------------------------E-S-S-L-----SA---RDVLEKIGLEIYN-K--E-I-EK---------T-IP--Y--NS-ELVGILRKA-RFA---D
+
+>SXC2_S4_L001_Contig798  {|3(0)|}frame_-2_NTSA domNum1 
+G--S-Sk----------------Dvptvvin--------------------------E-S-D-K-----ST---RNILEYFAQEIKK-Q--A-Q-KD---------A-QR--Y--VN-SLKGNLKNA-NFM---H
+
+>SFM-1_S11_L001_Contig605 frame_-1_NTSA domNum1 
+----------------------------------------------------------------------------VLENIGIGIYK-E--I-E-KT-----------IP--Y--NS-ELIGVLRKA-RFA---D
+
+>SFC19_S24_L002_Contig2100  {|6(0)|}frame_-3_NTSA domNum1 
+K--G-Rli---------------N---------------------------------E-I-E-L-----SA---RDVLEKIGLEIYN-K--E-K-DK---------T-IP--H--KD-QLIGTLRNA-RFA---D
+
+>SFC19_S24_L002_Contig1541  {|2(0)|}frame_3_NTSA domNum1 
+---------------------------------------------------------------------SA---RDILEGYGGTIQQ-K--A-K-EN---------A-VP--Y--QN-DLKGNLSNV-IFS---D
+
+>SFC-023_S32_L002_Contig803  {|2(0)|}frame_2_NTSA domNum1 
+---S-Se----------------Gaknpsii--------------------------E-S-Q-N-----SP---RNVLERYGEGIMI-K--E-K-DE---------A-RI--Y--EN-SLKGQLKQA-KFR---G
+
+>SFM-10_S1_L001_Contig1859  {|8(0)|}frame_-3_NTSA domNum1 
+R--K-Gvk---------------I---------------------------------E-S-S-L-----SA---RDVLEKIGLEIYN-K--E-I-EK---------T-IP--Y--NS-ELVGILRKA-RFA---D
+
+>SFM-8_S8_L001_Contig642  {|3(0)|}frame_1_NTSA domNum1 
+Q--K-Gvk---------------I---------------------------------E-N-K-L-----SA---RGVLEEIGKKIKD-K--T-E-KG-----------NN--Y--DG-KLKGTLSNA-KFA---D
+
+>SFM-8_S8_L001_Contig2437  {|3(0)|}frame_-1_NTSA domNum1 
+S--H-St----------------Ndtksptls-------------------------E-S-H-K-----SA---RNVLDVLAQNIRI-E--A-E-KN---------A-QK--Y--ER-FLKGKLSEA-KFY---Q
+
+>SFM-8_S8_L001_Contig3536  {|3(0)|}frame_-2_NTSA domNum1 
+Q--T-Skfsktvvg---------N---------------------------------E-T-H-N-----SA---RNVLEKIAL-----E--T-K-GDinvk-----A-NK--Y--EG-KLKGNLKDA-KFY---N
+
+>SFM-8_S8_L001_Contig3592  {|3(0)|}frame_-3_NTSA domNum1 
+G--P-Sssapedvk---------N---------------------------------E-S-H-K-----SA---RNILEGFAKDIKR-D--V-S-NE---------A-QK--R--AY-LLKGNLSEA-KFY---Q
+
+>SFM-8_S8_L001_Contig2497  {|6(0)|}frame_-1_NTSA domNum1 
+A--G-Sg----------------G---------------------------------Q-G----------A---RDVLEEFGGIIQQ-Q--A-D-NA---------A-KQ--Y--SS-ELKGDLLRV-QFS---K
+
+>SFM-8_S8_L001_10484_soapGraphK61  {|3(0)|}frame_-2_NTSA domNum1 
+S--A-Skfsktvvg---------N---------------------------------E-T-H-K-----SA---RNVLEKIAL-----E--T-K-GDinvk-----A-NL--Y--KD-KLKGKLSQA-KFY---Q
+
+>SFM-8_S8_L001_16151_soapGraphK51  {|3(0)|}frame_1_NTSA domNum1 
+G--P-Sssapedvk---------N---------------------------------E-S-H-K-----SA---RNILEGFAKDIKR-D--V-S-NE---------A-QK--R--AY-LLKGNLSEA-KFY---Q
+
+>SFC16_S6_L001_Contig333  {|6(0)|}frame_1_NTSA domNum1 
+G--R-St----------------N---------------------------------E-I-E-L-----SA---RDVLENIGIGIYN-Q--E-K-IK---------K-NP--Y--EQ-QLKGTLSNA-RFH---D
+
+>SFC16_S6_L001_Contig1066  {|2(0)|}frame_-3_NTSA domNum1 
+---------------------------------------------------------------------SA---RDILEGYGGTIQQ-K--A-K-EN---------A-VP--Y--QN-DLKGNLSNV-IFS---D
+
+>SFC22_S9_L001_Contig3205  {|6(0)|}frame_-1_NTSA domNum1 
+G--R-St----------------N---------------------------------E-I-E-L-----SA---RDVLENIGIGIYN-Q--E-K-IK---------K-NP--Y--EQ-QLKGTLSNA-RFH---D
+
+>SFC15-CM_S29_L002_Contig1931  {|2(0)|}frame_-1_NTSA domNum1 
+---------------------------------------------------------------------SA---RDILEGYGGTIQQ-K--A-K-EN---------A-VP--Y--QN-DLKGNLSNV-IFS---D
+
+>SFM-3_S12_L001_Contig528  {|6(0)|}frame_2_NTSA domNum1 
+K--G-Rli---------------N---------------------------------E-I-E-L-----SA---RDVLEKIGLEIYN-K--E-K-DK---------T-IP--H--KD-QLIGTLRNA-RFA---D
+
+>SFM-3_S12_L001_Contig619  {|7(0)|}frame_2_NTSA domNum1 
+S--S-Se----------------Gaknpsii--------------------------E-S-Q-N-----SP---RNVLERYGEGIMI-K--E-K-DE---------A-RI--Y--EN-SLKGQLKQA-KFR---G
+
+>SFC17_S7_L001_Contig2000  {|1(0)|}frame_-3_NTSA domNum1 
+---------------------------------------------------------------Q-----SA---RDVLEEYGKNVQE-E--A-T-KK---------A-GQ--H--RK-DLEGRLSNV-KFS---R
+
+>IFM23_S4_Contig698_frm-3_orf1_NTSA  {|3(0)|}domNum1 
+S--H-St----------------Ndtksptls-------------------------E-S-H-K-----SA---RNVLERYAESIKQ-Q--A-A-AD---------A-EK--C--EK-SLKGNLKNA-VFR---G
+
+>IFM57_S30_L002_Contig1007_frm1_orf7_NTSA  {|3(0)|}domNum1 
+Gy-S-Ss----------------Dasksvnit-------------------------E-S-E-K-----SA---RNVLEKIALQIYN-Q--V-K-DK---------R-IP--H--KD-QLIGTLSKA-QFL---D
+
+>IFM57_S30_L002_Contig1716_frm-3_orf3_NTSA  {|7(0)|}domNum1 
+S--S-Se----------------Gaknpsii--------------------------E-S-Q-N-----SP---RNVLERYGEGIMI-K--E-K-DE---------A-RI--Y--EN-SLKGQLKQA-KFR---G
+
+>IFM57_S30_L002_Contig1017_frm-1_orf20_NTSA  {|9(0)|}domNum1 
+S--K-Svvg--------------K---------------------------------E-T-H-M-----SA---RNVLENIGIGIYN-K--E-K-GK---------V-YP--H--EN-ELKGHLSNA-IFI---D
+
+>IFC63_S16_L001_Contig2095_frm-2_orf5_NTSA  {|6(0)|}domNum1 
+S--S-Se----------------Gdkipsii--------------------------E-S-Q-N-----SA---RNVLERYAKNIRR-H--P-S-KD---------A-KK--H--VD-SLKGDLTKA-EFR---G
+
+>IFM050_S11_Contig2306_frm-2_orf5_NTSA  {|6(0)|}domNum1 
+S--S-Se----------------Gdkipsii--------------------------E-S-Q-N-----SA---RNVLERYAKNIRR-H--P-S-KD---------A-KK--H--VD-SLKGDLTKA-EFR---G
+
+>IFM050_S11_Contig2235_frm1_orf9_NTSA  {|4(0)|}domNum1 
+S--S-Se----------------Geaeipfik-------------------------D-S-E-K-----SP---RNVFERYAEHIKK-Q--A-E-KA---------A-ES--Y--EN-VLKGKLEEA-SFC---G
+
+>IFM047_S10_Contig1447_frm-2_orf3_NTSA  {|4(0)|}domNum1 
+S--S-Se----------------Geaeipfik-------------------------D-S-E-K-----SP---RNVFERYAEHIKK-Q--A-E-ND---------A-KK-----KGiSLKGDLKRA-KFY---H
+
+>IFM26_S8_Contig206_frm2_orf1_NTSA  {|6(0)|}domNum1 
+S--S-Se----------------Gdkipsii--------------------------E-S-Q-N-----SA---RNVLERYAKNIRR-H--P-S-KD---------A-KK--H--VD-SLKGDLTKA-EFR---G
+
+>IFM26_S8_Contig204_frm2_orf4_NTSA  {|3(0)|}domNum1 
+G--S-Sk----------------Dvptvvin--------------------------E-S-D-K-----ST---RNILEYFAQGIKK-Q--A-Q-KD---------A-QR--Y--VN-SLKGDLKRA-KFN---H
+
+>IFM56_S15_Contig901_frm-2_orf4_NTSA  {|7(0)|}domNum1 
+S--S-Se----------------Gaknpsii--------------------------E-S-Q-N-----SP---RNVLERYGEGIMI-K--E-K-DE---------A-RI--Y--EN-SLKGQLKQA-KFR---G
+
+>IFM53_S14_L001_Contig1706_frm3_orf14_NTSA  {|3(0)|}domNum1 
+G--P-Sssaledvk---------N---------------------------------E-S-H-N-----SA---RNVLEGFAESIKN-Q--A-E-KD---------A-KE--H--GQ-HLTGDLAKA-VFR---H
+
+>IFM24_S5_Contig973_frm-2_orf0_NTSA  {|2(0)|}domNum1 
+---S-Se----------------Gdkipsii--------------------------E-S-Q-N-----SA---RNVLERYAKNIRR-H--P-S-KD---------A-KK--H--VD-SLKGDLTKA-EFR---G
+
+>IFM-049_S6_Contig16997_frm-1_orf5_NTSA  {|3(0)|}domNum1 
+G--S-Stpsvpkdvk--------Y---------------------------------E-S-H-E-----SA---RNVLENIGRKIKD-I--A-S-SY---------A-KN--Y--RS-YLKGDLKRA-KFH---H
+
+>IFC66_S31_L002_Contig1861_frm-2_orf16_NTSA  {|3(0)|}domNum1 
+Q--Q-Skpvdtsdvk--------N---------------------------------E-S-S-N-----SA---RNVFEYIAEIISN-E--V-K-KN---------A-EK--H--DK-SLQGDYKRA-KFH---Q
+
+>IFC66_S31_L002_Contig654_frm-2_orf5_NTSA  {|3(0)|}domNum1 
+T--E-Ssle--------------Gearspsii-------------------------E-S-E-N-----SP---RNVLERYAKNI-R-Q--A-S-KD---------E-NE--H--VD-SLKGDLTKA-EFR---G
+
+>IFC66_S31_L002_Contig1010_frm1_orf7_NTSA  {|4(0)|}domNum1 
+S--S-Se----------------Geaeipfik-------------------------D-S-E-K-----SP---RNVFERYAEHIKK-Q--A-E-ND---------A-KK-----KGiSLKGDLKRA-KFY---H
+
+>IFM058_S13_Contig1017_frm1_orf7_NTSA  {|3(0)|}domNum1 
+Gy-S-Ss----------------Dasksvnit-------------------------E-S-E-K-----SA---RNVLEKIALQIYN-Q--V-K-DK---------R-IP--H--KD-QLIGTLSKA-QFL---D
+
+>SFC13_S23_L002_Contig1727_frm-3_orf3_NTSA  {|7(0)|}domNum1 
+S--S-Se----------------Gaknpsii--------------------------E-S-Q-N-----SP---RNVLERYGEGIMI-K--E-K-DE---------A-RI--Y--EN-SLKGQLKQA-KFR---G
+
+>SFC13_S23_L002_Contig2754_frm-2_orf5_NTSA  {|3(0)|}domNum1 
+N--S-Skvaptyft---------N---------------------------------E-S-H-K-----SA---RNVLEKFALRIKN-K--A-T-ND---------A-KN--Y--AS-SLKGNLKRA-KFN---H
+
+>SFC13_S23_L002_Contig1100_frm1_orf6_NTSA  {|3(0)|}domNum1 
+G--S-Sk----------------Dvptvvin--------------------------E-S-D-K-----ST---RNILEYFAQEIKK-Q--A-Q-KD---------A-QR--Y--VN-SLKGNLKNA-NFM---H
+
+>SFC13_S23_L002_Contig2737_frm-3_orf4_NTSA  {|6(0)|}domNum1 
+G--T-Tg----------------Y---------------------------------Q-P---------SA---RDVLEQIALQIYN-Q--V-K-EK---------V-YP--H--EN-ELKGHLSNA-RFA---D
+
+>SFU-3_S21_L002_Contig633_frm1_orf5_NTSA  {|6(0)|}domNum1 
+S--S-Se----------------Gdkipsii--------------------------E-S-Q-N-----SA---RNVLERYAKNIRR-H--P-S-KD---------A-KK--H--VD-SLKGDLTKA-EFR---G
+
+>SFU-3_S21_L002_Contig1058_frm-2_orf3_NTSA  {|3(0)|}domNum1 
+Q--T-Skfsktvvg---------N---------------------------------E-T-H-N-----SA---RNVLEGFAKDIKR-D--A-S-NN---------A-KK-----KGiSLKGDLKRA-KFR---H
+
+>SFU2_S5_L001_25621_soapGraphK21_frm-2_orf9_NTSA  {|6(0)|}domNum1 
+S--S-Se----------------Gdkipsii--------------------------E-S-Q-N-----SA---RNVLERYAKNIRR-H--P-S-KD---------A-KK--H--VD-SLKGDLTKA-EFR---G
+
+>SFU2_S5_L001_Contig1103_frm1_orf5_NTSA  {|6(0)|}domNum1 
+S--S-Se----------------Gdkipsii--------------------------E-S-Q-N-----SA---RNVLERYAKNIRR-H--P-S-KD---------A-KK--H--VD-SLKGDLTKA-EFR---G
+
+>SXC2_S4_L001_Contig1699_frm-3_orf9_NTSA  {|7(0)|}domNum1 
+S--S-Se----------------Gaknpsii--------------------------E-S-Q-N-----SP---RNVLERYGEGIMI-K--E-K-DE---------A-RI--Y--EN-SLKGQLKQA-KFR---G
+
+>SXC2_S4_L001_4752_soapGraphK61_frm-2_orf5_NTSA  {|7(0)|}domNum1 
+S--S-Se----------------Gaknpsii--------------------------E-S-Q-N-----SP---RNVLERYGEGIMI-K--E-K-DE---------A-RI--Y--EN-SLKGQLKQA-KFR---G
+
+>SFM-1_S11_L001_Contig2095_frm-3_orf5_NTSA  {|3(0)|}domNum1 
+T--E-Ssle--------------Geakssiik-------------------------E-S-H-N-----SA---RNVLERYAKNI-R-Q--A-S-KD---------E-NE--N--VD-SLKGDLTKA-EFR---G
+
+>SFM-1_S11_L001_16206_soapGraphK41_frm2_orf9_NTSA  {|3(0)|}domNum1 
+Q--S-Skspqpsvvt--------N---------------------------------E-S-E-K-----SA---RNVLENIGKWIKD-K--R-K-IE---------S-K---H--SE-ILKGTLSKA-RFI---D
+
+>SFM-1_S11_L001_Contig2100_frm-3_orf3_NTSA  {|3(0)|}domNum1 
+G--Q-St----------------Ndtkrptis-------------------------E-S-Y-Q-----SA---RNVLERYAEDIKK-Q--A-E-KA---------A-ES--Y--EN-ELKGKLEEA-SFS---G
+
+>SFM-1_S11_L001_Contig1214_frm-2_orf9_NTSA  {|3(0)|}domNum1 
+Q--S-Skspqpsvvt--------N---------------------------------E-S-E-K-----SA---RNVLENIGKWIKD-K--R-K-IE---------S-K---H--SE-ILKGTLSKA-RFI---D
+
+>SFM-1_S11_L001_Contig1596_frm-3_orf3_NTSA  {|5(0)|}domNum1 
+K--K-Gvi---------------N---------------------------------E-S-K-L-----SA---RNVLENIANEI---K--V-K-REn--------E-RK--Y--ND-KLKGSLWEA-RFS---D
+
+>SFC19_S24_L002_Contig720_frm3_orf4_NTSA  {|6(0)|}domNum1 
+G--T-Tg----------------N---------------------------------K-Q---------SA---RDVLEKIGLEIYN-Q--E-K-EK---------V-YP--Y--EN-ELKGILSKA-IFV---D
+
+>SFC19_S24_L002_Contig710_frm3_orf3_NTSA  {|6(0)|}domNum1 
+S--S-Se----------------Gdkipsii--------------------------E-S-Q-N-----SA---RNVLERYAKNIRR-H--P-S-KD---------A-KK--H--VD-SLKGDLTKA-EFR---G
+
+>SFC-023_S32_L002_Contig966_frm1_orf10_NTSA  {|6(0)|}domNum1 
+G--R-St----------------N---------------------------------E-I-E-L-----SA---RDVLENIGIGIYN-Q--E-K-IK---------K-NP--Y--EQ-QLKGTLSNA-RFH---D
+
+>SFC-023_S32_L002_Contig1162_frm-3_orf4_NTSA  {|3(0)|}domNum1 
+S--A-Skfsktvvg---------N---------------------------------E-T-H-K-----SA---RNVLEGFAKDIKG-K--A-S-SD---------A-EK--H--AS-SLKGDLKRA-KFN---H
+
+>SFM-6_S3_L001_Contig674_frm-3_orf3_NTSA  {|6(0)|}domNum1 
+S--S-Se----------------Gdkipsii--------------------------E-S-Q-N-----SA---RNVLERYAKNIRR-H--P-S-KD---------A-KK--H--VD-SLKGDLTKA-EFR---G
+
+>SFM-6_S3_L001_Contig651_frm2_orf3_NTSA  {|3(0)|}domNum1 
+S--Y-Shttltsdit--------N---------------------------------E-S-H-K-----SA---RNVLENIGKWIKD-K--R-K-NQ---------S-K---Y--TD-KLIGTLSNA-QFH---D
+
+>SFM-10_S1_L001_Contig1304_frm-3_orf10_NTSA  {|3(0)|}domNum1 
+G--P-Sssaledvk---------N---------------------------------E-S-H-N-----SA---RNVLEGFAESIKN-Q--A-E-KD---------A-KE--H--GQ-HLTGDLAKA-VFR---H
+
+>SFM-10_S1_L001_Contig1384_frm-1_orf5_NTSA  {|6(0)|}domNum1 
+S--S-Se----------------Gdkipsii--------------------------E-S-Q-N-----SA---RNVLERYAKNIRR-H--P-S-KD---------A-KK--H--VD-SLKGDLTKA-EFR---G
+
+>SFM-8_S8_L001_Contig1646_frm2_orf10_NTSA  {|4(0)|}domNum1 
+S--S-Se----------------Geaktpslt-------------------------E-S-H-N-----SA---RNALEKIGIGIYK-E--E-K-KK---------V-NG--Y--AS-QLRGNLSRA-TFC---D
+
+>SFM-8_S8_L001_Contig3151_frm-3_orf13_NTSA  {|3(0)|}domNum1 
+Gy-S-Ss----------------Dasksvnit-------------------------E-S-E-K-----SA---RNVLEKIALQIYN-Q--V-K-DK---------R-IP--H--KD-QLIGTLSKA-QFL---D
+
+>SFM-8_S8_L001_Contig3597_frm-3_orf10_NTSA  {|3(0)|}domNum1 
+Q--S-Skssqpsvvt--------N---------------------------------E-S-E-K-----SA---RNVLENIGKWIKD-K--R-Q-IE---------S-K---H--SE-ILKGTLSRA-RFI---D
+
+>SFM-8_S8_L001_10480_soapGraphK61_frm3_orf13_NTSA  {|3(0)|}domNum1 
+Gy-S-Ss----------------Dasksvnit-------------------------E-S-E-K-----SA---RNVLEKIALQIYN-Q--V-K-DK---------R-IP--H--KD-QLIGTLSKA-QFL---D
+
+>SFM-8_S8_L001_Contig1695_frm1_orf15_NTSA  {|6(0)|}domNum1 
+A--T-Sdpifi------------N---------------------------------E-S-H-K-----SA---RNVLDVLAEDVKK-Q--A-E-ND---------A-KK-----KGiSLKGDLKRA-KFH---H
+
+>SFM-8_S8_L001_15835_soapGraphK51_frm-2_orf10_NTSA  {|3(0)|}domNum1 
+Q--S-Skssqpsvvt--------N---------------------------------E-S-E-K-----SA---RNVLENIGKWIKD-K--R-Q-IE---------S-K---H--SE-ILKGTLSRA-RFI---D
+
+>SFM-8_S8_L001_Contig3596_frm2_orf4_NTSA  {|3(0)|}domNum1 
+N--E-Ssisknvvg---------N---------------------------------E-T-H-N-----SA---RNVLEKIGKVIKD-K--A-S-ED---------A-RK--Y--SN-VLKGNLKKA-NFI---H
+
+>SFM-8_S8_L001_Contig1555_frm1_orf0_NTSA  {|4(0)|}domNum1 
+Q--S-Sssle-------------Geakspsii-------------------------E-S-Q-N-----SP---RNVLERYAEDIMI-K--E-K-NE---------A-RI--Y--EN-SLKGQLKQA-KFR---G
+
+>SFM-8_S8_L001_Contig3016_frm-1_orf5_NTSA  {|3(0)|}domNum1 
+N--E-Ssisktvvg---------K---------------------------------E-T-H-M-----SA---RNILEGFAKDIRN-K--A-E-NS---------S-KK--Y--EF-QLKGKLEEA-SFS---G
+
+>SFC16_S6_L001_Contig1789_frm-2_orf5_NTSA  {|4(0)|}domNum1 
+A--S-Sle---------------Gdakspiik-------------------------E-S-H-K-----SA---RNVLERYAKNI-R-Q--A-S-KY---------A-KE--H--VD-SLKGDLTKA-EFR---G
+
+>SFC16_S6_L001_Contig388_frm2_orf4_NTSA  {|3(0)|}domNum1 
+S--Y-Shttltsdit--------N---------------------------------E-S-H-K-----SA---RNVLENIGKWIKD-K--R-K-NQ---------S-K---Y--TD-KLIGTLSNA-QFH---D
+
+>SFC22_S9_L001_Contig3219_frm-2_orf1_NTSA  {|5(0)|}domNum1 
+A--G-Sg----------------G---------------------------------Q-G----------A---RDVLEEFGGIIQQ-Q--A-D-NA---------A-KQ--Y--SS-ELKGDLLRV-QFS---K
+
+>SFC22_S9_L001_Contig2326_frm-2_orf7_NTSA  {|3(0)|}domNum1 
+Gy-S-Ss----------------Dasksvnit-------------------------E-S-E-K-----SA---RNVLEKIALQIYN-Q--V-K-DK---------R-IP--H--KD-QLIGTLSKA-QFL---D
+
+>SFC22_S9_L001_Contig3230_frm-1_orf5_NTSA  {|2(0)|}domNum1 
+---S-Se----------------Gaknpsii--------------------------E-S-Q-N-----SP---RNVLERYGEGIMI-K--E-K-DE---------A-RI--Y--EN-SLKGQLKQA-KFR---G
+
+>SFC22_S9_L001_Contig283_frm3_orf8_NTSA  {|3(0)|}domNum1 
+G--S-Sipsvpkdvk--------N---------------------------------E-S-E-K-----SA---RNVLENIGKWIKD-E--I-N-KN---------S-N---H--TN-KLKGTLSNA-QFH---D
+
+>SFC22_S9_L001_Contig1118_frm3_orf12_NTSA  {|9(0)|}domNum1 
+S--K-Svvg--------------K---------------------------------E-T-H-M-----SA---RNVLENIGIGIYN-K--E-K-GK---------V-YP--H--EN-ELKGHLSNA-IFI---D
+
+>SFC22_S9_L001_Contig2392_frm-3_orf4_NTSA  {|3(0)|}domNum1 
+S--A-Skfsktvvg---------N---------------------------------E-T-H-K-----SA---RNVLEKIAL-----E--T-K-GDinvk-----A-NL--Y--KD-KLKGKLSQA-KFY---Q
+
+>SFM-7_S13_L001_Contig1091_frm-1_orf5_NTSA  {|6(0)|}domNum1 
+S--S-Se----------------Gdkipsii--------------------------E-S-E-N-----SP---RNVLERYAKNI-R-Q--A-S-KD---------E-NE--H--VD-SLKGDLTKA-EFR---G
+
+>SFM-7_S13_L001_Contig1897_frm3_orf11_NTSA  {|3(0)|}domNum1 
+G--P-Sssaledvk---------N---------------------------------E-S-H-N-----SA---RNVLEGFAESIKN-Q--A-E-KD---------A-KE--H--GQ-HLTGDLAKA-VFR---H
+
+>SFM-7_S13_L001_Contig1893_frm1_orf7_NTSA  {|3(0)|}domNum1 
+N--E-Ssisktvvg---------K---------------------------------E-T-H-M-----SA---RNVLEKFALEIKN-K--A-S-DD---------A-KK--Y--RS-SLKGYLSQA-KFY---H
+
+>SFC-18_S20_L002_Contig628_frm-1_orf5_NTSA  {|6(0)|}domNum1 
+S--S-Se----------------Gdkipsii--------------------------E-S-Q-N-----SA---RNVLERYAKNIRR-H--P-S-KD---------A-KK--H--VD-SLKGDLTKA-EFR---G
+
+>SFC15-CM_S29_L002_Contig1968_frm-3_orf5_NTSA  {|6(0)|}domNum1 
+S--S-Se----------------Gdkipsii--------------------------E-S-Q-N-----SA---RNVLERYAKNIRR-H--P-S-KD---------A-KK--H--VD-SLKGDLTKA-EFR---G
+
+>SFC15-CM_S29_L002_Contig1050_frm1_orf4_NTSA  {|6(0)|}domNum1 
+G--R-St----------------N---------------------------------E-I-E-L-----SA---RDVLENIGIGIYK-E--E-K-KK---------V-NG--Y--TS-QLRGNLSRA-TFC---D
+
+>SFC15-CM_S29_L002_Contig1080_frm1_orf10_NTSA  {|3(0)|}domNum1 
+G--P-Sssaledvk---------N---------------------------------E-S-H-N-----SA---RNVLEGFAESIKN-Q--A-E-KD---------A-KE--H--GQ-HLTGDLAKA-VFR---H
+
+>SFC-21_S22_L002_Contig1103_frm1_orf5_NTSA  {|2(0)|}domNum1 
+---S-Se----------------Gaknpsii--------------------------E-S-Q-N-----SP---RNVLERYGEGIMI-K--E-K-DE---------A-RI--Y--EN-SLKGQLKQA-KFR---G
+
+>SFM-3_S12_L001_Contig1068_frm1_orf6_NTSA  {|3(0)|}domNum1 
+G--S-Sk----------------Dvptvvin--------------------------E-S-D-K-----ST---RNILEYFAQEIKK-Q--A-Q-KD---------A-QR--Y--VN-SLKGNLKNA-NFM---H
+
+>SFM-3_S12_L001_Contig616_frm3_orf7_NTSA  {|4(0)|}domNum1 
+S--S-Se----------------Geaktpslt-------------------------E-S-H-N-----SA---RNALEKIGIGIYK-E--E-K-KK---------V-NG--Y--AS-QLRGNLSRA-TFC---D
+
+>SFM-3_S12_L001_Contig1087_frm-1_orf4_NTSA  {|6(0)|}domNum1 
+G--T-Tg----------------Y---------------------------------Q-P---------SA---RDVLEQIALQIYN-Q--V-K-EK---------V-YP--H--EN-ELKGHLSNA-RFA---D
+
+>SFC14_S17_L001_Contig2401_frm-1_orf2_NTSA  {|3(0)|}domNum1 
+G--S-Sipsvpkdvk--------N---------------------------------E-S-E-K-----SA---RNVLEKIGLEIYN-K--E-I-EK---------T-IP--H--KD-QLIGTLSNA-QFH---D
+
+>SFC17_S7_L001_Contig1006_frm2_orf5_NTSA  {|3(0)|}domNum1 
+G--S-Sipsvpkdvk--------N---------------------------------E-S-E-K-----SA---RNVLEKIGLEIYN-K--E-I-EK---------T-IP--H--KD-QLIGTLSNA-QFH---D
+
+>SFC17_S7_L001_Contig1000_frm2_orf5_NTSA  {|6(0)|}domNum1 
+S--S-Se----------------Gdkipsii--------------------------E-S-Q-N-----SA---RNVLERYAKNIRR-H--P-S-KD---------A-KK--H--VD-SLKGDLTKA-EFR---G
+
+>SFC17_S7_L001_Contig1014_frm2_orf13_NTSA  {|3(0)|}domNum1 
+G--P-Sssaledvk---------N---------------------------------E-S-H-N-----SA---RNVLEGFAESIKN-Q--A-E-KD---------A-KE--H--GQ-HLTGDLAKA-VFR---H
+
+>IFM23_S4_Contig486  {|3(0)|}frame_3_NTSB domNum1 
+G--R-Gg----------------Gdaeky----------------------------K-N-A-T-----NV---KYLFDLIGETVQK-K--A-K-EKaeva-----S-KK--Y--FE-ELHGDLSKA-DYK---K
+
+>IFM23_S4_Contig565  {|3(0)|}frame_3_NTSB domNum1 
+G--N-Ag----------------Ggndy-----------------------------S-S-A-K-----DA---KDLLDRIGEDVYK-K--V-K-DD---------S-NV--F--TD-DLKGNLASA-TEG---S
+
+>IFM23_S4_Contig235  {|5(0)|}frame_3_NTSB domNum1 
+S--T-T-------------------------------------------------------Y-S-----SA---KDFLDSIGKKVHD-Ei-V-E-KGv--------A-ET--Y--KE-ALKGKLQEA-KVM---G
+
+>IFM23_S4_Contig695  {|14(0)|}frame_-2_NTSB domNum1 
+Q--G-Ge----------------D---------------------------------I-D-E-T-----SA---KNLLDSIGKIVHD-Q--V-K-SE---------S-NG--F--KD-DLKGNLQHA-TNI---N
+
+>IFM23_S4_Contig696  {|5(0)|}frame_-2_NTSB domNum1 
+Q--G-Gtqeqedk----------Y---------------------------------K-N-A-E-----DA---KDLFDIIGKDVHD-Ei-V-K-SE---------A-LG--Rs-NG-DLQGILSKA-DYK---N
+
+>IFM23_S4_Contig693  {|7(0)|}frame_1_NTSB domNum1 
+G--G-Gg----------------G---------------------------------S-SvE-E-----DA---KHVLDEFGQQVYK-Ek-V-E-KDgad------A-ET--Y--KG-ELKGDLNTA-NGR---S
+
+>IFM23_S4_Contig581  {|9(0)|}frame_1_NTSB domNum1 
+A--P-R-----------------Y---------------------------------D-Q-A-T-----SA---KELFDLIGETVQK-K--V-H-DA---------A-KT--Y--TS-ELKGDLSKA-KFE---K
+
+>IFM23_S4_Contig502  {|10(0)|}frame_-2_NTSB domNum1 
+G--P-Rg----------------Gvge------------------------------I-D-D-K-----DA---KHLLDSIGKKVHD-Ei-V-K-KDg--------A-EK--Y--KG-ELKGSLSLA-KGS---G
+
+>IFM57_S30_L002_Contig1000 frame_-2_NTSB domNum1 
+--------------------------------------------------------------------------------IGKRVHA-Q--V-Q-NE---------A-AG--Rg-GS-ELKGLLSLA-TFS---S
+
+>IFM57_S30_L002_4330_soapGraphK61  {|13(0)|}frame_3_NTSB domNum1 
+-----Sd----------------Y---------------------------------S-I-A-S-----DA---KDLLDKIGEDIYK-I--A-N-EA---------A-LK--Y--EN-ELHGRLSEA-TFS---N
+
+>IFM57_S30_L002_4406_soapGraphK61  {|16(0)|}frame_2_NTSB domNum1 
+G--G-Gd----------------G---------------------------------I-D-H-Q-----SA---KHLLDSIGEKVYK-Ek-V-Q-SD---------A-ET--Y--KD-ALKGKLQHA-TED---S
+
+>IFM57_S30_L002_Contig1701  {|16(0)|}frame_-3_NTSB domNum1 
+G--S-Gg----------------G---------------------------------G-V-D-E-----DA---KHMFDRIGQQVHD-Q--V-K-KGg--------A-ET--Y--KD-DLKGSLSLA-STS---L
+
+>IFM57_S30_L002_Contig859  {|9(0)|}frame_1_NTSB domNum1 
+G--G-Rg----------------Gqggsdggg-------------------------T-K-D-E-----SA---KHVLDKIGQQVYE-Q--V-K-KEvdgt-----A-KK--Y--IE-ALKGDLKKA-TYP---N
+
+>IFM57_S30_L002_Contig850  {|1(0)|}frame_3_NTSB domNum1 
+G--G-Sv----------------G---------------------------------S-T---Q-----DA---KHLLDSIGKIVHN-Q--V-K-KEadgt-----A-KN--Y--IE-ELKGDLNTA-NGH---R
+
+>IFM57_S30_L002_Contig1534  {|12(0)|}frame_-1_NTSB domNum1 
+G--G-Gg----------------D---------------------------------P-Q-D-E-----SA---KHMFDRIGGIIQK-E--A-H-KK---------A-LE--Rs-GS-ELKGFISRA-SYN---G
+
+>IFM57_S30_L002_Contig1537  {|8(0)|}frame_1_NTSB domNum1 
+QvyT-Tvnd--------------Y---------------------------------T-L-A-T-----DA---RDLLDRIGGKIQE-Q--A-Y-QK---------A-LG--Rs-RN-ELHGRLKDA-IFHa--R
+
+>IFM57_S30_L002_Contig1698  {|11(0)|}frame_3_NTSB domNum1 
+A--PvTd----------------Y---------------------------------S-D-A-T-----DA---KDLLDRIGETVQE-K--V-H-KE---------D-AD--Y--RN-YLQGHLEDA-RFE---K
+
+>IFM57_S30_L002_Contig604  {|8(0)|}frame_1_NTSB domNum1 
+G--G-Ss----------------G---------------------------------E-E-D-K-----DA---KHLLDSIGKKVHD-K--V-K-GE---------A-EN--Y--IG-DLKGLLSQA-PIL---G
+
+>IFM57_S30_L002_Contig1699  {|18(0)|}frame_-2_NTSB domNum1 
+G--G-Sg----------------Gdadky----------------------------K-S-A-P-----DA---KHLLDMIGEEVYK-Ek-V-H-RE---------A-AD--Y--RG-ELHGHLSDA-NFK---N
+
+>IFM57_S30_L002_Contig1547  {|13(0)|}frame_-1_NTSB domNum1 
+-----Sd----------------Y---------------------------------S-I-A-S-----DA---KDLLDKIGEDIYK-I--A-N-EA---------A-LK--Y--EN-ELHGRLSEA-TFS---N
+
+>IFM57_S30_L002_Contig1543  {|4(0)|}frame_1_NTSB domNum1 
+G--S-Ag----------------T---------------------------------E-D----------A---KHALDKIGEDVYK-K--V-K-DE---------A-QK--Rs-NG-ELKGLLSLA-TAS---E
+
+>IFM57_S30_L002_Contig139  {|10(0)|}frame_-3_NTSB domNum1 
+A--D-Apd---------------Y---------------------------------S-N-V-N-----NV---KDLFDEVGKYIEK-K--V-R-GD---------A-LT--Rs-HS-KLKGDLSSV-KFY---T
+
+>IFM57_S30_L002_Contig1683  {|7(0)|}frame_2_NTSB domNum1 
+G--S-Gg----------------D---------------------------------S-SrD-E-----SV---KHLFDRIGKKVYE-K--T-E-KI---------A-KR--Y--TT-ELHGDLSKA-SYP---N
+
+>IFM57_S30_L002_Contig1553  {|16(0)|}frame_1_NTSB domNum1 
+G--G-Gd----------------G---------------------------------I-D-H-Q-----SA---KHLLDSIGEKVYK-Ek-V-Q-SD---------A-ET--Y--KD-ALKGKLQHA-TED---S
+
+>IFM57_S30_L002_Contig1550  {|3(0)|}frame_-1_NTSB domNum1 
+P--S-Avsapd------------Y---------------------------------S-K-A-T-----NV---KYLFDMIGEIVQK-K--V-T-RK---------A-IQ--Y--NN-DLHGVLSNV-NFS---N
+
+>IFM57_S30_L002_Contig1721  {|3(0)|}frame_-1_NTSB domNum1 
+Q--G-Sg----------------Ggggqggkddy-----------------------K-D-A-T-----NV---KDLLDKIGQQVYD-Et-V-K-KGvad------A-KN--Y--IG-ELKGKLKEA-KGI---R
+
+>IFM57_S30_L002_Contig999  {|27(0)|}frame_2_NTSB domNum1 
+A--S-Tt----------------Y---------------------------------S-S----------V---KDLLEDIGKSIQK-Q--A-H-DA---------A-LG--Rs-GS-DLHGLLSRA-KFN---G
+
+>IFM061_S15_Contig894  {|7(0)|}frame_2_NTSB domNum1 
+G--G-Ged---------------G---------------------------------I-D-D-K-----DA---KHLLDSIGKIVHK-K--V-H-SE---------A-QT--Y--KQ-ALTGQLSFA-TLS---G
+
+>IFM061_S15_Contig1006  {|2(0)|}frame_-3_NTSB domNum1 
+S--P-Tptvnk------------Y---------------------------------T-W-A-S-----DA---KNLLEEIGEDIYK-K--A-K-EA---------A-LG--Rg-GN-KLQGDLSKA-RFK---D
+
+>IFM061_S15_Contig494  {|13(0)|}frame_3_NTSB domNum1 
+G--G-Gg----------------Gsaggk----------------------------D-K-Y-D-----DA---KHMFDRIGEEVHK-K--V-H-TA---------A-LK--Y--EK-ELHGCLKDA-IFE---E
+
+>IFM061_S15_Contig1000  {|11(0)|}frame_-3_NTSB domNum1 
+Q--G-GrgghgggsskekedepdY---------------------------------T-N-V-K-----DA---KELLDKIGEHIYK-K--V-HlGD---------A-N---Y--RG-KLYGRLTQA-QFS---N
+
+>IFM061_S15_Contig1002  {|3(0)|}frame_-2_NTSB domNum1 
+Q--S-Rgaggvedaek-------Y---------------------------------K-N-A-T-----NV---KELLDKIGEDVYK-K--V-K-DA---------A-LP--Y--ND-ALQGRLSDA-TYP---N
+
+>IFM061_S15_Contig920  {|7(0)|}frame_-3_NTSB domNum1 
+G--G-Gd----------------D---------------------------------I-D-H-K-----SV---KHLLDSIGEKVYK-Ek-V-E-ND---------A-EK--Y--KE-ALKGDLNKA-NGH---S
+
+>IFM061_S15_Contig889  {|5(0)|}frame_-1_NTSB domNum1 
+G--G-Gg----------------G---------------------------------S-T---Q-----DA---KHVLDEFGQKVHD-K--V-K-EE---------A-NQ--Y--KE-ALKGYLNKA-VST---S
+
+>IFM061_S15_Contig323  {|5(0)|}frame_2_NTSB domNum1 
+R--P-Gg----------------V---------------------------------I-E-D-A-----TA---KHIFDRIGRTIHQ-Q--V-N-KV---------A-KK--Y--YD-DLHGRLSEA-TFE---K
+
+>IFM061_S15_Contig756  {|3(0)|}frame_2_NTSB domNum1 
+---G-Gg----------------G---------------------------------Q-G----------A---RDVLEQFGAIIQE-Q--A-K-AE---------A-VQ--H--RK-DLEGRLSNV-IFS---N
+
+>IFM061_S15_Contig862  {|10(0)|}frame_1_NTSB domNum1 
+A--G-Sg----------------G---------------------------------Q-G----------A---RDVLEEFGGIIQQ-Q--A-D-NA---------A-KQ--Y--SS-ELKGDLLRV-QFS---K
+
+>IFM061_S15_Contig996  {|8(0)|}frame_1_NTSB domNum1 
+T--G-Ge----------------Gr--------------------------------I-E-D-A-----TA---KHLLDSIGKKVYD-K--V-H-SE---------V-DA--Y--RD-KLKGTLSKA-TYP---K
+
+>IFM061_S15_Contig598  {|1(0)|}frame_-3_NTSB domNum1 
+G--G-Gg----------------G---------------------------------G-V-D-K-----DA---KNMFDRIGQQVYN-Ek-V-K-NGe--------A-QT--Y--DS-YLKGNLQHA-TKS---S
+
+>IFM061_S15_Contig908  {|9(0)|}frame_2_NTSB domNum1 
+S--S-Ag----------------T---------------------------------N-G-Y-N-----DA---KDLLDKIGQQVHD-Ei-V-E-NAa--------A-KK--Y--IE-ELRGNLTDS-TIL---G
+
+>IFM061_S15_2294_soapGraphK61  {|11(0)|}frame_3_NTSB domNum1 
+G--G-Sg----------------Gagsgggdd-------------------------I-D-H-A-----SA---KHVLDEFGQQVYD-Ei-V-K-KGv--------A-KT--Y--KG-ELEGSLSQV-SVK---S
+
+>IFM061_S15_Contig904  {|10(0)|}frame_1_NTSB domNum1 
+-------------------------------------------------------------Y-N-----SA---KDLLEDIGKSIQK-E--A-H-TE---------A-SQ--H--ER-SLKGSLSQV-EFK---E
+
+>IFM061_S15_Contig903  {|6(0)|}frame_3_NTSB domNum1 
+Q--P-Kvrpd-------------Y---------------------------------S-D-A-N-----DA---KDLLDKIGQQVYD-Et-V-K-KV---------A-DN--Y--SS-QLKGTLSQA-TFE---G
+
+>IFM061_S15_Contig481  {|4(0)|}frame_1_NTSB domNum1 
+-----Gg----------------G---------------------------------S-P---Q-----DA---KHLLDSIGEKVYK-E--V-K-KGv--------A-ET--Y--KE-ALKGDLKKA-AST---S
+
+>IFM061_S15_Contig665  {|11(0)|}frame_-2_NTSB domNum1 
+G--G-Sg----------------Gagsgggdd-------------------------I-D-H-A-----SA---KHVLDEFGQQVYD-Ei-V-K-KGv--------A-KT--Y--KG-ELEGSLSQV-SVK---S
+
+>IFC63_S16_L001_Contig2029  {|7(0)|}frame_-3_NTSB domNum1 
+G--G-Gd----------------D---------------------------------I-D-H-K-----SV---KHLLDSIGEKVYK-Ek-V-E-ND---------A-EK--Y--KE-ALKGDLNKA-NGH---S
+
+>IFC63_S16_L001_Contig1642  {|2(0)|}frame_1_NTSB domNum1 
+Qn-G-Gg----------------G---------------------------------Q-G----------A---RDVLEQFGAIIQE-Q--A-K-AE---------A-VQ--H--RK-DLEGRLSNV-IFS---N
+
+>IFC63_S16_L001_Contig1914  {|9(0)|}frame_2_NTSB domNum1 
+S--S-Ag----------------T---------------------------------N-G-Y-N-----DA---KDLLDKIGQQVHD-Ei-V-E-NAa--------A-KK--Y--IE-ELRGNLTDS-TIL---G
+
+>IFC63_S16_L001_Contig2074  {|7(0)|}frame_1_NTSB domNum1 
+G--G-Ged---------------G---------------------------------I-D-D-K-----DA---KHLLDSIGKIVHK-K--V-H-SE---------A-QT--Y--KQ-ALTGQLSFA-TLS---G
+
+>IFC63_S16_L001_Contig1848  {|3(0)|}frame_-2_NTSB domNum1 
+-----------------------Y---------------------------------K-S-A-T-----DA---KHLLDQIGEDIYK-K--I-K-DD---------A-ND--F--RE-KLKGNLNKA-NNS---S
+
+>IFC63_S16_L001_Contig2044  {|5(0)|}frame_-3_NTSB domNum1 
+R--G-Gg----------------K---------------------------------D-D-Y-K-----DA---RELLDKIGKTVHE-K--L-K-GD---------A-EK--Y--SS-QLKGNLSLA-KGS---G
+
+>IFC63_S16_L001_Contig1061  {|1(0)|}frame_-1_NTSB domNum1 
+G--G-Gg----------------G---------------------------------G-V-D-K-----DA---KNMFDRIGQQVYN-Ek-V-K-NGe--------A-QT--Y--DS-YLKGNLQHA-TKS---S
+
+>IFC63_S16_L001_Contig2083  {|6(0)|}frame_-3_NTSB domNum1 
+Q--P-Kvrpd-------------Y---------------------------------S-D-A-N-----DA---KDLLDKIGQQVYD-Et-V-K-KV---------A-DN--Y--SS-QLKGTLSQA-TFE---G
+
+>IFC63_S16_L001_Contig1594  {|10(0)|}frame_-2_NTSB domNum1 
+-------------------------------------------------------------Y-N-----SA---KDLLEDIGKSIQK-E--A-H-TE---------A-SQ--H--ER-SLKGSLSQV-EFK---E
+
+>IFC63_S16_L001_Contig1656  {|11(0)|}frame_1_NTSB domNum1 
+Q--G-GrgghgggsskekedepdY---------------------------------T-N-V-K-----DA---KELLDKIGEHIYK-K--V-HlGD---------A-N---Y--RG-KLYGRLTQA-QFS---N
+
+>IFC63_S16_L001_Contig2081  {|5(0)|}frame_-1_NTSB domNum1 
+G--G-Gg----------------G---------------------------------S-T---Q-----DA---KHVLDEFGQKVHD-K--V-K-EE---------A-NQ--Y--KE-ALKGYLNKA-VST---S
+
+>IFC63_S16_L001_4700_soapGraphK61  {|1(0)|}frame_-3_NTSB domNum1 
+-------------------------------------------------------------D-K-----DA---KHVLDEFGQQVYK-Ek-V-Q-SD---------A-EK--Y--KE-ALKGDLNKA-NGH---R
+
+>IFM050_S11_Contig3396  {|15(0)|}frame_-1_NTSB domNum1 
+-----------------------G---------------------------------I-E-D-T-----TA---KHALDKIGEKIYE-K--A-K-KD---------A-EP--Y--IN-ELHGSLKDA-IFE---K
+
+>IFM050_S11_Contig3710  {|15(0)|}frame_1_NTSB domNum1 
+G--G-Gg----------------D---------------------------------I-E-D-K-----DA---KNMFDRIGKKVHE-Q--V-K-TE---------A-KE--Rs-NG-ELKGNLQEA-KGM---R
+
+>IFM050_S11_Contig3650  {|3(0)|}frame_-3_NTSB domNum1 
+Q--R-A---------------------------------------------------T-Q-D-E-----DA---KHMFDRIGAEVQD-I--A-H-SA---------A-VD--Y--IN-ELKGNLRNV-RFK---D
+
+>IFM050_S11_8064_soapGraphK61  {|15(0)|}frame_-3_NTSB domNum1 
+-----------------------G---------------------------------I-E-D-T-----TA---KHALDKIGEKIYE-K--A-K-KD---------A-EP--Y--IN-ELHGSLKDA-IFE---K
+
+>IFM050_S11_Contig1836  {|3(0)|}frame_2_NTSB domNum1 
+P--G-Gg----------------Eedr------------------------------I-D-D-T-----TA---KHLLDSIGKIVHK-K--V-H-SE---------A-LS--Rs-KS-ALKGFLTSA-KFS---N
+
+>IFM050_S11_Contig2853  {|4(0)|}frame_-2_NTSB domNum1 
+G--R-Rg----------------Gggrggggdd------------------------I-D-E-R-----SA---KHLLDSIGGIIEK-Q--A-K-ED---------A-KI--Y--QK-VLKGNLAEA-QFR---T
+
+>IFM050_S11_Contig2855  {|6(0)|}frame_1_NTSB domNum1 
+Q--G-Sag---------------Gvge------------------------------I-D-H-T-----SA---KHLLDSIGKRVHD-Q--V-K-NGg--------A-ET--Y--KD-DLKGNLQEA-TNR---S
+
+>IFM050_S11_Contig3693  {|12(0)|}frame_-3_NTSB domNum1 
+G--G-Gg----------------Gkddy-----------------------------K-D-A-T-----NV---KELLDKIGQKVYE-Ek-V-E-KDad-------A-EK--Y--KE-ALKGNLQAA-KGI---G
+
+>IFM050_S11_8042_soapGraphK61  {|6(0)|}frame_3_NTSB domNum1 
+G--N-Gg----------------Ggssq-----------------------------E-Q-D-E-----SV---KHMFDRIGQQVHD-K--V-K-GE---------A-EK--Rs-KG-KLQGDLLKA-RFE---K
+
+>IFM050_S11_7938_soapGraphK61  {|4(0)|}frame_3_NTSB domNum1 
+G--G-Gg----------------Gaggssggkdky----------------------K-N-A-K-----DA---KELLDRIGKDVYD-Ei-V-K-KD---------A-EE--Y--KG-DLKGSLTSA-TEG---S
+
+>IFM050_S11_Contig3788  {|20(0)|}frame_1_NTSB domNum1 
+G--G-Gg----------------Grgssga---------------------------D-K-Y-D-----DA---KDFLDKIGQQVYE-T--V-K-NGg--------A-KT--Y--ED-DLKACVSFAsTNW---Q
+
+>IFM050_S11_Contig3768  {|4(0)|}frame_-3_NTSB domNum1 
+Q--G-Gr----------------Geddi-----------------------------E-H-D-K-----DV---KHLLDSIGKNVHD-Q--V-K-ND---------A-ET--Y--KG-ELEGKLSQV-SVK---S
+
+>IFM050_S11_Contig3761  {|1(0)|}frame_-3_NTSB domNum1 
+S--S-Ag----------------T---------------------------------N-G-Y-N-----DA---KDFLDKMGEKVYK-Ei-V-K-SE---------A-NQ--Y--KD-DLKGSLTSA-TLS---G
+
+>IFM050_S11_Contig3717  {|10(0)|}frame_-1_NTSB domNum1 
+S--G-Gdg---------------G---------------------------------T-Q-D-E-----SA---KHALDRIGAEVQK-I--A-H-SD---------A-LN--H--IN-DLKGFISHA-KYN---G
+
+>IFM050_S11_Contig3792  {|4(0)|}frame_3_NTSB domNum1 
+G--G-Sg----------------Gggggggdgi------------------------E-H-D-K-----DA---KNMFDRIGQQVHE-E--V-E-KE---------A-KE--Rs-NG-DLKGSLTRA-TNL---G
+
+>IFM050_S11_Contig3798  {|13(0)|}frame_-2_NTSB domNum1 
+G--G-T-------------------------------------------------------D-K-----SA---KEVLDEIGETIQQ-Q--A-R-KA---------A-LN--H--IN-DLKGYLNNV-KFS---N
+
+>IFM050_S11_Contig3776  {|5(0)|}frame_-1_NTSB domNum1 
+-----------------------Y---------------------------------S-S-A-K-----NV---KELFDLIGEKVHE-E--V-K-NA---------A-KK--Y--VS-ELKGNLARA-KFD---R
+
+>IFM050_S11_Contig1887  {|7(0)|}frame_1_NTSB domNum1 
+-----------------------Y---------------------------------S-S-A-K-----DA---KDLLDRIGETVHK-K--V-H-GA---------A-LE--Y--NS-QLLGHLTQA-KFS---N
+
+>IFM050_S11_Contig3748  {|5(0)|}frame_2_NTSB domNum1 
+G--S-Gg----------------D---------------------------------S-SrD-E-----SV---KDLFDRIGKKVYE-K--T-E-KI---------A-KR--Y--TT-ELHGDLSKA-TYP---K
+
+>IFM050_S11_Contig3743  {|2(0)|}frame_-3_NTSB domNum1 
+N--S-Ag----------------M---------------------------------N-G-Y-S-----DA---KDFLDKMGEKVYR-Ek-V-Q-SD---------A-KT--Y--KE-ALKGDLASA-TED---S
+
+>IFM050_S11_8380_soapGraphK61  {|8(0)|}frame_-2_NTSB domNum1 
+G--G-Sg----------------Ggdd------------------------------I-D-D-K-----DA---KHLLDSIGKKVHD-Ei-V-K-TE---------A-AN--Y--VG-DLKGLLTSA-TLL---G
+
+>IFM050_S11_Contig1857  {|6(0)|}frame_3_NTSB domNum1 
+T--S-Aipsvnd-----------Y---------------------------------T-L-A-S-----DA---KHLLDRIGEDIYK-I--A-N-EA---------A-LK--Rs-YK-DLHGLLTSA-TYP---K
+
+>IFM050_S11_8030_soapGraphK61  {|6(0)|}frame_1_NTSB domNum1 
+A--S-Apr---------------Y---------------------------------D-Q-A-T-----SA---KEFLDLIGESVQK-K--V-H-GA---------A-KQ--Y--VS-ELKGDLSKA-KFE---L
+
+>IFM050_S11_Contig3756  {|8(0)|}frame_1_NTSB domNum1 
+G--G-Sskeeedepd--------Y---------------------------------T-N-V-K-----DA---KELLDKIGQQVYK-Ek-V-K-NGd--------A-KK--Y--ID-DLKAGVSFA-SIF---G
+
+>IFM050_S11_8354_soapGraphK61  {|2(0)|}frame_-1_NTSB domNum1 
+P--P-Avtd--------------Y---------------------------------S-S-A-K-----NV---KDLLEDIGEEIQK-E--A-H-EK---------A-LE--Hg-KD-KLQGFLSQA-TFK---H
+
+>IFM050_S11_Contig3434  {|10(0)|}frame_-3_NTSB domNum1 
+I--G-Gg----------------G---------------------------------T-K-D-E-----DA---KHMFDRIGQQVYD-E--V-K-NGad-------A-ET--Y--KG-ELKGDLNTA-NDR---S
+
+>IFM050_S11_18120_soapGraphK51  {|6(0)|}frame_1_NTSB domNum1 
+G--N-Gg----------------Ggssq-----------------------------E-Q-D-E-----SV---KHMFDRIGQQVHD-K--V-K-GE---------A-EK--Rs-KG-KLQGDLLKA-RFE---K
+
+>IFM050_S11_Contig3739  {|4(0)|}frame_1_NTSB domNum1 
+G--N-Gg----------------G---------------------------------T-K-D-E-----DA---KNMFDRIGKEVYE-Q--V-K-GE---------A-VD--Y--RS-ALQGRLSDA-RFP---H
+
+>IFM050_S11_Contig3424  {|6(0)|}frame_-1_NTSB domNum1 
+A--S-Apr---------------Y---------------------------------D-Q-A-T-----SA---KEFLDLIGESVQK-K--V-H-GA---------A-KQ--Y--VS-ELKGDLSKA-KFE---L
+
+>IFM050_S11_Contig3426  {|18(0)|}frame_-1_NTSB domNum1 
+A--S-Te----------------Nr--------------------------------T-S---R-----S------VLEEYGKNVQE-E--A-T-KK---------A-GE--Rs-KG-LLKGYLKEA-KFK---N
+
+>IFM047_S10_4640_soapGraphK61  {|3(0)|}frame_-2_NTSB domNum1 
+G--G-Rqg---------------Gk--------------------------------D-K-Y-D-----DA---KYMFDRIGKDVYD-K--V-K-GE---------A-QT--Y--KD-DLKAYVSFA-SIF---G
+
+>IFM047_S10_Contig1227  {|3(0)|}frame_2_NTSB domNum1 
+S--P-Tptvnk------------Y---------------------------------T-W-A-S-----DA---KNLLEEIGEDIYK-K--A-K-EA---------A-LG--Rg-GN-KLQGDLSKA-RFK---D
+
+>IFM047_S10_4738_soapGraphK61  {|7(0)|}frame_1_NTSB domNum1 
+G--S-Ggassgendadk------Y---------------------------------K-N-A-E-----DA---KHLLDMIGEDIYK-K--A-K-EA---------A-LP--Y--NN-ALHGLLTRA-TYP---R
+
+>IFM047_S10_Contig981  {|9(0)|}frame_3_NTSB domNum1 
+G--G-Sg----------------G---------------------------------S-T---Q-----DA---KHVLDKFGQQVLD-K--V-H-DA---------A-KT--Y--EG-ELKGNLQKA-ATT---T
+
+>IFM047_S10_Contig1403  {|8(0)|}frame_-1_NTSB domNum1 
+G--G-Sg----------------Ggdd------------------------------I-D-D-K-----DA---KHLLDSIGKKVHD-Ei-V-K-TE---------A-AN--Y--VG-DLKGLLTSA-TLL---G
+
+>IFM047_S10_9078_soapGraphK51 frame_-1_NTSB domNum1 
+G--G-Sg----------------G---------------------------------T-Q-D-D-----DA---KNMFDRIGKDVYK-T--V-K-NE---------S-EQ--Rs-NG-DLKGNLTDS-TIF---G
+
+>IFM047_S10_Contig1211  {|3(0)|}frame_-2_NTSB domNum1 
+S--R-Apn---------------Y---------------------------------S-S-A-Q-----NA---KELLELIGETVQK-K--A-T-NI---------V-HE--N--RE-KLKGNLSDA-KFL---G
+
+>IFM047_S10_Contig1626  {|2(0)|}frame_-2_NTSB domNum1 
+A--G-Sg----------------G---------------------------------Q-G----------A---RDVLEQFGESVQK-K--V-H-DE---------A-VQ--R--GN-TLHAVLSKA-TFK---H
+
+>IFM047_S10_Contig1244  {|14(0)|}frame_3_NTSB domNum1 
+Q--G-Ge----------------D---------------------------------I-D-E-T-----SA---KNLLDSIGKIVHD-K--V-K-ED---------A-EP--Y--IN-ELHGRLSEA-IFE---K
+
+>IFM047_S10_Contig1022  {|14(0)|}frame_-2_NTSB domNum1 
+Q--G-Ge----------------D---------------------------------I-D-E-T-----SA---KNLLDSIGKIVHD-K--V-K-ED---------A-EP--Y--IN-ELHGRLSEA-IFE---K
+
+>IFM047_S10_Contig1449  {|6(0)|}frame_3_NTSB domNum1 
+G--K-Gg----------------G---------------------------------T-K-D-D-----DA---KYMFDRIGKDVYD-Q--V-K-KDg--------A-ET--Y--KD-YLKGNLTDS-SIW---G
+
+>IFM047_S10_4772_soapGraphK61  {|6(0)|}frame_1_NTSB domNum1 
+G--K-Gg----------------G---------------------------------T-K-D-D-----DA---KYMFDRIGKDVYD-Q--V-K-KDg--------A-ET--Y--KD-YLKGNLTDS-SIW---G
+
+>IFM047_S10_Contig1232  {|7(0)|}frame_-3_NTSB domNum1 
+G--S-Ggassgendadk------Y---------------------------------K-N-A-E-----DA---KHLLDMIGEDIYK-K--A-K-EA---------A-LP--Y--NN-ALHGLLTRA-TYP---R
+
+>IFM047_S10_Contig1160  {|2(0)|}frame_2_NTSB domNum1 
+N--S-Ag----------------M---------------------------------N-G-Y-S-----DA---KDFLDKMGEKVYR-Ek-V-Q-SD---------A-KT--Y--KE-ALKGDLASA-TED---S
+
+>IFM047_S10_Contig1045  {|1(0)|}frame_-2_NTSB domNum1 
+-----------------------G---------------------------------I-E-D-T-----TA---KHALDKIGEKIYE-K--A-K-KD---------A-EP--Y--IN-ELHGSLKDA-IFE---K
+
+>IFD8_S2_Contig1128  {|5(0)|}frame_-2_NTSB domNum1 
+S--T-T-------------------------------------------------------Y-S-----SA---KDFLDSIGKKVHD-Ei-V-E-KGv--------A-ET--Y--KE-ALKGKLQEA-KVM---G
+
+>IFD8_S2_Contig836  {|3(0)|}frame_2_NTSB domNum1 
+G--G-Rqg---------------Gk--------------------------------D-K-Y-D-----DA---KYMFDRIGKDVYD-K--V-K-GE---------A-QT--Y--KD-DLKAYVSFA-SIF---G
+
+>IFD8_S2_Contig762 frame_-1_NTSB domNum1 
+G--G-Sg----------------G---------------------------------T-Q-D-D-----DA---KNMFDRIGKDVYK-T--V-K-NE---------S-EQ--Rs-NG-DLKGNLTDS-TIF---G
+
+>IFD8_S2_Contig651  {|16(0)|}frame_1_NTSB domNum1 
+-----------------------G---------------------------------I-E-D-T-----TA---KHALDKIGEKVYK-Ek-V-E-KD---------A-EQ--Y--FN-ELHGNLSQA-TFE---E
+
+>IFD8_S2_Contig1086  {|7(0)|}frame_1_NTSB domNum1 
+G--S-Ggassgendadk------Y---------------------------------K-N-A-E-----DA---KHLLDMIGEDIYK-K--A-K-EA---------A-LP--Y--NN-ALHGLLTRA-TYP---R
+
+>IFD8_S2_Contig843 frame_-1_NTSB domNum1 
+-------------------------------------------------------------D-D-----DA---KYMFDRIGKDVYD-Q--V-K-KDg--------A-ET--Y--KD-YLKGNLTDS-SIW---G
+
+>IFD8_S2_Contig1034  {|8(0)|}frame_2_NTSB domNum1 
+Q--K-Aaapn-------------Y---------------------------------K-D-A-Q-----DA---KHLLDMIGEDIYK-K--A-Q-RD---------A-LE--Hs-NS-ELQGHLSKA-TYP---N
+
+>IFD8_S2_32839_soapGraphK31  {|3(0)|}frame_2_NTSB domNum1 
+G--G-Rqg---------------Gk--------------------------------D-K-Y-D-----DA---KYMFDRIGKDVYD-K--V-K-GE---------A-QT--Y--KD-DLKAYVSFA-SIF---G
+
+>IFD8_S2_Contig1043  {|1(0)|}frame_-3_NTSB domNum1 
+-------------------------------------------------------------D-K-----DA---KHLLDSIGKKVHD-Ei-V-K-TE---------A-AN--Y--VG-DLKGLLTSA-TLL---G
+
+>IFD8_S2_Contig1127  {|4(0)|}frame_1_NTSB domNum1 
+G--G-Sg----------------G---------------------------------S-T---Q-----DA---KHVLDKFGQQVLD-K--V-H-DA---------A-KT--Y--EG-ELKGNLQKA-ATT---T
+
+>IFM12_S16_Contig827  {|10(0)|}frame_-3_NTSB domNum1 
+G--G-Sg----------------Gggrgssgedg-----------------------I-D-H-A-----SA---KHVLDEFGQQVYE-Q--V-K-NA---------A-ND--L--KN-DLKGNLASA-SIF---G
+
+>IFM12_S16_Contig841  {|12(0)|}frame_-3_NTSB domNum1 
+G--S-Gvedadk-----------Y---------------------------------K-N-A-K-----DA---KHLFDIIGKEVYD-Q--V-K-TE---------A-EK--Y--IE-VLKGSLTRA-TIL---R
+
+>IFM12_S16_Contig844  {|14(0)|}frame_-2_NTSB domNum1 
+Q--G-Ge----------------D---------------------------------I-D-E-T-----SA---KNLLDSIGKIVHD-Q--V-K-SE---------S-NG--F--KD-DLKGNLQHA-TNI---N
+
+>IFM12_S16_Contig540  {|3(0)|}frame_1_NTSB domNum1 
+-----G-----------------M---------------------------------N-G-Y-S-----DA---KDFLDKIGQKVYE-Ek-V-E-KDad-------A-EK--Y--KE-ALKGNLQAA-KGI---G
+
+>IFM12_S16_Contig852  {|7(0)|}frame_-1_NTSB domNum1 
+-----------------------Y---------------------------------S-K-A-T-----NV---KELFDLIGETVQK-K--A-K-EKadda-----S-KK--Y--FE-ELHGDLSKA-TYK---N
+
+>IFM12_S16_Contig530  {|8(0)|}frame_-2_NTSB domNum1 
+T--G-Ge----------------Gr--------------------------------I-E-D-A-----TA---KHLLDSIGKKVYD-K--V-H-SE---------V-DA--Y--RD-KLKGTLSKA-TYP---K
+
+>IFM12_S16_Contig681  {|4(0)|}frame_1_NTSB domNum1 
+A--E-Sg----------------G---------------------------------Q-G----------A---KDFLDKIGEDIYK-I--A-K-ND---------A-ND--F--RE-KLKGTLSQA-TYP---N
+
+>IFM12_S16_Contig686  {|10(0)|}frame_1_NTSB domNum1 
+-------------------------------------------------------------A-T-----SA---KDLLDQIGETVQK-E--V-H-GD---------A-QQ--Y--FS-ELKGDLSQA-KFR---T
+
+>IFM12_S16_Contig342  {|10(0)|}frame_2_NTSB domNum1 
+Q--G-Rqg---------------Gkdeedp---------------------------I-E-HnK-----DA---KHLFDSIGEKVYR-Ek-V-Q-SD---------A-KT--Y--EG-ELKGNLSFA-SIF---D
+
+>IFM12_S16_Contig835  {|3(0)|}frame_-3_NTSB domNum1 
+A--E-Sa----------------E---------------------------------P-K-D-P-----SA---KHMFDRIGKDVYE-K--A-K-NA---------A-LP--Y--ND-ALHGHLSKA-RFE---E
+
+>IFM12_S16_Contig556  {|2(0)|}frame_2_NTSB domNum1 
+G--L-Ga----------------R---------------------------------S-N---K-----SA---KEVFDEIGGIIQQ-Q--A-K-SD---------A-EQ--H--GS-ELKGDLSRV-EFT---N
+
+>IFM26_S8_Contig84  {|4(0)|}frame_1_NTSB domNum1 
+-------------------------------------------------------------D-A-----TA---KNIFDRIGRTIQQ-Q--V-H-DA---------A-KK--Y--TS-QLHGDLSKA-TYP---G
+
+>IFM26_S8_Contig631  {|10(0)|}frame_-2_NTSB domNum1 
+-------------------------------------------------------------Y-N-----SA---KDLLEDIGKSIQK-E--A-H-TE---------A-SQ--H--ER-SLKGSLSQV-EFK---E
+
+>IFM26_S8_Contig645  {|8(0)|}frame_-1_NTSB domNum1 
+-----------------------------------------------------------K-D-P-----SA---KHMFDRIGQQVYE-Q--V-K-KE---------A-AG--Rg-GG-ELEGLLSLA-KVS---G
+
+>IFM26_S8_Contig97  {|7(0)|}frame_2_NTSB domNum1 
+G--G-Gg----------------D---------------------------------I-E-D-K-----DA---KHVLDEFGQQVYD-K--V-K-GE---------A-EK--Y--KN-KLKGDLKEAaKGM---G
+
+>IFM26_S8_Contig335  {|12(0)|}frame_1_NTSB domNum1 
+G--S-Sg----------------Gkdky-----------------------------K-D-A-P-----DA---KHLLDIIGKDVYD-K--V-K-EE---------A-EN--Y--IS-ELEGTLSQV-SIN---S
+
+>IFM26_S8_Contig136  {|5(0)|}frame_1_NTSB domNum1 
+P--Q-Gg----------------G---------------------------------T-Q-D-D-----SV---KDLFDRIGQEVHE-E--V-K-ND---------A-NV--F--TD-YLKGDLKKA-KVM---G
+
+>IFM26_S8_1976_soapGraphK61  {|5(0)|}frame_-1_NTSB domNum1 
+-----------------------Y---------------------------------K-D-A-P-----DA---KHLLDIIGKDVYD-K--V-K-EE---------A-EN--Y--IS-ELEGTLSQV-SIN---S
+
+>IFM26_S8_Contig447  {|3(0)|}frame_3_NTSB domNum1 
+P--G-Ggqvg-------------Gdd-------------------------------I-D-E-R-----SA---KHLLDSIGKKVHK-E--V-K-NA---------A-ND--F--RE-KLKGDLKKA-AST---N
+
+>IFM26_S8_Contig555  {|4(0)|}frame_2_NTSB domNum1 
+G--D-Gg----------------Gdan------------------------------K-S-A-R-----NA---RDILEEYGKKVQE-E--A-T-NK---------A-GE--Rs-YG-DLQGILSKA-TFN---K
+
+>IFM21_S3_Contig776  {|3(0)|}frame_2_NTSB domNum1 
+P--G-Ggqvg-------------Gdd-------------------------------I-D-E-R-----SA---KHLLDSIGKKVHK-E--V-K-NA---------A-ND--F--RE-KLKGDLKKA-AST---N
+
+>IFM21_S3_Contig775  {|4(0)|}frame_1_NTSB domNum1 
+G--G-Gg----------------G---------------------------------S-T---Q-----DA---KHVLDEFGQKVHD-K--V-K-EE---------A-NQ--Y--KE-ALKGYLNKA-VST---S
+
+>IFM21_S3_Contig814  {|7(0)|}frame_-1_NTSB domNum1 
+G--G-Ged---------------G---------------------------------I-D-D-K-----DA---KHLLDSIGKIVHK-K--V-H-SE---------A-QT--Y--KQ-ALTGQLSFA-TLS---G
+
+>IFM21_S3_Contig678  {|9(0)|}frame_-1_NTSB domNum1 
+S--S-Ag----------------T---------------------------------N-G-Y-N-----DA---KDLLDKIGQQVHD-Ei-V-E-NAa--------A-KK--Y--IE-ELRGNLTDS-TIL---G
+
+>IFM21_S3_Contig944  {|9(0)|}frame_1_NTSB domNum1 
+Q--G-Gged--------------Gieda-----------------------------E-K-Y-K-----NA---KDFLDKIGQQVHD-Ei-V-K-KDg--------A-ET--Y--KE-ALKGDLKKA-KVS---G
+
+>IFM21_S3_Contig482  {|1(0)|}frame_-3_NTSB domNum1 
+---G-St----------------G---------------------------------G-G-D-K-----DA---KHLFDRIGEEVYK-Ek-V-K-NE---------A-ET--Y--KD-ALKGKLSFG-T-----T
+
+>IFM21_S3_Contig916  {|1(0)|}frame_-3_NTSB domNum1 
+G--G-Gg----------------G---------------------------------G-V-D-K-----DA---KNMFDRIGQQVYN-Ek-V-K-NGe--------A-QT--Y--DS-YLKGNLQHA-TKS---S
+
+>IFM21_S3_Contig518  {|10(0)|}frame_2_NTSB domNum1 
+G--G-Rg----------------Dnadmy----------------------------K-S-A-T-----DA---KHLLDQIGEDIYK-K--I-K-DD---------A-ND--F--RE-KLKGNLNKA-NNS---S
+
+>IFM21_S3_Contig748  {|2(0)|}frame_1_NTSB domNum1 
+N--S-Ag----------------M---------------------------------N-G-Y-S-----DA---KDFLDKMGEKVYR-Ek-V-Q-SD---------A-KT--Y--KE-ALKGDLASA-TED---S
+
+>IFM21_S3_Contig581  {|2(0)|}frame_-2_NTSB domNum1 
+G--G-Sg----------------G---------------------------------T-D---K-----SA---KEVLDEYGEQIKK-E--V-H-AK---------A-LE--Y--EN-DLHGFLSRV-VFS---N
+
+>IFM56_S15_Contig938  {|9(0)|}frame_2_NTSB domNum1 
+A--P-R-----------------Y---------------------------------D-Q-A-T-----SA---KELFDLIGETVQK-K--V-H-DA---------A-KT--Y--TS-ELKGDLSKA-KFE---K
+
+>IFM56_S15_Contig1774  {|17(0)|}frame_-2_NTSB domNum1 
+---------------------------------------------------------------N-----DA---KDLLDQIGEKIQE-Q--A-H-AA---------A-LK--Rs-YK-DLHGDLSRA-TYP---K
+
+>IFM53_S14_L001_Contig2097  {|3(0)|}frame_1_NTSB domNum1 
+Q--K-Aaapd-------------Y---------------------------------S-S-A-K-----DA---KHLLDMIGENVYN-E--V-H-RE---------D-AD--Y--RG-KLHGHLSDA-NFK---N
+
+>IFM53_S14_L001_Contig2091  {|7(0)|}frame_-3_NTSB domNum1 
+G--G-Ged---------------G---------------------------------I-D-D-K-----DA---KHLLDSIGKIVHK-K--V-H-SE---------A-QT--Y--KQ-ALTGQLSFA-TLS---G
+
+>IFM53_S14_L001_Contig2477  {|8(0)|}frame_1_NTSB domNum1 
+G--R-Gg----------------G---------------------------------G-S-P-Q-----DA---KHLLDSIGKIVHD-K--V-K-ED---------A-EP--Y--IN-ELHGRLSEA-IFE---K
+
+>IFM53_S14_L001_Contig2715  {|4(0)|}frame_-1_NTSB domNum1 
+G--G-Gg----------------G---------------------------------S-T---Q-----DA---KHVLDEFGQKVHD-K--V-K-EE---------A-NQ--Y--KE-ALKGYLNKA-VST---S
+
+>IFM53_S14_L001_Contig1587  {|8(0)|}frame_1_NTSB domNum1 
+-------------------------------------------------------------Y-N-----SA---KDLLEDIGKSIQK-E--A-H-TE---------A-SQ--H--ER-SLKGSLSQV-EFK---E
+
+>IFM53_S14_L001_Contig1658  {|5(0)|}frame_2_NTSB domNum1 
+Q--G-Gtqeqedk----------Y---------------------------------K-N-A-E-----DA---KDLFDIIGKDVHD-Ei-V-K-SE---------A-LG--Rs-NG-DLQGILSKA-DYK---N
+
+>IFM53_S14_L001_Contig2086  {|7(0)|}frame_1_NTSB domNum1 
+S--G-Gg----------------Gsv-------------------------------E-E-D-K-----DA---KYMFDRIGQQVHE-Q--V-K-GE---------A-QT--Y--FS-ELKGDLKEA-KGI---G
+
+>IFM53_S14_L001_Contig2121  {|14(0)|}frame_2_NTSB domNum1 
+V--G-Ge----------------D---------------------------------I-D-D-K-----DA---KHLLDSIGKKVHD-Ei-V-K-KD---------V-VH--H--IS-YLKGVLANA-TYP---N
+
+>IFM53_S14_L001_Contig1601  {|9(0)|}frame_1_NTSB domNum1 
+S--S-Ag----------------T---------------------------------N-G-Y-N-----DA---KDLLDKIGQQVHD-Ei-V-E-NAa--------A-KK--Y--IE-ELRGNLTDS-TIL---G
+
+>IFM054_S12_Contig990 frame_-2_NTSB domNum1 
+---------------------------------------------------------------------DA---KHLLDMIGEDIYK-K--A-K-EA---------A-LP--Y--NN-ALHGLLTRA-TYP---R
+
+>IFM054_S12_Contig895  {|2(0)|}frame_2_NTSB domNum1 
+S--P-Tptvnk------------Y---------------------------------T-W-A-S-----DA---KNLLEEIGEDIYK-K--A-K-EA---------A-LG--Rg-GN-KLQGDLSKA-RFK---D
+
+>IFM054_S12_Contig1088  {|8(0)|}frame_1_NTSB domNum1 
+Q--K-Aaapn-------------Y---------------------------------K-D-A-Q-----DA---KHLLDMIGEDIYK-K--A-Q-RD---------A-LE--Hs-NS-ELQGHLSKA-TYP---N
+
+>IFM054_S12_2479_soapGraphK61  {|8(0)|}frame_1_NTSB domNum1 
+G--G-Sg----------------Ggdd------------------------------I-D-D-K-----DA---KHLLDSIGKKVHD-Ei-V-K-TE---------A-AN--Y--VG-DLKGLLTSA-TLL---G
+
+>IFM054_S12_Contig428  {|4(0)|}frame_-1_NTSB domNum1 
+G--G-Ge----------------D---------------------------------I-D-K-T-----SA---KHLLDSIGKRVHA-Q--V-Q-NE---------A-AG--Rg-GS-ELKGLLSLA-TFS---S
+
+>IFM054_S12_2387_soapGraphK61  {|6(0)|}frame_-1_NTSB domNum1 
+G--K-Gg----------------G---------------------------------T-K-D-D-----DA---KYMFDRIGKDVYD-Q--V-K-KDg--------A-ET--Y--KD-YLKGNLTDS-SIW---G
+
+>IFM054_S12_Contig880  {|3(0)|}frame_3_NTSB domNum1 
+G--G-Rqg---------------Gk--------------------------------D-K-Y-D-----DA---KYMFDRIGKDVYD-K--V-K-GE---------A-QT--Y--KD-DLKAYVSFA-SIF---G
+
+>IFM054_S12_2245_soapGraphK61  {|7(0)|}frame_1_NTSB domNum1 
+G--S-Ggassgendadk------Y---------------------------------K-N-A-E-----DA---KHLLDMIGEDIYK-K--A-K-EA---------A-LP--Y--NN-ALHGLLTRA-TYP---R
+
+>IFM054_S12_2373_soapGraphK61  {|1(0)|}frame_2_NTSB domNum1 
+-----------------------G---------------------------------I-E-D-T-----TA---KHALDKIGEEVYKgK--V-E-KD---------A-EK--Y--YD-DLHGSLKNA-IFE---N
+
+>IFM054_S12_Contig1077  {|3(0)|}frame_2_NTSB domNum1 
+S--R-Apn---------------Y---------------------------------S-S-A-Q-----NA---KELLELIGETVQK-K--A-T-NI---------V-HE--N--RE-KLKGNLSDA-KFL---G
+
+>IFM054_S12_Contig904  {|14(0)|}frame_3_NTSB domNum1 
+Q--G-Ge----------------D---------------------------------I-D-E-T-----SA---KNLLDSIGKIVHD-K--V-K-ED---------A-EP--Y--IN-ELHGRLSEA-IFE---K
+
+>IFM054_S12_Contig710  {|4(0)|}frame_1_NTSB domNum1 
+S--T-T-------------------------------------------------------Y-S-----SA---KDLFDLIGESVQK-KvrA-K-AEva-------S-KK--Y--FE-ELHGDLSKA-DYK---N
+
+>IFM054_S12_Contig743  {|16(0)|}frame_-1_NTSB domNum1 
+-----------------------G---------------------------------I-E-D-T-----TA---KHALDKIGEKVYK-Ek-V-E-KD---------A-EQ--Y--FN-ELHGNLSQA-TFE---E
+
+>IFM054_S12_Contig831  {|6(0)|}frame_-3_NTSB domNum1 
+G--K-Gg----------------G---------------------------------T-K-D-D-----DA---KYMFDRIGKDVYD-Q--V-K-KDg--------A-ET--Y--KD-YLKGNLTDS-SIW---G
+
+>IFM14_S7_2959_soapGraphK61  {|3(0)|}frame_3_NTSB domNum1 
+S--G-G-----------------------------------------------------T-D-K-----SA---KEVLDKIGQKVHD-Ei-V-K-NAe--------A-ET--Y--KN-KLKGDLASA-TSS---H
+
+>IFM14_S7_Contig297  {|2(0)|}frame_-2_NTSB domNum1 
+---G-Gg----------------G---------------------------------N-D-Y-S-----DA---KDLLDKIGQQVHE-T--V-E-KE---------A-EA--Y--KE-ALKGDLKKA-TNR---S
+
+>IFM14_S7_Contig377  {|3(0)|}frame_-3_NTSB domNum1 
+S--G-G-----------------------------------------------------T-D-K-----SA---KEVLDKIGQKVHD-Ei-V-K-NAe--------A-ET--Y--KN-KLKGDLASA-TSS---H
+
+>IFD6_S1_Contig604  {|9(0)|}frame_3_NTSB domNum1 
+S--S-Ag----------------T---------------------------------N-G-Y-K-----DA---KDLLDKIGQQVHD-K--V-H-GA---------A-LQp-S--KG-KLEGKLSLA-IFE---K
+
+>IFD6_S1_Contig549  {|4(0)|}frame_-2_NTSB domNum1 
+G--D-Gg----------------Gdan------------------------------K-S-A-R-----NA---RDILEEYGKKVQE-E--A-T-NK---------A-GE--Rs-YG-DLQGILSKA-TFN---K
+
+>IFD6_S1_Contig737  {|13(0)|}frame_-2_NTSB domNum1 
+-----Sd----------------Y---------------------------------S-I-A-S-----DA---KDLLDKIGEDIYK-I--A-N-EA---------A-LK--Y--EN-ELHGRLSEA-TFS---N
+
+>IFD6_S1_Contig547  {|9(0)|}frame_-1_NTSB domNum1 
+P--P-Aapd--------------Y---------------------------------S-S-A-K-----DA---KDLFDMIGKDVHD-Q--V-Q-SD---------A-KT--Y--KQ-ALKGNLTSS-TIF---D
+
+>IFD6_S1_Contig691  {|10(0)|}frame_1_NTSB domNum1 
+K--P-Tade--------------Y---------------------------------D-N-V-N-----NV---KELLDKIGQKVHD-Ei-V-K-NGe--------A-QT--Y--KE-ALKGNLKEA-KGS---E
+
+>IFM24_S5_Contig770  {|5(0)|}frame_-1_NTSB domNum1 
+R--G-Gg----------------K---------------------------------D-D-Y-K-----DA---RELLDKIGKTVHE-K--L-K-GD---------A-EK--Y--SS-QLKGNLSLA-KGS---G
+
+>IFM24_S5_Contig812  {|4(0)|}frame_3_NTSB domNum1 
+G--G-Gg----------------G---------------------------------S-T---Q-----DA---KHVLDEFGQKVHD-K--V-K-EE---------A-NQ--Y--KE-ALKGYLNKA-VST---S
+
+>IFM24_S5_Contig829  {|3(0)|}frame_1_NTSB domNum1 
+---G-Gg----------------G---------------------------------Q-G----------A---RDVLEQFGAIIQE-Q--A-K-AE---------A-VQ--H--RK-DLEGRLSNV-IFS---N
+
+>IFM24_S5_Contig822  {|3(0)|}frame_3_NTSB domNum1 
+Q--S-Rgaggvedaek-------Y---------------------------------K-N-A-T-----NV---KELLDKIGEDVYK-K--V-K-DA---------A-LP--Y--ND-ALQGRLSDA-TYP---N
+
+>IFM24_S5_Contig918  {|11(0)|}frame_-1_NTSB domNum1 
+Q--G-GrgghgggsskekedepdY---------------------------------T-N-V-K-----DA---KELLDKIGEHIYK-K--V-HlGD---------A-N---Y--RG-KLYGRLTQA-QFS---N
+
+>IFM24_S5_Contig978  {|3(0)|}frame_-2_NTSB domNum1 
+-----------------------Y---------------------------------K-S-A-T-----DA---KHLLDQIGEDIYK-K--I-K-DD---------A-ND--F--RE-KLKGNLNKA-NNS---S
+
+>IFM24_S5_Contig857  {|13(0)|}frame_-3_NTSB domNum1 
+G--G-Gg----------------Gsaggk----------------------------D-K-Y-D-----DA---KHMFDRIGEEVHK-K--V-H-TA---------A-LK--Y--EK-ELHGCLKDA-IFE---E
+
+>IFM24_S5_Contig448  {|5(0)|}frame_1_NTSB domNum1 
+R--P-Gg----------------V---------------------------------I-E-D-A-----TA---KHIFDRIGRTIHQ-Q--V-N-KV---------A-KK--Y--YD-DLHGRLSEA-TFE---K
+
+>IFM24_S5_Contig915  {|1(0)|}frame_-3_NTSB domNum1 
+G--G-Gg----------------G---------------------------------G-V-D-K-----DA---KNMFDRIGQQVYN-Ek-V-K-NGe--------A-QT--Y--DS-YLKGNLQHA-TKS---S
+
+>IFM24_S5_Contig914  {|7(0)|}frame_-3_NTSB domNum1 
+G--G-Ged---------------G---------------------------------I-D-D-K-----DA---KHLLDSIGKIVHK-K--V-H-SE---------A-QT--Y--KQ-ALTGQLSFA-TLS---G
+
+>IFM24_S5_Contig119  {|2(0)|}frame_-2_NTSB domNum1 
+S--P-Tptvnk------------Y---------------------------------T-W-A-S-----DA---KNLLEEIGEDIYK-K--A-K-EA---------A-LG--Rg-GN-KLQGDLSKA-RFK---D
+
+>IFM24_S5_Contig981  {|3(0)|}frame_-1_NTSB domNum1 
+K--G-G-----------------G---------------------------------S-P---Q-----DA---KHLLDSIGEKVYK-E--V-K-KGv--------A-ET--Y--KE-ALKGDLKKA-AST---S
+
+>IFM-049_S6_139745_soapGraphK61  {|9(0)|}frame_2_NTSB domNum1 
+P--G-It----------------G---------------------------------T-E-D-L-----SA---KHMFDRIGGIIQQ-Q--A-H-AA---------A-LG--Rs-HN-ELLGHLSSA-TFR---E
+
+>IFM-049_S6_Contig37911  {|6(0)|}frame_-2_NTSB domNum1 
+T--S-Aipsvnd-----------Y---------------------------------T-L-A-S-----DA---KDLLDRIGEKIQQ-Q--A-H-EA---------A-KK--Y--FE-ELHGDLSKA-DYK---N
+
+>IFM-049_S6_Contig40700  {|8(0)|}frame_-3_NTSB domNum1 
+-----------------------Y---------------------------------D-Q-A-T-----SA---KDLLDMIGKEVHD-E--V-H-GA---------AlEP--S--NG-KLKGTLSLA-IFE---K
+
+>IFM-049_S6_Contig16760  {|10(0)|}frame_1_NTSB domNum1 
+-------------------------------------------------------------A-T-----SA---KDLLDQIGETVQK-E--V-H-GD---------A-QQ--Y--FS-ELKGDLSQA-KFR---T
+
+>IFM-049_S6_Contig32537  {|7(0)|}frame_-3_NTSB domNum1 
+G--S-Sg----------------Gdadky----------------------------K-D-A-K-----DA---KDLLDQIGEDIYK-I--A-N-DA---------A-LG--Rg-GN-KLQGRLLDA-TYP---N
+
+>IFM-049_S6_Contig14773  {|4(0)|}frame_2_NTSB domNum1 
+Q--S-Dg----------------R---------------------------------K-V--------------RDVLDEIGEKIQK-E--A-T-RI---------A-NN--Y--RE-YLHGYLNKA-TYP---N
+
+>IFM-049_S6_Contig8766  {|9(0)|}frame_-1_NTSB domNum1 
+G--G-Gg----------------R---------------------------------I-E-D-T-----TA---KHIFDRIGRTIHQ-Q--V-N-KV---------A-KQ--Y--YD-DLHGTLKNA-TFE---N
+
+>IFM-049_S6_Contig34431  {|3(0)|}frame_1_NTSB domNum1 
+Q--G-Sg----------------Gggedd----------------------------I-D-H-K-----SV---KHLLDSIGEKVYN-T--F-H-TA---------A-LK--Y--EN-ELHGFLSQA-TYS---R
+
+>IFM-049_S6_Contig18495  {|3(0)|}frame_2_NTSB domNum1 
+G--G-Gqggedk-----------Y---------------------------------K-N-A-T-----NV---KDLLDMIGKDVYD-K--V-K-EE---------A-KT--Y--KG-ELEGNLASS-SIL---G
+
+>IFM-049_S6_Contig40805  {|2(0)|}frame_3_NTSB domNum1 
+---G-Gg----------------G---------------------------------Q-G----------A---KDFLDKIGQQVHE-Q--V-K-KDvgad-----A-KK--Y--IE-ELKGNLTDS-SIL---G
+
+>IFM-049_S6_Contig39675  {|2(0)|}frame_2_NTSB domNum1 
+A--G-Sg----------------G---------------------------------Q-G----------A---RDVLEQFGESVQK-K--V-H-DE---------A-VQ--R--GN-TLHAVLSKA-TFK---H
+
+>IFM-049_S6_Contig41067  {|9(0)|}frame_2_NTSB domNum1 
+S--R-Ggeg--------------Ggrgagssge------------------------D-K-Y-D-----DA---KDFLDKIGQQVHE-Q--V-K-ND---------A-ET--Y--KD-ELKGDLSKA-TFE---G
+
+>IFM-049_S6_Contig33205  {|10(0)|}frame_-3_NTSB domNum1 
+-------------------------------------------------------------Y-N-----SA---KDLLEDIGKSIQK-E--A-H-TE---------A-SQ--H--ER-SLKGSLSQV-EFK---E
+
+>IFM-049_S6_Contig40737  {|3(0)|}frame_-1_NTSB domNum1 
+S--S-G---------------------------------------------------T-Q-D-P-----SA---KHMFDRIGEEVYK-E--V-H-SE---------A-QT--Y--KQ-ALTGQLSLA-PNI---M
+
+>IFM-049_S6_Contig40765  {|5(0)|}frame_3_NTSB domNum1 
+Q--G-Gtqeqedk----------Y---------------------------------K-N-A-E-----DA---KDLFDIIGKDVHD-Ei-V-K-SE---------A-LG--Rs-NG-DLQGILSKA-DYK---N
+
+>IFC66_S31_L002_26151_soapGraphK21 frame_-2_NTSB domNum1 
+----------------------------------------------------------------------A---KHMFDRIGGIIQQ-Q--A-H-AA---------A-LG--Rs-HN-ELLGHLSSA-TFR---E
+
+>IFC66_S31_L002_Contig1784  {|6(0)|}frame_-2_NTSB domNum1 
+G--R-Rg----------------Gggrggggdd------------------------I-D-E-R-----SA---KHLLDSIGGIIEK-Q--A-K-ED---------A-KI--Y--QK-VLKGNLAEA-QFR---T
+
+>IFC66_S31_L002_Contig1005  {|9(0)|}frame_-1_NTSB domNum1 
+P--G-It----------------G---------------------------------T-E-D-L-----SA---KHMFDRIGGIIQQ-Q--A-H-AA---------A-LG--Rs-HN-ELLGHLSSA-TFR---E
+
+>IFC66_S31_L002_5326_soapGraphK61  {|11(0)|}frame_1_NTSB domNum1 
+A--K-Gg----------------G---------------------------------S-S---Q-----DA---KHLLDRIGEEVYK-E--V-K-NGg--------A-ET--Y--KE-ALTGKLQHA-TNR---S
+
+>IFC66_S31_L002_5316_soapGraphK61  {|7(0)|}frame_2_NTSB domNum1 
+S--S-Srasgpk-----------Y---------------------------------D-Q-A-T-----SA---KELFDMIGETVQE-K--V-H-DA---------A-NK--Y--YT-DLHGDLSKA-RFD---R
+
+>IFC66_S31_L002_Contig1859  {|15(0)|}frame_2_NTSB domNum1 
+-----------------------G---------------------------------I-E-D-T-----TA---KHALDKIGEKIYE-K--A-K-KD---------A-EP--Y--IN-ELHGSLKDA-IFE---K
+
+>IFC66_S31_L002_Contig1857  {|11(0)|}frame_-2_NTSB domNum1 
+Q--N-Gg----------------Ggdgrdgi--------------------------E-H-D-K-----DA---KHLLDSIGKKVHD-Q--V-K-NGg--------A-KK--Y--YD-DLHGDLSKA-KFE---K
+
+>IFC66_S31_L002_Contig1825  {|7(0)|}frame_1_NTSB domNum1 
+G--G-Sg----------------Grgedky---------------------------K-D-A-P-----DA---KHLLDMIGEEVYN-Ek-V-K-NGe--------A-QK--Y--YA-ELHGDLSEA-KFR---H
+
+>IFC66_S31_L002_Contig1771 frame_-1_NTSB domNum1 
+----------------------------------------------------------------------A---KHLLDIIGKDVHE-K--A-K-KN---------A-EQ--Y--FN-ELHGTLSKA-TFE---K
+
+>IFC66_S31_L002_Contig1779  {|5(0)|}frame_-1_NTSB domNum1 
+-----------------------Y---------------------------------S-K-A-T-----NV---KYLLDQIGEEIQK-E--A-Y-QK---------A-LG--Rs-RN-ELHGRLTGA-IFHargK
+
+>IFC66_S31_L002_Contig1573  {|7(0)|}frame_-3_NTSB domNum1 
+G--G-Ged---------------G---------------------------------I-D-D-K-----DA---KHLLDSIGKIVHK-K--V-H-SE---------A-QT--Y--KQ-ALTGQLSFA-TLS---G
+
+>IFC66_S31_L002_Contig1572  {|3(0)|}frame_2_NTSB domNum1 
+G--R-Gg----------------Gdaeky----------------------------K-N-A-T-----NV---KYLFDLIGETVQK-K--A-K-EKaeva-----S-KK--Y--FE-ELHGDLSKA-DYK---K
+
+>IFC66_S31_L002_Contig1574  {|8(0)|}frame_-3_NTSB domNum1 
+T--G-Ge----------------Gr--------------------------------I-E-D-A-----TA---KHLLDSIGKKVYD-K--V-H-SE---------V-DA--Y--RD-KLKGTLSKA-TYP---K
+
+>IFC66_S31_L002_Contig1576  {|4(0)|}frame_-2_NTSB domNum1 
+G--G-Sg----------------Ggggndy---------------------------S-D-A-K-----NA---KDLLDMIGKDVHD-Q--V-K-SE---------T-VN--Y--VS-ELKGKLQEA-ASI---N
+
+>IFC66_S31_L002_Contig1533  {|1(0)|}frame_-3_NTSB domNum1 
+---G-St----------------G---------------------------------G-G-D-K-----DA---KHLFDRIGEEVYK-Ek-V-K-NE---------A-ET--Y--KD-ALKGKLSFG-T-----T
+
+>IFC66_S31_L002_Contig1840  {|3(0)|}frame_-3_NTSB domNum1 
+A--G-Sg----------------G---------------------------------Q-G----------A---KEVLDGIGQQVYD-Ei-V-K-ND---------A-KT--Y--KE-ALTGQLSLA-STN---S
+
+>IFC66_S31_L002_Contig1845  {|10(0)|}frame_2_NTSB domNum1 
+A--D-Apd---------------Y---------------------------------S-N-V-N-----NV---KDLFDEVGKYIEK-K--V-R-GD---------A-LT--Rs-HS-KLKGDLSSV-KFY---T
+
+>IFC66_S31_L002_Contig1443  {|9(0)|}frame_-2_NTSB domNum1 
+P--P-Aapd--------------Y---------------------------------S-S-A-K-----DA---KDLFDMIGKDVHD-Q--V-Q-SD---------A-KT--Y--KQ-ALKGNLTSS-TIF---D
+
+>IFC66_S31_L002_5258_soapGraphK61  {|1(0)|}frame_-2_NTSB domNum1 
+---G-Gg----------------Gsv-------------------------------E-E-D-K-----DA---KHMFDRIGQQVHE-Q--V-K-GE---------A-EK--Y--KN-KLKGDLKEA-KGI---G
+
+>IFC66_S31_L002_5168_soapGraphK61  {|4(0)|}frame_-3_NTSB domNum1 
+G--G-Sg----------------Ggggndy---------------------------S-D-A-K-----NA---KDLLDMIGKDVHD-Q--V-K-SE---------T-VN--Y--VS-ELKGKLQEA-ASI---N
+
+>IFC66_S31_L002_5038_soapGraphK61  {|9(0)|}frame_1_NTSB domNum1 
+P--P-Repr--------------Y---------------------------------D-E-A-T-----SA---KDFLDQIGETVQK-E--V-Q-SD---------A-LP--Y--NK-YLQGDLSKV-EFS---N
+
+>IFC66_S31_L002_Contig1544  {|7(0)|}frame_-1_NTSB domNum1 
+S--S-Srasgpk-----------Y---------------------------------D-Q-A-T-----SA---KELFDMIGETVQE-K--V-H-DA---------A-NK--Y--YT-DLHGDLSKA-RFD---R
+
+>IFC66_S31_L002_Contig1541  {|3(0)|}frame_2_NTSB domNum1 
+G--G-Gqvg--------------Gsig------------------------------E-E-D-K-----DA---KNMFDRIGKKVHD-E--V-K-EEadgt-----A-KK--Y--IE-ELKGDLKKA-KGS---D
+
+>IFC66_S31_L002_Contig1800  {|4(0)|}frame_3_NTSB domNum1 
+G--S-Ag----------------T---------------------------------E-D----------A---KHVLDKIGQQVHE-Q--V-E-KE---------A-AG--Rg-GS-ELKGLLSQA-SIL---G
+
+>IFC66_S31_L002_5344_soapGraphK61  {|8(0)|}frame_2_NTSB domNum1 
+P--G-It----------------G---------------------------------T-E-D-L-----SA---KHMFDRIGGIIQQ-Q--A-H-AA---------A-LG--Rs-HN-ELLGHLSSA-TFR---E
+
+>IFC66_S31_L002_Contig1830  {|10(0)|}frame_-1_NTSB domNum1 
+A--S-Gg----------------Ggdaeky---------------------------K-N-A-T-----NV---KELLDMIGEKVYK-Ek-V-E-KD---------A-EN--Y--IG-DLKGKLSQA-SIL---G
+
+>IFC66_S31_L002_5262_soapGraphK61  {|8(0)|}frame_1_NTSB domNum1 
+T--G-Ge----------------Gr--------------------------------I-E-D-A-----TA---KHLLDSIGKKVYD-K--V-H-SE---------V-DA--Y--RD-KLKGTLSKA-TYP---K
+
+>IFC66_S31_L002_Contig1762  {|1(0)|}frame_2_NTSB domNum1 
+----------------------------------------------------------------------V---KDLLDMIGKDVHE-E--V-E-KKadgtgdsgdS-KK--Y--RE-ELKGDLNTA-NNS---S
+
+>IFC66_S31_L002_Contig1564  {|11(0)|}frame_3_NTSB domNum1 
+A--K-Gg----------------G---------------------------------S-S---Q-----DA---KHLLDRIGEEVYK-E--V-K-NGg--------A-ET--Y--KE-ALTGKLQHA-TNR---S
+
+>IFC66_S31_L002_Contig1565  {|4(0)|}frame_3_NTSB domNum1 
+Q--G-G-----------------G---------------------------------T-K-D-E-----SA---KHMFDRIGAEVQQ-K--V-H-TA---------A-LQ--Y--NS-QLLGHLTQA-EFS---N
+
+>IFM058_S13_Contig1009  {|3(0)|}frame_-2_NTSB domNum1 
+S--T-T-----------------Y---------------------------------S-S-A-K-----DA---KHLFDMIGKDVYN-Ek-V-K-SE---------A-QT--Y--KE-ALKGNLKEA-KGS---G
+
+>IFM058_S13_Contig1008  {|10(0)|}frame_2_NTSB domNum1 
+G--P-Rg----------------Gvge------------------------------I-D-D-K-----DA---KHLLDSIGKKVHD-Ei-V-K-KDg--------A-EK--Y--KG-ELKGSLSLA-KGS---G
+
+>IFM058_S13_Contig843  {|7(0)|}frame_2_NTSB domNum1 
+G--G-Ged---------------G---------------------------------I-D-D-K-----DA---KHLLDSIGKIVHK-K--V-H-SE---------A-QT--Y--KQ-ALTGQLSFA-TLS---G
+
+>IFM058_S13_Contig803 frame_1_NTSB domNum1 
+---------------------------------------------------------------K-----SA---KEVLDEFGQQVYD-Ei-V-K-KEvdgtgasgdA-KK--Y--IE-ELKGNLKEA-KGI---G
+
+>IFM058_S13_Contig1075  {|4(0)|}frame_-3_NTSB domNum1 
+G--G-Gqggedk-----------Y---------------------------------K-N-A-T-----NV---KDLLDMIGKDVYD-K--V-K-EE---------A-KT--Y--KG-ELEGNLASS-SIL---G
+
+>IFM058_S13_Contig1035  {|5(0)|}frame_-1_NTSB domNum1 
+-----------------------Y---------------------------------I-K-V-N-----NA---KDLFDLIGKYIKE-Q--V-H-IE---------S-LT--Rd-GS-KLHGFFSQV-EFT---N
+
+>IFM058_S13_Contig1101  {|7(0)|}frame_2_NTSB domNum1 
+Ql-D-Ttvnd-------------Y---------------------------------T-L-A-S-----DV---KHLLDRIGEDIYK-I--A-K-ND---------E-ND--F--RE-KLKGTLSQA-TYP---R
+
+>IFM058_S13_Contig1069  {|10(0)|}frame_2_NTSB domNum1 
+G--S-Gg----------------Gggssgdaeky-----------------------K-N-A-T-----NV---KELLDKIGEDVYK-K--V-K-DA---------A-LP--Y--ND-ALQGRLSDA-TYP---N
+
+>IFM058_S13_Contig883  {|4(0)|}frame_3_NTSB domNum1 
+Q--G-G-----------------G---------------------------------T-K-D-E-----SA---KHMFDRIGAEVQQ-K--V-H-TA---------A-LQ--Y--NS-QLLGHLTQA-EFS---N
+
+>IFM058_S13_Contig1092  {|4(0)|}frame_-1_NTSB domNum1 
+G--G-G-----------------------------------------------------T-D-K-----SA---KHVLDEFGQQVYR-Ek-V-Q-SD---------A-EA--Y--KD-DLKGNLQEA-VTT---T
+
+>IFM058_S13_Contig1085  {|2(0)|}frame_-3_NTSB domNum1 
+A--G-Sg----------------G---------------------------------Q-G----------A---RDVLEQFGESVQK-K--V-H-DE---------A-VQ--R--GN-TLHAVLSKA-TFK---H
+
+>IFM058_S13_Contig438  {|3(0)|}frame_-2_NTSB domNum1 
+S--T-T-----------------Y---------------------------------S-S-A-K-----DA---KHLFDMIGKDVYN-Ek-V-K-SE---------A-QT--Y--KE-ALKGNLKEA-KGS---G
+
+>IFM27_S9_Contig416  {|5(0)|}frame_1_NTSB domNum1 
+-----------------------Y---------------------------------I-K-V-N-----NA---KDLFDLIGKYIKE-Q--V-H-IE---------S-LT--Rd-GS-KLHGFFSQV-EFT---N
+
+>IFM27_S9_Contig330  {|10(0)|}frame_-3_NTSB domNum1 
+-------------------------------------------------------------Y-N-----SA---KDLLEDIGKSIQK-E--A-H-TE---------A-SQ--H--ER-SLKGSLSQV-EFK---E
+
+>IFM27_S9_1788_soapGraphK61  {|5(0)|}frame_2_NTSB domNum1 
+S--T-T-------------------------------------------------------Y-S-----SA---KDFLDSIGKKVHD-Ei-V-E-KGv--------A-ET--Y--KE-ALKGKLQEA-KVM---G
+
+>IFM27_S9_Contig377  {|1(0)|}frame_-2_NTSB domNum1 
+---G-St----------------G---------------------------------G-G-D-K-----DA---KHLFDRIGEEVYK-Ek-V-K-NE---------A-ET--Y--KD-ALKGKLSFG-T-----T
+
+>IFM27_S9_Contig530 frame_-3_NTSB domNum1 
+G--G-Sg----------------G---------------------------------T-Q-D-D-----DA---KNMFDRIGKDVYK-T--V-K-NE---------S-EQ--Rs-NG-DLKGNLTDS-TIF---G
+
+>IFM27_S9_1778_soapGraphK61  {|3(0)|}frame_-1_NTSB domNum1 
+S--T-T-----------------Y---------------------------------S-S-A-K-----DA---KHLFDMIGKDVYN-Ek-V-K-SE---------A-QT--Y--KE-ALKGNLKEA-KGS---G
+
+>IFM27_S9_Contig614  {|3(0)|}frame_-1_NTSB domNum1 
+Q--G-Gg----------------Ggred-----------------------------I-D-E-T-----SA---KHLLDSIGKIVHD-Q--V-K-NGg--------A-KT--Y--DS-YLKGNLASA-TEG---S
+
+>IFM27_S9_Contig519  {|5(0)|}frame_1_NTSB domNum1 
+S--T-T-------------------------------------------------------Y-S-----SA---KDFLDSIGKKVHD-Ei-V-E-KGv--------A-ET--Y--KE-ALKGKLQEA-KVM---G
+
+>IFM27_S9_Contig510  {|4(0)|}frame_1_NTSB domNum1 
+P--G-Gg----------------Ggrgsgg---------------------------E-E-D-K-----DA---KNMFDRIGKDVYD-Ei-V-K-NGg--------A-ET--Y--KD-DLKGDLNKA-TNI---N
+
+>SFC13_S23_L002_Contig2646  {|2(0)|}frame_-3_NTSB domNum1 
+N--S-Ag----------------M---------------------------------N-G-Y-S-----DA---KDFLDKMGEKVYR-Ek-V-Q-SD---------A-KT--Y--KE-ALKGDLASA-TED---S
+
+>SFC13_S23_L002_Contig2735  {|6(0)|}frame_-2_NTSB domNum1 
+G--N-Gg----------------G---------------------------------G-S-S-Q-----DA---KHVLDKIGEKIQK-Q--V-Y-NA---------A-LN--H--IN-DLKGYLNNV-KFS---N
+
+>SFC13_S23_L002_Contig1170  {|4(0)|}frame_2_NTSB domNum1 
+G--D-Gg----------------Gdan------------------------------K-S-A-R-----NA---RDILEEYGKKVQE-E--A-T-NK---------A-GE--Rs-YG-DLQGILSKA-TFN---K
+
+>SFC13_S23_L002_Contig1754  {|6(0)|}frame_-2_NTSB domNum1 
+S--K-Aasvpk------------Y---------------------------------D-Q-A-S-----NV---RDLLDMIGKDVYD-E--V-H-KK---------D-AD--Y--RS-SLQGDLSKA-TFR---Y
+
+>SFC13_S23_L002_Contig1795  {|5(0)|}frame_-3_NTSB domNum1 
+R--G-Gg----------------K---------------------------------D-D-Y-K-----DA---RELLDKIGKTVHE-K--L-K-GD---------A-EK--Y--SS-QLKGNLSLA-KGS---G
+
+>SFC13_S23_L002_Contig2664  {|3(0)|}frame_-3_NTSB domNum1 
+P--G-Sagdg-------------G---------------------------------T-K-D-E-----SV---KDLFDRIGKIVHE-Q--V-K-ND---------A-ET--Y--KN-KLKGDLSRV-EFK---N
+
+>SFC13_S23_L002_Contig2401  {|6(0)|}frame_3_NTSB domNum1 
+G--R-Rg----------------Gggrggggdd------------------------I-D-E-R-----SA---KHLLDSIGGIIEK-Q--A-K-ED---------A-KI--Y--QK-VLKGNLAEA-QFR---T
+
+>SFC13_S23_L002_Contig2134  {|26(0)|}frame_2_NTSB domNum1 
+A--Q-Gg----------------T---------------------------------Q-D---------DA---KHVLDKIGQQVHD-L--V-K-NA---------A-LD--Rs-ES-ALKGDLSKA-TYS---R
+
+>SFC13_S23_L002_Contig2468  {|10(0)|}frame_-3_NTSB domNum1 
+G--P-Rg----------------Ghgggsskekedepdy------------------T-N-V-K-----DA---KELLDKIGEHIYK-K--V-HlGD---------A-N---Y--RG-KLYGRLTQA-QFS---N
+
+>SFC13_S23_L002_6550_soapGraphK61  {|16(0)|}frame_3_NTSB domNum1 
+-----------------------G---------------------------------I-E-D-T-----TA---KHALDKIGEEVYKgK--V-E-KD---------A-EK--Y--YD-DLHGSLKNA-IFE---N
+
+>SFC13_S23_L002_Contig1971  {|3(0)|}frame_2_NTSB domNum1 
+Q--S-Rgaggvedaek-------Y---------------------------------K-N-A-P-----DA---KHLLDLIGETIQK-Q--A-H-AA---------A-LE--Rs-GS-ALQGRLSSA-TFK---N
+
+>SFC13_S23_L002_Contig2457  {|4(0)|}frame_-1_NTSB domNum1 
+G--G-Sphgsgggnd--------Y---------------------------------S-D-A-K-----DA---KDLLDMIGKDVHD-K--V-K-EE---------A-KN--Y--IG-ELKAGVSFA-SIF---G
+
+>SFC13_S23_L002_Contig2451  {|16(0)|}frame_2_NTSB domNum1 
+-----------------------G---------------------------------I-E-D-T-----TA---KHALDKIGEEVYKgK--V-E-KD---------A-EK--Y--YD-DLHGSLKNA-IFE---N
+
+>SFC13_S23_L002_Contig2461  {|3(0)|}frame_1_NTSB domNum1 
+S--G-Sa----------------G---------------------------------T-E---------DA---KHVLDKFGQQVHD-Q--V-K-NGadgt-----A-KK--Y--IE-ELKGNLQYA-TNI---N
+
+>SFU-3_S21_L002_Contig2027  {|4(0)|}frame_-2_NTSB domNum1 
+G--R-Ag----------------G---------------------------------T-Q-D-A-----SV---KHMFDRIGQQVHE-Ei-V-K-NGe--------A-KT--Y--IG-ELAGLLSQA-SIF---G
+
+>SFU-3_S21_L002_Contig1466  {|5(0)|}frame_2_NTSB domNum1 
+S--T-T-------------------------------------------------------Y-S-----SA---KDFLDSIGKKVHD-Ei-V-E-KGv--------A-ET--Y--KE-ALKGKLQEA-KVM---G
+
+>SFU-3_S21_L002_Contig1454  {|3(0)|}frame_-3_NTSB domNum1 
+Q--N-Gg----------------Gvge------------------------------I-D-D-K-----DA---KHLLDSIGEKVYK-Ei-V-G-KK---------A-AD--Y--RS-ALQGHLSDA-NFK---N
+
+>SFU-3_S21_L002_Contig637  {|7(0)|}frame_3_NTSB domNum1 
+Ql-D-Ttvnd-------------Y---------------------------------T-L-A-S-----DV---KHLLDRIGEDIYK-I--A-K-ND---------E-ND--F--RE-KLKGTLSQA-TYP---R
+
+>SFU-3_S21_L002_Contig1770 frame_-2_NTSB domNum1 
+---------------------------------------------------------------------------HMFDRIGEEVYK-E--V-K-SE---------A-EN--Y--IS-ELAGLLSQA-PIL---G
+
+>SFU-3_S21_L002_Contig2032  {|9(0)|}frame_-1_NTSB domNum1 
+G--G-Gg----------------Gsaggk----------------------------D-K-Y-D-----DA---KHMFDRIGEEVHK-K--V-H-TA---------A-LK--Y--EK-ELHGCLKDA-IFE---E
+
+>SFU-3_S21_L002_Contig1055  {|12(0)|}frame_-3_NTSB domNum1 
+T--G-Tqeqedk-----------Y---------------------------------K-S-A-P-----DA---KHLFDIIGKDVYE-T--V-E-KD---------A-ET--C--KG-ELEGNLKKA-K-----D
+
+>SFU-3_S21_L002_Contig913 frame_-3_NTSB domNum1 
+-------------------------------------------------------------Y-S-----SV---KDLLEKIGQSIQQ-K--A-T-IS---------A-KG--Y--RQ-YLHGNLKKA-EYP---K
+
+>SFU-3_S21_L002_Contig1764  {|4(0)|}frame_-1_NTSB domNum1 
+G--D-Gg----------------Gdan------------------------------K-S-A-R-----NA---RDILEEYGKKVQE-E--A-T-NK---------A-GE--Rs-YG-DLQGILSKA-TFN---K
+
+>SFU2_S5_L001_Contig1468  {|3(0)|}frame_2_NTSB domNum1 
+G--G-Sg----------------D---------------------------------P-Q-D-D-----DA---KNMFDRIGKEVHD-Q--V-E-KD---------A-KI--Y--KD-DLKGNLQHA-TNR---S
+
+>SFU2_S5_L001_Contig1269  {|3(0)|}frame_-2_NTSB domNum1 
+P--G-Rg----------------Gggqggkggkdky---------------------D-D-A-K-----DA---KELLDRIGEDIYK-K--I-K-DD---------S-NV--F--RD-ELKGKLQEA-ART---S
+
+>SFU2_S5_L001_Contig1419  {|4(0)|}frame_-1_NTSB domNum1 
+S--T-T-------------------------------------------------------Y-S-----SA---KDLFDLIGESVQK-KvrA-K-AEva-------S-KK--Y--FE-ELHGDLSKA-DYK---N
+
+>SFU2_S5_L001_Contig1466  {|23(0)|}frame_3_NTSB domNum1 
+K--K-Rtaed-------------Y---------------------------------G-K-A-T-----SA---KEFLDLIGETVQE-K--V-H-GA---------A-KT--Y--TS-ELKGDLSLA-TYP---N
+
+>SFU2_S5_L001_Contig1888  {|7(0)|}frame_-2_NTSB domNum1 
+G--G-Gd----------------D---------------------------------I-D-H-K-----SV---KHLLDSIGEKVYK-Ek-V-E-ND---------A-EK--Y--KE-ALKGDLNKA-NGH---S
+
+>SFU2_S5_L001_4626_soapGraphK61  {|3(0)|}frame_-1_NTSB domNum1 
+K--G-G-----------------G---------------------------------S-P---Q-----DA---KHLLDSIGEKVYK-E--V-K-KGv--------A-ET--Y--KE-ALKGDLKKA-AST---S
+
+>SFU2_S5_L001_Contig1715  {|11(0)|}frame_2_NTSB domNum1 
+Q--G-GrgghgggsskekedepdY---------------------------------T-N-V-K-----DA---KELLDKIGEHIYK-K--V-HlGD---------A-N---Y--RG-KLYGRLTQA-QFS---N
+
+>SFU2_S5_L001_Contig1895  {|1(0)|}frame_-1_NTSB domNum1 
+G--G-Gg----------------G---------------------------------G-V-D-K-----DA---KNMFDRIGQQVYN-Ek-V-K-NGe--------A-QT--Y--DS-YLKGNLQHA-TKS---S
+
+>SFU2_S5_L001_Contig1718  {|3(0)|}frame_-1_NTSB domNum1 
+K--G-G-----------------G---------------------------------S-P---Q-----DA---KHLLDSIGEKVYK-E--V-K-KGv--------A-ET--Y--KE-ALKGDLKKA-AST---S
+
+>SFU2_S5_L001_Contig1429  {|4(0)|}frame_2_NTSB domNum1 
+G--G-Gg----------------G---------------------------------S-T---Q-----DA---KHVLDEFGQKVHD-K--V-K-EE---------A-NQ--Y--KE-ALKGYLNKA-VST---S
+
+>SFU2_S5_L001_4636_soapGraphK61  {|11(0)|}frame_-2_NTSB domNum1 
+Q--G-GrgghgggsskekedepdY---------------------------------T-N-V-K-----DA---KELLDKIGEHIYK-K--V-HlGD---------A-N---Y--RG-KLYGRLTQA-QFS---N
+
+>SFU2_S5_L001_Contig1725  {|3(0)|}frame_-2_NTSB domNum1 
+---G-Gg----------------G---------------------------------Q-G----------A---RDVLEQFGAIIQE-Q--A-K-AE---------A-VQ--H--RK-DLEGRLSNV-IFS---N
+
+>SXC2_S4_L001_Contig1860  {|3(0)|}frame_-3_NTSB domNum1 
+P--G-Rg----------------Gggqggkggkdky---------------------D-D-A-K-----DA---KELLDRIGEDIYK-K--I-K-DD---------S-NV--F--RD-ELKGKLQEA-ART---S
+
+>SXC2_S4_L001_Contig1853  {|7(0)|}frame_2_NTSB domNum1 
+---------------------------------------------------------------K-----SA---KEVLDEFGQQVYE-Q--V-K-KDvg-------A-EA--Y--KE-ALKGDLQKA-AST---S
+
+>SXC2_S4_L001_Contig1889  {|9(0)|}frame_-3_NTSB domNum1 
+S--S-Ag----------------T---------------------------------N-G-Y-N-----DA---KDLLDKIGQQVHD-Ei-V-E-NAa--------A-KK--Y--IE-ELRGNLTDS-TIL---G
+
+>SXC2_S4_L001_Contig1896  {|9(0)|}frame_-3_NTSB domNum1 
+G--S-T-----------------G---------------------------------T-Q-D-D-----DA---KNMFDRIGKEVHD-K--V-K-ND---------A-KT--Y--EG-ELKGNLASS-SIW---K
+
+>SXC2_S4_L001_Contig1885  {|10(0)|}frame_-2_NTSB domNum1 
+G--P-Rg----------------Ghgggsskekedepdy------------------T-N-V-K-----DA---KELLDKIGEHIYK-K--V-HlGD---------A-N---Y--RG-KLYGRLTQA-QFS---N
+
+>SXC2_S4_L001_Contig1693  {|3(0)|}frame_-1_NTSB domNum1 
+G--G-Gqggedk-----------Y---------------------------------K-N-A-T-----NV---KDLLDMIGKDVYD-K--V-K-EE---------A-KT--Y--KG-ELEGNLASS-SIL---G
+
+>SXC2_S4_L001_Contig1020  {|3(0)|}frame_-2_NTSB domNum1 
+Q--S-Rgaggvedaek-------Y---------------------------------K-N-A-P-----DA---KHLLDLIGETIQK-Q--A-H-AA---------A-LE--Rs-GS-ALQGRLSSA-TFK---N
+
+>SXC2_S4_L001_Contig1682  {|3(0)|}frame_-1_NTSB domNum1 
+A--G-Sg----------------G---------------------------------P-S----------A---RDVLEEYGEKIQE-H--A-K-KD---------S-IY--Y--RN-SLRGILSSV-TYP---N
+
+>SXC2_S4_L001_Contig619  {|14(0)|}frame_1_NTSB domNum1 
+S--T-S---------------------------------------------------T-T-Y-S-----SV---KDLLEKIGQSIQQ-K--A-T-IS---------A-KG--Y--RQ-YLHGNLKKA-EYP---K
+
+>SXC2_S4_L001_Contig1887  {|5(0)|}frame_2_NTSB domNum1 
+S--T-T-------------------------------------------------------Y-S-----SA---KDFLDSIGKKVHD-Ei-V-E-KGv--------A-ET--Y--KE-ALKGKLQEA-KVM---G
+
+>SXC2_S4_L001_Contig1886  {|3(0)|}frame_-2_NTSB domNum1 
+S--T-T-----------------Y---------------------------------S-S-A-K-----DA---KHLFDMIGKDVYN-Ek-V-K-SE---------A-QT--Y--KE-ALKGNLKEA-KGS---G
+
+>SXC2_S4_L001_Contig1425  {|10(0)|}frame_2_NTSB domNum1 
+G--P-Rg----------------Gvge------------------------------I-D-D-K-----DA---KHLLDSIGKKVHD-Ei-V-K-KDg--------A-EK--Y--KG-ELKGSLSLA-KGS---G
+
+>SXC2_S4_L001_Contig1910  {|4(0)|}frame_-2_NTSB domNum1 
+G--D-Gg----------------Gdan------------------------------K-S-A-R-----NA---RDILEEYGKKVQE-E--A-T-NK---------A-GE--Rs-YG-DLQGILSKA-TFN---K
+
+>SFM-1_S11_L001_Contig1851  {|3(0)|}frame_3_NTSB domNum1 
+P--G-Rg----------------Gggqggkggkdky---------------------D-D-A-K-----DA---KELLDRIGEDIYK-K--I-K-DD---------S-NV--F--RD-ELKGKLQEA-ART---S
+
+>SFM-1_S11_L001_Contig1882  {|3(0)|}frame_3_NTSB domNum1 
+T--S-Sg----------------Gtqeqedky-------------------------K-D-A-K-----DA---KDLLDRIGETIQK-Q--A-H-ND---------A-LD--Rs-GS-ELKGLLSRA-TFR---E
+
+>SFM-1_S11_L001_5120_soapGraphK61  {|4(0)|}frame_1_NTSB domNum1 
+A--S-Tt----------------Y---------------------------------S-S----------A---KDLLEKIGKQVQE-E--A-T-KV---------S-ID--Y--RN-SLRGILSSV-TYP---N
+
+>SFM-1_S11_L001_Contig1588  {|3(0)|}frame_2_NTSB domNum1 
+G--GpRg----------------Ggk-------------------------------D-D-Y-K-----DA---KELLDKIGEKIQK-Q--V-R-DE---------A-LE--Hs-KS-DLQGILSKA-TYS---N
+
+>SFM-1_S11_L001_5026_soapGraphK61  {|7(0)|}frame_2_NTSB domNum1 
+G--G-Gd----------------D---------------------------------I-D-H-K-----SV---KHLLDSIGEKVYK-Ek-V-E-ND---------A-EK--Y--KE-ALKGDLNKA-NGH---S
+
+>SFM-1_S11_L001_Contig1595  {|3(0)|}frame_1_NTSB domNum1 
+P--G-Grdgrgssgadk------Y---------------------------------K-N-A-Q-----DA---KHLLDMIGKDVHD-Q--M-K-ND---------A-ET--Y--KD-ELKGKLQEA-AST---S
+
+>SFM-1_S11_L001_Contig1590  {|4(0)|}frame_1_NTSB domNum1 
+A--S-Tt----------------Y---------------------------------S-S----------A---KDLLEKIGKQVQE-E--A-T-KV---------S-ID--Y--RN-SLRGILSSV-TYP---N
+
+>SFM-1_S11_L001_Contig1870  {|10(0)|}frame_-2_NTSB domNum1 
+G--S-Aakepd------------Y---------------------------------N-S-A-T-----NV---KELLDMIGEHIHK-E--V-H-RK---------D-AN--Y--RG-KLHGRLRQA-KFS---N
+
+>SFM-1_S11_L001_Contig2099  {|7(0)|}frame_-1_NTSB domNum1 
+---------------------------------------------------------------K-----SA---KEVLDEFGQQVYE-Q--V-K-KDvg-------A-EA--Y--KE-ALKGDLQKA-AST---S
+
+>SFM-1_S11_L001_Contig1881  {|7(0)|}frame_1_NTSB domNum1 
+G--G-Gd----------------D---------------------------------I-D-H-K-----SV---KHLLDSIGEKVYK-Ek-V-E-ND---------A-EK--Y--KE-ALKGDLNKA-NGH---S
+
+>SFM-1_S11_L001_Contig1167  {|3(0)|}frame_-2_NTSB domNum1 
+G--G-Gqggedk-----------Y---------------------------------K-N-A-T-----NV---KDLLDMIGKDVYD-K--V-K-EE---------A-KT--Y--KG-ELEGNLASS-SIL---G
+
+>SFM-1_S11_L001_Contig1600  {|3(0)|}frame_3_NTSB domNum1 
+K--S-Tpd---------------Y---------------------------------S-S-A-K-----DA---KDLLDMIGKDVHD-Q--V-K-TE---------S-NG--F--KD-DLKGDLASA-TSS---H
+
+>SFC19_S24_L002_5732_soapGraphK61  {|1(0)|}frame_3_NTSB domNum1 
+G--G-Gg----------------G---------------------------------G-V-D-K-----DA---KNMFDRIGQQVYN-Ek-V-K-NGe--------A-QT--Y--DS-YLKGNLQHA-TKS---S
+
+>SFC19_S24_L002_Contig1853  {|4(0)|}frame_2_NTSB domNum1 
+S--T-T-------------------------------------------------------Y-S-----SA---KELLDEIGAEVQK-I--A-K-KD---------V-VD--H--IS-YVKGVLANA-TYP---N
+
+>SFC19_S24_L002_Contig1851  {|1(0)|}frame_-2_NTSB domNum1 
+G--G-Gg----------------G---------------------------------G-V-D-K-----DA---KNMFDRIGQQVYN-Ek-V-K-NGe--------A-QT--Y--DS-YLKGNLQHA-TKS---S
+
+>SFC19_S24_L002_Contig1100  {|10(0)|}frame_1_NTSB domNum1 
+G--G-Gg----------------Gvdkdv----------------------------I-D-E-T-----SA---KNLLDSIGKKVYD-Q--V-K-NGad-------A-EK--Y--KG-ELKGDLQEAaKGM---G
+
+>SFC19_S24_L002_Contig1531  {|2(0)|}frame_1_NTSB domNum1 
+---G-Gg----------------Gsv-------------------------------E-E-D-K-----DA---KHMFDRIGQQVHE-Q--V-K-GE---------A-EK--Y--KN-KLKGDLKEA-KGI---G
+
+>SFC19_S24_L002_Contig1149  {|9(0)|}frame_-2_NTSB domNum1 
+G--P-Rg----------------Ghgggsskekedepdy------------------T-N-V-K-----DA---KELLDKIGEHIYK-K--V-HlGD---------A-N---Y--RG-KLYGRLTQA-QFS---N
+
+>SFC19_S24_L002_Contig1118  {|7(0)|}frame_-2_NTSB domNum1 
+G--S-Gg----------------D---------------------------------S-SrD-E-----SV---KDLFDRIGKKVYE-K--T-E-KI---------A-KR--Y--TT-ELHGDLSKA-TYP---G
+
+>SFC19_S24_L002_Contig719  {|3(0)|}frame_3_NTSB domNum1 
+G--N-Gg----------------G---------------------------------T-K-D-E-----DA---KNMFDRIGKEVYE-Q--V-K-GE---------A-VD--Y--RS-ALQGRLSDA-RFP---H
+
+>SFC19_S24_L002_Contig1120  {|1(0)|}frame_2_NTSB domNum1 
+G--G-Gqvged------------G---------------------------------I-E-E-T-----TA---KHMFDRIGKDVYE-T--V-K-KD---------A-LP--Y--NN-ALHGTLSQA-RFE---E
+
+>SFC19_S24_L002_Contig1569  {|5(0)|}frame_-3_NTSB domNum1 
+R--G-Gg----------------K---------------------------------D-D-Y-K-----DA---RELLDKIGKTVHE-K--L-K-GD---------A-EK--Y--SS-QLKGNLSLA-KGS---G
+
+>SFM-6_S3_L001_Contig2025  {|3(0)|}frame_-2_NTSB domNum1 
+Q--K-Aaapd-------------Y---------------------------------S-S-A-K-----DA---KHLLDMIGENVYN-E--V-H-RE---------D-AD--Y--RG-KLHGHLSDA-NFK---N
+
+>SFM-6_S3_L001_Contig1264  {|5(0)|}frame_-1_NTSB domNum1 
+S--T-T-------------------------------------------------------Y-G-----SV---KDLFENIGKEVQE-L--A-K-ND---------A-KQ--Y--RS-QLKGDLSQA-TYSrnsN
+
+>SFM-6_S3_L001_Contig1999  {|7(0)|}frame_-3_NTSB domNum1 
+S--G-Gg----------------Gsv-------------------------------E-E-D-K-----DA---KYMFDRIGQQVHE-Q--V-K-GE---------A-QT--Y--FS-ELKGDLKEA-KGI---G
+
+>SFM-6_S3_L001_5453_soapGraphK61  {|1(0)|}frame_1_NTSB domNum1 
+-----------------------Y---------------------------------S-D-A-N-----DA---KDLLDKIGQQVYE-Ek-V-Q-SD---------A-ET--Y--KD-ELKGDLKKA-AST---S
+
+>SFM-6_S3_L001_Contig1751  {|3(0)|}frame_1_NTSB domNum1 
+Q--S-Sg----------------Ggggd-----------------------------I-E-D-K-----DA---KHMFDRIGQQVYE-T--V-K-NGg--------A-KT--Y--KD-DLKGKLQEA-KGI---G
+
+>SFM-6_S3_L001_Contig97  {|9(0)|}frame_3_NTSB domNum1 
+G--G-Rg----------------Gqggkdky--------------------------D-D-A-Q-----DA---KELLDRIGKDVHD-Q--V-K-NDe--------A-KK--Y--ID-ELHGDLQKA-VTT---T
+
+>SFM-6_S3_L001_Contig1421  {|3(0)|}frame_-1_NTSB domNum1 
+-----Gg----------------G---------------------------------T-Q-D-K-----DA---KHLLDEIGETIEK-E--V-R-KS---------I-VD--Y--IS-ELKGNLRNV-RFK---D
+
+>SFM-6_S3_L001_16823_soapGraphK41 frame_-2_NTSB domNum1 
+-------------------------------------------------------------D-K-----DA---KHVLDEFGQQVYK-Ek-V-Q-SD---------A-EK--Y--KE-ALKGDLNKA-NGH---R
+
+>SFM-10_S1_L001_Contig572  {|3(0)|}frame_1_NTSB domNum1 
+Q--S-Rgaggvedaek-------Y---------------------------------K-N-A-P-----DA---KHLLDLIGETIQK-Q--A-H-AA---------A-LE--Rs-GS-ALQGRLSSA-TFK---N
+
+>SFM-10_S1_L001_Contig2231  {|3(0)|}frame_-1_NTSB domNum1 
+S--T-T-----------------Y---------------------------------S-S-A-K-----DA---KHLFDMIGKDVYN-Ek-V-K-SE---------A-QT--Y--KE-ALKGNLKEA-KGS---G
+
+>SFM-10_S1_L001_Contig336  {|4(0)|}frame_3_NTSB domNum1 
+Q--G-Gr----------------Geddi-----------------------------E-H-D-K-----DV---KHLLDSIGKKVHG-E--A-K-KN---------A-EQ--Y--FN-ELHGRLSEA-RFE---K
+
+>SFM-10_S1_L001_7135_soapGraphK61  {|1(0)|}frame_3_NTSB domNum1 
+G--G-Gg----------------G---------------------------------G-V-D-K-----DA---KNMFDRIGQQVYN-Ek-V-K-NGe--------A-QT--Y--DS-YLKGNLQHA-TKS---S
+
+>SFM-10_S1_L001_Contig839  {|9(0)|}frame_-3_NTSB domNum1 
+S--S-Ag----------------T---------------------------------N-G-Y-N-----DA---KDLLDKIGQQVHD-Ei-V-E-NAa--------A-KK--Y--IE-ELRGNLTDS-TIL---G
+
+>SFM-10_S1_L001_Contig1854  {|11(0)|}frame_2_NTSB domNum1 
+Q--G-GrgghgggsskekedepdY---------------------------------T-N-V-K-----DA---KELLDKIGEHIYK-K--V-HlGD---------A-N---Y--RG-KLYGRLTQA-QFS---N
+
+>SFM-10_S1_L001_Contig2270  {|4(0)|}frame_2_NTSB domNum1 
+-----Gg----------------G---------------------------------S-P---Q-----DA---KHLLDSIGEKVYK-E--V-K-KGv--------A-ET--Y--KE-ALKGDLKKA-AST---S
+
+>SFM-10_S1_L001_Contig2456  {|9(0)|}frame_-3_NTSB domNum1 
+G--G-Gg----------------G---------------------------------S-G-E-E-----DA---KHMFDRIGAEVQT-I--A-H-SD---------A-LG--Rs-HS-KLKGDLSSV-KFY---T
+
+>SFM-10_S1_L001_Contig1849  {|11(0)|}frame_-3_NTSB domNum1 
+Q--G-GrgghgggsskekedepdY---------------------------------T-N-V-K-----DA---KELLDKIGEHIYK-K--V-HlGD---------A-N---Y--RG-KLYGRLTQA-QFS---N
+
+>SFM-10_S1_L001_Contig2581  {|11(0)|}frame_3_NTSB domNum1 
+G--G-Sg----------------Gagsgggdd-------------------------I-D-H-A-----SA---KHVLDEFGQQVYD-Ei-V-K-KGv--------A-KT--Y--KG-ELEGSLSQV-SVK---S
+
+>SFM-10_S1_L001_7183_soapGraphK61  {|3(0)|}frame_-2_NTSB domNum1 
+K--G-G-----------------G---------------------------------S-P---Q-----DA---KHLLDSIGEKVYK-E--V-K-KGv--------A-ET--Y--KE-ALKGDLKKA-AST---S
+
+>SFM-10_S1_L001_Contig1320  {|9(0)|}frame_1_NTSB domNum1 
+G--G-Sg----------------G---------------------------------T-D---K-----SA---KEVLDEYGEQIKK-E--V-H-AK---------A-LE--Y--EN-DLHGFLSRV-VFS---N
+
+>SFM-10_S1_L001_Contig2543  {|3(0)|}frame_2_NTSB domNum1 
+Q--S-Rgaggvedaek-------Y---------------------------------K-N-A-T-----NV---KELLDKIGEDVYK-K--V-K-DA---------A-LP--Y--ND-ALQGRLSDA-TYP---N
+
+>SFM-10_S1_L001_Contig2469  {|10(0)|}frame_-1_NTSB domNum1 
+-------------------------------------------------------------Y-N-----SA---KDLLEDIGKSIQK-E--A-H-TE---------A-SQ--H--ER-SLKGSLSQV-EFK---E
+
+>SFM-10_S1_L001_Contig2267  {|2(0)|}frame_1_NTSB domNum1 
+S--P-Tptvnk------------Y---------------------------------T-W-A-S-----DA---KNLLEEIGEDIYK-K--A-K-EA---------A-LG--Rg-GN-KLQGDLSKA-RFK---D
+
+>SFM-10_S1_L001_Contig2554  {|10(0)|}frame_-1_NTSB domNum1 
+G--D-Gg----------------G---------------------------------SpQ-D-D-----DA---KYMFDRIGANVHE-E--V-K-KE---------A-QT--Y--KG-ELEGNLSFA-SIF---G
+
+>SFM-10_S1_L001_7117_soapGraphK61  {|3(0)|}frame_3_NTSB domNum1 
+S--T-T-----------------Y---------------------------------S-S-A-K-----DA---KHLFDMIGKDVYN-Ek-V-K-SE---------A-QT--Y--KE-ALKGNLKEA-KGS---G
+
+>SFM-8_S8_L001_Contig2436  {|12(0)|}frame_1_NTSB domNum1 
+G--G-Gg----------------D---------------------------------P-Q-D-E-----SA---KHMFDRIGGIIQK-E--A-H-KK---------A-LE--Rs-GS-ELKGFISRA-SYN---G
+
+>SFM-8_S8_L001_Contig3547  {|5(0)|}frame_1_NTSB domNum1 
+-----------------------Y---------------------------------I-K-V-N-----NA---KDLFDLIGKYIKE-Q--V-H-IE---------S-LT--Rd-GS-KLHGFFSQV-EFT---N
+
+>SFM-8_S8_L001_Contig3543  {|7(0)|}frame_2_NTSB domNum1 
+G--S-Gg----------------D---------------------------------S-SrD-E-----SV---KHLFDRIGKKVYE-K--T-E-KI---------A-KR--Y--TT-ELHGDLSKA-SYP---N
+
+>SFM-8_S8_L001_Contig3598  {|11(0)|}frame_3_NTSB domNum1 
+A--PvTd----------------Y---------------------------------S-D-A-T-----DA---KDLLDRIGETVQE-K--V-H-KE---------D-AD--Y--RN-YLQGHLEDA-RFE---K
+
+>SFM-8_S8_L001_Contig2970  {|4(0)|}frame_3_NTSB domNum1 
+G--N-Gg----------------G---------------------------------G-S-S-Q-----DA---KHVLDEFGQQVYD-Ei-V-E-KE---------A-NQ--Y--KE-ALKGKLQHA-KGS---D
+
+>SFM-8_S8_L001_Contig3560  {|4(0)|}frame_3_NTSB domNum1 
+S--G-Grged-------------Y---------------------------------I-E-E-T-----TA---KHLLDSIGKRVHD-Q--V-K-NGad-------A-KN--Y--IE-ELKACVSQA-PIL---S
+
+>SFM-8_S8_L001_Contig3583  {|7(0)|}frame_2_NTSB domNum1 
+Ql-D-Ttvnd-------------Y---------------------------------T-L-A-S-----DV---KHLLDRIGEDIYK-I--A-K-ND---------E-ND--F--RE-KLKGTLSQA-TYP---R
+
+>SFM-8_S8_L001_Contig3522  {|5(0)|}frame_-1_NTSB domNum1 
+G--N-Gg----------------Ggkkvdepdy------------------------T-K-A-T-----NV---KELLDMIGKDVHD-Q--V-K-NGadgt-----A-KN--Y--IG-ELKGDLQEA-AST---S
+
+>SFM-8_S8_L001_Contig3607  {|10(0)|}frame_1_NTSB domNum1 
+A--G-S-----------------N---------------------------------T-Q-D-E-----SA---KHMFDRIGEKVYN-E--V-K-NGad-------A-KK--Y--KD-DLKGNLASS-SIL---G
+
+>SFM-8_S8_L001_10286_soapGraphK61  {|4(0)|}frame_-1_NTSB domNum1 
+G--G-G-----------------------------------------------------T-D-K-----SA---KHVLDEFGQQVYR-Ek-V-Q-SD---------A-EA--Y--KD-DLKGNLQEA-VTT---T
+
+>SFM-8_S8_L001_Contig2899  {|4(0)|}frame_-3_NTSB domNum1 
+G--G-G-----------------------------------------------------T-D-K-----SA---KHVLDEFGQQVYR-Ek-V-Q-SD---------A-EA--Y--KD-DLKGNLQEA-VTT---T
+
+>SFM-8_S8_L001_Contig694  {|3(0)|}frame_2_NTSB domNum1 
+P--S-Avsapd------------Y---------------------------------S-K-A-T-----NV---KYLFDMIGEIVQK-K--V-T-RK---------A-IQ--Y--NN-DLHGVLSNV-NFS---N
+
+>SFM-8_S8_L001_Contig1517  {|3(0)|}frame_1_NTSB domNum1 
+S--R-Apn---------------Y---------------------------------S-S-A-Q-----NA---KELLELIGETVQK-K--A-T-NI---------V-HE--N--RE-KLKGNLSDA-KFL---G
+
+>SFC16_S6_L001_Contig1788  {|9(0)|}frame_-2_NTSB domNum1 
+P--P-Aapd--------------Y---------------------------------S-S-A-K-----DA---KDLFDMIGKDVHD-Q--V-Q-SD---------A-KT--Y--KQ-ALKGNLTSS-TIF---D
+
+>SFC16_S6_L001_Contig1630  {|14(0)|}frame_3_NTSB domNum1 
+Q--G-Ge----------------D---------------------------------I-D-E-T-----SA---KNLLDSIGKIVHD-Q--V-K-SE---------S-NG--F--KD-DLKGNLQHA-TNI---N
+
+>SFC16_S6_L001_Contig1793  {|11(0)|}frame_3_NTSB domNum1 
+G--G-Sg----------------Gagsgggdd-------------------------I-D-H-A-----SA---KHVLDEFGQQVYD-Ei-V-K-KGv--------A-KT--Y--KG-ELEGSLSQV-SVK---S
+
+>SFC16_S6_L001_4433_soapGraphK61  {|14(0)|}frame_1_NTSB domNum1 
+Q--G-Ge----------------D---------------------------------I-D-E-T-----SA---KNLLDSIGKIVHD-Q--V-K-SE---------S-NG--F--KD-DLKGNLQHA-TNI---N
+
+>SFC16_S6_L001_4405_soapGraphK61  {|10(0)|}frame_1_NTSB domNum1 
+G--G-Gg----------------Gvdkdv----------------------------I-D-E-T-----SA---KNLLDSIGKKVYD-Q--V-K-NGad-------A-EK--Y--KG-ELKGDLQEAaKGM---G
+
+>SFC16_S6_L001_Contig1624  {|5(0)|}frame_2_NTSB domNum1 
+Q--G-Gtqeqedk----------Y---------------------------------K-N-A-E-----DA---KDLFDIIGKDVHD-Ei-V-K-SE---------A-LG--Rs-NG-DLQGILSKA-DYK---N
+
+>SFC16_S6_L001_Contig1629  {|10(0)|}frame_-3_NTSB domNum1 
+G--G-Gg----------------Gvdkdv----------------------------I-D-E-T-----SA---KNLLDSIGKKVYD-Q--V-K-NGad-------A-EK--Y--KG-ELKGDLQEAaKGM---G
+
+>SFC16_S6_L001_Contig993  {|5(0)|}frame_2_NTSB domNum1 
+G--R-R----------------------------------------------------------------V---RDVLDEIGEKIQK-D--A-H-NA---------S-EQ--Y--HK-VLQGHLSKV-RFS---D
+
+>SFC22_S9_L001_8186_soapGraphK61  {|8(0)|}frame_2_NTSB domNum1 
+G--G-Sg----------------Ggdd------------------------------I-D-D-K-----DA---KHLLDSIGKKVHD-Ei-V-K-TE---------A-AN--Y--VG-DLKGLLTSA-TLL---G
+
+>SFC22_S9_L001_Contig2385  {|3(0)|}frame_-3_NTSB domNum1 
+Q--G-Sg----------------Ggggqggkddy-----------------------K-D-A-T-----NV---KDLLDKIGQQVYD-Et-V-K-KGvad------A-KN--Y--IG-ELKGKLKEA-KGI---R
+
+>SFC22_S9_L001_Contig3178  {|7(0)|}frame_3_NTSB domNum1 
+G--G-Gd----------------D---------------------------------I-D-H-K-----SV---KHLLDSIGEKVYK-Ek-V-E-ND---------A-EK--Y--KE-ALKGDLNKA-NGH---S
+
+>SFC22_S9_L001_8676_soapGraphK61  {|26(0)|}frame_-3_NTSB domNum1 
+A--Q-Gg----------------T---------------------------------Q-D---------DA---KHVLDKIGQQVHD-L--V-K-NA---------A-LD--Rs-ES-ALKGDLSKA-TYS---R
+
+>SFC22_S9_L001_Contig2819  {|4(0)|}frame_2_NTSB domNum1 
+G--S-Ag----------------T---------------------------------E-D----------A---KHALDKIGEDVYK-K--V-K-DE---------A-QK--Rs-NG-ELKGLLSLA-TAS---E
+
+>SFC22_S9_L001_Contig2330  {|8(0)|}frame_-3_NTSB domNum1 
+G--G-Gg----------------Gggk------------------------------D-D-Y-K-----DA---KDFLDKIGQKVYD-Ei-V-K-KE---------V-EQ--Rs-NG-ELKGFLTSA-TIF---G
+
+>SFC22_S9_L001_Contig2847  {|10(0)|}frame_2_NTSB domNum1 
+A--G-S-----------------N---------------------------------T-Q-D-E-----SA---KHMFDRIGEKVYN-E--V-K-NGad-------A-KK--Y--KD-DLKGNLASS-SIL---G
+
+>SFC22_S9_L001_Contig1580  {|3(0)|}frame_2_NTSB domNum1 
+G--G-Rldggssgadk-------Y---------------------------------K-N-A-Q-----DA---KELLDRIGEDIYK-K--I-K-DE---------A-QK--Rs-NG-GLKGKLSLA-STS---S
+
+>SFC22_S9_L001_Contig2361  {|27(0)|}frame_2_NTSB domNum1 
+A--S-Tt----------------Y---------------------------------S-S----------V---KDLLEDIGKSIQK-Q--A-H-DA---------A-LG--Rs-GS-DLHGLLSRA-KFN---G
+
+>SFC22_S9_L001_Contig2363  {|11(0)|}frame_-3_NTSB domNum1 
+A--PvTd----------------Y---------------------------------S-D-A-T-----DA---KDLLDRIGETVQE-K--V-H-KE---------D-AD--Y--RN-YLQGHLEDA-RFE---K
+
+>SFC22_S9_L001_Contig1326  {|4(0)|}frame_-3_NTSB domNum1 
+G--S-Gg----------------Ggkddy----------------------------K-D-A-K-----DA---KHLLDQIGETIQK-Q--A-H-AA---------A-LK--R--GR-GLQGFWSLA-TYP---N
+
+>SFC22_S9_L001_Contig2757  {|1(0)|}frame_-1_NTSB domNum1 
+-------------------------------------------------------------D-K-----DA---KNMFDRIGKDVYE-T--V-K-KE---------A-ET--Y--KD-ELKGNLTIS-TIF---D
+
+>SFC22_S9_L001_Contig1688  {|4(0)|}frame_1_NTSB domNum1 
+Gr-G-Gd----------------G---------------------------------I-D-E-T-----SA---KDFLDSIGKIVHD-Q--V-K-EE---------A-EQ--Rs-RS-DLKGSLSRA-TFN---K
+
+>SFC22_S9_L001_Contig3222  {|6(0)|}frame_2_NTSB domNum1 
+G--N-Gg----------------G---------------------------------G-S-S-Q-----DA---KHVLDKIGEKIQK-Q--V-Y-NA---------A-LN--H--IN-DLKGYLNNV-KFS---N
+
+>SFC22_S9_L001_Contig2722  {|4(0)|}frame_1_NTSB domNum1 
+G--G-G-----------------------------------------------------T-D-K-----SA---KHVLDEFGQQVYR-Ek-V-Q-SD---------A-EA--Y--KD-DLKGNLQEA-VTT---T
+
+>SFC22_S9_L001_Contig1879  {|5(0)|}frame_1_NTSB domNum1 
+G--N-Gg----------------Ggkkvdepdy------------------------T-K-A-T-----NV---KELLDMIGKDVHD-Q--V-K-NGadgt-----A-KN--Y--IG-ELKGDLQEA-AST---S
+
+>SFC22_S9_L001_Contig2839  {|3(0)|}frame_3_NTSB domNum1 
+S--G-Sa----------------G---------------------------------T-E---------DA---KHVLDKFGQQVHD-Q--V-K-NGadgt-----A-KK--Y--IE-ELKGNLQYA-TNI---N
+
+>SFC22_S9_L001_Contig2834  {|26(0)|}frame_2_NTSB domNum1 
+A--Q-Gg----------------T---------------------------------Q-D---------DA---KHVLDKIGQQVHD-L--V-K-NA---------A-LD--Rs-ES-ALKGDLSKA-TYS---R
+
+>SFC22_S9_L001_8670_soapGraphK61 frame_-2_NTSB domNum1 
+-------------------------------------------------------------Y-S-----DA---KDFLDKMGEKVYR-Ek-V-Q-SD---------A-KT--Y--KE-ALKGDLASA-TED---S
+
+>SFC22_S9_L001_Contig2832  {|2(0)|}frame_-3_NTSB domNum1 
+G--G-Sa----------------G---------------------------------S-T---Q-----DA---KHVLDEFGQKVYD-Ei-V-K-KDgad------A-ET--Y--KE-ALKGDLASA-TNR---S
+
+>SFC22_S9_L001_Contig3169  {|3(0)|}frame_3_NTSB domNum1 
+G--G-Rqg---------------Gk--------------------------------D-K-Y-D-----DA---KYMFDRIGKDVYD-K--V-K-GE---------A-QT--Y--KD-DLKAYVSFA-SIF---G
+
+>SFC22_S9_L001_Contig3053  {|6(0)|}frame_-2_NTSB domNum1 
+G--S-Gdaek-------------Y---------------------------------K-N-A-K-----DA---KHLLDMIGKDVYD-Q--V-K-NGad-------A-KK--Y--IK-ELKGDLSKA-SYP---N
+
+>SFC22_S9_L001_8668_soapGraphK61  {|4(0)|}frame_-3_NTSB domNum1 
+G--S-Ag----------------T---------------------------------E-D----------A---KHALDKIGEDVYK-K--V-K-DE---------A-QK--Rs-NG-ELKGLLSLA-TAS---E
+
+>SFC22_S9_L001_Contig1652  {|7(0)|}frame_1_NTSB domNum1 
+Ql-D-Ttvnd-------------Y---------------------------------T-L-A-S-----DV---KHLLDRIGEDIYK-I--A-K-ND---------E-ND--F--RE-KLKGTLSQA-TYP---R
+
+>SFC22_S9_L001_Contig3199  {|7(0)|}frame_2_NTSB domNum1 
+G--S-Gg----------------D---------------------------------S-SrD-E-----SV---KHLFDRIGKKVYE-K--T-E-KI---------A-KR--Y--TT-ELHGDLSKA-SYP---N
+
+>SFM-7_S13_L001_Contig2112  {|10(0)|}frame_2_NTSB domNum1 
+A--K-Gg----------------G---------------------------------S-P---Q-----DA---KHLLDSIGKIVHD-K--V-K-KV---------A-EQ--Y--FN-ELHGTLSLA-KFE---K
+
+>SFM-7_S13_L001_5268_soapGraphK61  {|6(0)|}frame_-1_NTSB domNum1 
+Q--G-Gkkedtpn----------Y---------------------------------K-D-A-K-----DA---KELLDMIGETVQE-K--V-H-GA---------A-VQ--Y--NS-QLLGDLSRA-KFE---K
+
+>SFM-7_S13_L001_5208_soapGraphK61  {|3(0)|}frame_-3_NTSB domNum1 
+S--G-G-----------------------------------------------------T-D-K-----SA---KEVLDKIGQKVHD-Ei-V-K-NAe--------A-ET--Y--KN-KLKGDLASA-TSS---H
+
+>SFM-7_S13_L001_Contig1891  {|10(0)|}frame_-1_NTSB domNum1 
+G--G-Ssgdaek-----------Y---------------------------------K-S-A-P-----DA---KHLFDMIGKDVHD-Q--V-K-SE---------A-QT--Y--DS-YLKGSLASA-TSS---H
+
+>SFM-7_S13_L001_Contig144  {|9(0)|}frame_2_NTSB domNum1 
+G--S-Gdaek-------------Y---------------------------------K-N-A-T-----NV---KDLLDMIGADVYN-E--V-K-SE---------A-NQ--Y--KE-ALTGQLSLA-SIW---K
+
+>SFM-7_S13_L001_Contig1894  {|2(0)|}frame_2_NTSB domNum1 
+G--G-Sg----------------G---------------------------------T-K---K-----TA---KEVLDEFGQQVHK-E--V-K-NGg--------A-EK--Y--FD-ELHGSLKDA-IFE---E
+
+>SFM-7_S13_L001_Contig1892  {|10(0)|}frame_-2_NTSB domNum1 
+-------------------------------------------------------------A-T-----SA---KDLLDQIGETVQK-E--V-H-GD---------A-QQ--Y--FS-ELKGDLSQA-KFR---T
+
+>SFM-7_S13_L001_Contig2136 frame_1_NTSB domNum1 
+----------------------------------------------------------------------A---KHLLDSIGKIVHD-K--V-K-KE---------A-AD--Y--RN-ALQGHLENA-IFE---K
+
+>SFM-7_S13_L001_Contig2137 frame_1_NTSB domNum1 
+----------------------------------------------------------------------A---KHLLDSIGKIVHD-K--V-K-KE---------A-EA--Y--KG-ALTGQLSLA-SIL---G
+
+>SFM-7_S13_L001_Contig1499  {|5(0)|}frame_2_NTSB domNum1 
+S--T-T-------------------------------------------------------Y-S-----SA---KDFLDSIGKKVHD-Ei-V-E-KGv--------A-ET--Y--KE-ALKGKLQEA-KVM---G
+
+>SFM-7_S13_L001_Contig1550  {|3(0)|}frame_2_NTSB domNum1 
+-----G-----------------M---------------------------------N-G-Y-S-----DA---KDFLDKIGQKVYE-Ek-V-E-KDad-------A-EK--Y--KE-ALKGNLQAA-KGI---G
+
+>SFM-7_S13_L001_Contig1887  {|6(0)|}frame_-2_NTSB domNum1 
+Q--G-Gkkedtpn----------Y---------------------------------K-D-A-K-----DA---KELLDMIGETVQE-K--V-H-GA---------A-VQ--Y--NS-QLLGDLSRA-KFE---K
+
+>SFM-5_S2_L001_Contig1938  {|7(0)|}frame_-1_NTSB domNum1 
+G--G-Ged---------------G---------------------------------I-D-D-K-----DA---KHLLDSIGKIVHK-K--V-H-SE---------A-QT--Y--KQ-ALTGQLSFA-TLS---G
+
+>SFM-5_S2_L001_Contig1932  {|4(0)|}frame_-2_NTSB domNum1 
+G--G-G-----------------------------------------------------T-D-K-----SA---KHVLDEFGQQVYR-Ek-V-Q-SD---------A-EA--Y--KD-DLKGNLQEA-VTT---T
+
+>SFC-18_S20_L002_Contig653  {|5(0)|}frame_3_NTSB domNum1 
+Q--R-Ae----------------D---------------------------------S-N---K-----SA---KEVLDEYGEQIQK-E--A-H-KS---------A-VH--Y--GN-VLRGLLSNV-VFS---N
+
+>SFC-18_S20_L002_Contig1719  {|2(0)|}frame_-1_NTSB domNum1 
+S--T-T-----------------Y---------------------------------S-S-A-K-----NA---KDLLDRIGKDVYD-K--V-K-EE---------A-EK--Rs-NG-DLKAYVSFA-SIF---G
+
+>SFC-18_S20_L002_Contig1119  {|2(0)|}frame_3_NTSB domNum1 
+-------------------------------------------------------------Y-S-----SA---KEFLDLIGETVQK-N--V-K-HA---------A-KQ--Y--YS-ELHGDLSKA-TYP---G
+
+>SFC-18_S20_L002_Contig1724  {|7(0)|}frame_-2_NTSB domNum1 
+A--K-Gg----------------G---------------------------------S-S---Q-----DA---KHVLDEFGQQVYD-Ei-V-E-KD---------A-KT--Y--DS-YLKGNLQEA-VST---I
+
+>SFC-18_S20_L002_Contig1910  {|3(0)|}frame_-3_NTSB domNum1 
+G--G-Sg----------------Gggndy----------------------------S-S-A-K-----DA---KDLLDMIGKDVYE-T--V-K-KDad-------A-KK--Y--IK-ELEGDLAIG-TSS---H
+
+>SFC15-CM_S29_L002_Contig1954  {|2(0)|}frame_-3_NTSB domNum1 
+-------------------------------------------------------------Y-S-----SA---KDFLDSIGKKVHD-Ei-V-E-KGv--------A-ET--Y--KE-ALKGKLQEA-KVM---G
+
+>SFC15-CM_S29_L002_Contig1923  {|3(0)|}frame_1_NTSB domNum1 
+P--G-Rg----------------Gggqggkggkdky---------------------D-D-A-K-----DA---KELLDRIGEDIYK-K--I-K-DD---------S-NV--F--RD-ELKGKLQEA-ART---S
+
+>SFC15-CM_S29_L002_Contig1945  {|2(0)|}frame_-3_NTSB domNum1 
+G--S-A-----------------G---------------------------------T-Q-D-D-----SV---KDLFDRIGQQVHE-Ei-V-K-NGe--------A-KK--Y--IG-DLKGDLQKA-TNR---S
+
+>SFC15-CM_S29_L002_Contig1749  {|10(0)|}frame_2_NTSB domNum1 
+G--G-Gg----------------G---------------------------------S-G-E-E-----DA---KHMFDRIGAEVQT-I--A-H-SD---------A-LG--Rs-HS-KLKGDLSSV-KFY---T
+
+>SFC15-CM_S29_L002_Contig1745  {|6(0)|}frame_-3_NTSB domNum1 
+Q--G-Gkkedtpn----------Y---------------------------------K-D-A-K-----DA---KELLDMIGETVQE-K--V-H-GA---------A-VQ--Y--NS-QLLGDLSRA-KFE---K
+
+>SFC15-CM_S29_L002_Contig1967  {|3(0)|}frame_1_NTSB domNum1 
+-----Gg----------------G---------------------------------T-Q-D-K-----DA---KHLLDEIGETIEK-E--V-R-KS---------I-VD--Y--IS-ELKGNLRNV-RFK---D
+
+>SFC15-CM_S29_L002_Contig1064  {|6(0)|}frame_-1_NTSB domNum1 
+Q--P-Kvrpd-------------Y---------------------------------S-D-A-N-----DA---KDLLDKIGQQVYD-Et-V-K-KV---------A-DN--Y--SS-QLKGTLSQA-TFE---G
+
+>SFC-21_S22_L002_Contig2705  {|11(0)|}frame_1_NTSB domNum1 
+S--G-Gg----------------G---------------------------------S-S---Q-----DA---KHLLDSIGEKVHD-Q--V-K-ND---------A-KT--Y--FS-ELKGNLTDS-TIF---G
+
+>SFC-21_S22_L002_Contig1679  {|7(0)|}frame_-1_NTSB domNum1 
+G--S-Gg----------------D---------------------------------S-SrD-E-----SV---KDLFDRIGKKVYE-K--T-E-KI---------A-KR--Y--TT-ELHGDLSKA-TYP---G
+
+>SFC-21_S22_L002_Contig1819  {|1(0)|}frame_2_NTSB domNum1 
+-----G-----------------G---------------------------------T-K-D-E-----SA---KHVLDEFGQQVYK-E--V-K-NGg--------A-KT--Y--FD-ELKGDLKKA-KDM---G
+
+>SFC-21_S22_L002_Contig1212  {|13(0)|}frame_2_NTSB domNum1 
+G--G-Gg----------------Ged-------------------------------I-D-K-T-----SA---KHLLDSIGKRVHA-Q--V-Q-NE---------A-AG--Rg-GS-ELKGLLSLA-TFS---S
+
+>SFC-21_S22_L002_Contig2102  {|3(0)|}frame_-1_NTSB domNum1 
+G--R-Ggeed-------------Y---------------------------------I-E-E-T-----TA---KHLLDSIGKKVHD-Q--V-K-EE---------A-ER--Rs-NG-DLKGNLKEA-KGI---G
+
+>SFC-21_S22_L002_Contig2147  {|2(0)|}frame_1_NTSB domNum1 
+G--G-Rg----------------Grgagssg--------------------------E-E-D-K-----DA---KNMFDRIGAEVQK-E--A-H-SE---------A-LE--Rs-HN-ELQGHLSQA-TYA---N
+
+>SFC-21_S22_L002_Contig2708  {|1(0)|}frame_-2_NTSB domNum1 
+G--G-Gg----------------G---------------------------------G-V-D-K-----DA---KNMFDRIGQQVYN-Ek-V-K-NGe--------A-QT--Y--DS-YLKGNLQHA-TKS---S
+
+>SFC-21_S22_L002_Contig2469  {|2(0)|}frame_3_NTSB domNum1 
+-----------------------Y---------------------------------K-N-A-K-----DA---KELLDRIGEDIYK-I--A-N-KD---------A-LT--Rs-RS-RLKGFLTSA-KFS---D
+
+>SFM-3_S12_L001_Contig1468  {|3(0)|}frame_3_NTSB domNum1 
+Q--S-Rgaggvedaek-------Y---------------------------------K-N-A-P-----DA---KHLLDLIGETIQK-Q--A-H-AA---------A-LE--Rs-GS-ALQGRLSSA-TFK---N
+
+>SFM-3_S12_L001_Contig1463  {|2(0)|}frame_1_NTSB domNum1 
+S--R-Apn---------------Y---------------------------------S-S-A-Q-----NA---KELLELIGETVQK-K--A-T-NI---------V-HE--N--RE-KLKGNLSDA-KFL---G
+
+>SFM-3_S12_L001_Contig1460  {|3(0)|}frame_3_NTSB domNum1 
+G--N-Gg----------------G---------------------------------T-K-D-E-----DA---KNMFDRIGKEVYE-Q--V-K-GE---------A-VD--Y--RS-ALQGRLSDA-RFP---H
+
+>SFM-3_S12_L001_Contig1458  {|3(0)|}frame_2_NTSB domNum1 
+S--G-Sa----------------G---------------------------------T-E---------DA---KHVLDKFGQQVHD-Q--V-K-NGadgt-----A-KK--Y--IE-ELKGNLQYA-TNI---N
+
+>SFM-3_S12_L001_Contig598  {|4(0)|}frame_1_NTSB domNum1 
+G--D-Gg----------------Gdan------------------------------K-S-A-R-----NA---RDILEEYGKKVQE-E--A-T-NK---------A-GE--Rs-YG-DLQGILSKA-TFN---K
+
+>SFM-3_S12_L001_5196_soapGraphK61  {|5(0)|}frame_2_NTSB domNum1 
+S--T-T-------------------------------------------------------Y-S-----SA---KDFLDSIGKKVHD-Ei-V-E-KGv--------A-ET--Y--KE-ALKGKLQEA-KVM---G
+
+>SFM-3_S12_L001_Contig934  {|3(0)|}frame_2_NTSB domNum1 
+P--G-Ggqvg-------------Gdd-------------------------------I-D-E-R-----SA---KHLLDSIGKKVHK-E--V-K-NA---------A-ND--F--RE-KLKGDLKKA-AST---N
+
+>SFM-3_S12_L001_Contig855  {|6(0)|}frame_3_NTSB domNum1 
+S--K-Aasvpk------------Y---------------------------------D-Q-A-S-----NV---RDLLDMIGKDVYD-E--V-H-KK---------D-AD--Y--RS-SLQGDLSKA-TFR---Y
+
+>SFM-3_S12_L001_Contig1101  {|3(0)|}frame_2_NTSB domNum1 
+S--G-Sa----------------G---------------------------------T-E---------DA---KHVLDKFGQQVHD-Q--V-K-NGadgt-----A-KK--Y--IE-ELKGNLQYA-TNI---N
+
+>SFM-3_S12_L001_Contig1997  {|10(0)|}frame_-2_NTSB domNum1 
+G--P-Rg----------------Ghgggsskekedepdy------------------T-N-V-K-----DA---KELLDKIGEHIYK-K--V-HlGD---------A-N---Y--RG-KLYGRLTQA-QFS---N
+
+>SFM-3_S12_L001_Contig798  {|4(0)|}frame_2_NTSB domNum1 
+-----------------------Y---------------------------------S-K-A-T-----SA---KDFLDLIGETVQK-E--V-H-GE---------A-KN--Y--VI-ELKGNLSRA-KYP---K
+
+>SFM-3_S12_L001_Contig950  {|5(0)|}frame_1_NTSB domNum1 
+G--N-Gg----------------G---------------------------------G-S-S-Q-----DA---KHVLDKIGEKIQK-Q--V-Y-NA---------A-LN--H--IN-DLKGYLNNV-KFS---N
+
+>SFM-3_S12_L001_Contig915  {|16(0)|}frame_1_NTSB domNum1 
+-----------------------G---------------------------------I-E-D-T-----TA---KHALDKIGEEVYKgK--V-E-KD---------A-EK--Y--YD-DLHGSLKNA-IFE---N
+
+>SFM-3_S12_L001_Contig1754  {|5(0)|}frame_1_NTSB domNum1 
+S--T-T-------------------------------------------------------Y-S-----SA---KDFLDSIGKKVHD-Ei-V-E-KGv--------A-ET--Y--KE-ALKGKLQEA-KVM---G
+
+>SFC14_S17_L001_Contig1221  {|5(0)|}frame_-1_NTSB domNum1 
+G--S-Gg----------------D---------------------------------S-SrD-E-----SV---KDLFDRIGKKVYE-K--T-E-KI---------A-KR--Y--TT-ELHGDLSKA-TYP---K
+
+>SFC14_S17_L001_Contig2125  {|5(0)|}frame_-2_NTSB domNum1 
+Q--G-G-----------------G---------------------------------T-K-D-E-----SA---KHMFDRIGAEVQQ-K--V-H-TA---------A-LQ--Y--NS-QLLGHLTQA-EFS---N
+
+>SFC14_S17_L001_Contig2409  {|4(0)|}frame_1_NTSB domNum1 
+G--R-Ag----------------G---------------------------------T-Q-D-A-----SV---KHMFDRIGQQVHE-Ei-V-K-NGe--------A-KT--Y--IG-ELAGLLSQA-SIF---G
+
+>SFC14_S17_L001_Contig514  {|9(0)|}frame_2_NTSB domNum1 
+K--E-Aapd--------------Y---------------------------------T-N-V-N-----NV---KELFDLIGKYIEK-K--V-H-SE---------A-LD--Rs-ES-ALQGILSEA-KFR---H
+
+>SFC14_S17_L001_Contig2138  {|11(0)|}frame_-1_NTSB domNum1 
+-------------------------------------------------------------Y-N-----SA---KDLLEDIGKSIQK-E--A-H-TE---------A-SQ--H--ER-SLKGSLSQV-EFK---E
+
+>SFC14_S17_L001_Contig1598  {|9(0)|}frame_3_NTSB domNum1 
+G--G-Gg----------------Gsaggk----------------------------D-K-Y-D-----DA---KHMFDRIGEEVHK-K--V-H-TA---------A-LK--Y--EK-ELHGCLKDA-IFE---E
+
+>SFC14_S17_L001_Contig507  {|3(0)|}frame_1_NTSB domNum1 
+Q--G-Gg----------------Ggred-----------------------------I-D-E-T-----SA---KHLLDSIGKIVHK-E--V-H-GD---------A-LQ--Hs-KG-KLKGTLSEA-TFE---E
+
+>SFC14_S17_L001_Contig2175  {|3(0)|}frame_-3_NTSB domNum1 
+-----G-----------------M---------------------------------N-G-Y-S-----DA---KDFLDKIGQKVYE-Ek-V-E-KDad-------A-EK--Y--KE-ALKGNLQAA-KGI---G
+
+>SFC17_S7_L001_Contig2021  {|7(0)|}frame_-2_NTSB domNum1 
+P--G-Sa----------------G---------------------------------T-Q-D-E-----DA---KHMFDRIGAEVQN-E--A-H-RE---------A-LD--R--IN-DLKGFISHA-TYN---G
+
+>SFC17_S7_L001_Contig2023  {|1(0)|}frame_3_NTSB domNum1 
+G--G-Gg----------------G---------------------------------G-V-D-K-----DA---KNMFDRIGQQVYN-Ek-V-K-NGe--------A-QT--Y--DS-YLKGNLQHA-TKS---S
+
+>SFC17_S7_L001_Contig1738  {|6(0)|}frame_-1_NTSB domNum1 
+Q--P-Kvrpd-------------Y---------------------------------S-D-A-N-----DA---KDLLDKIGQQVYD-Et-V-K-KV---------A-DN--Y--SS-QLKGTLSQA-TFE---G
+
+>SFC17_S7_L001_Contig1736  {|7(0)|}frame_1_NTSB domNum1 
+G--G-Gg----------------G---------------------------------S-SvE-E-----DA---KHVLDEFGQQVYK-Ek-V-E-KDgad------A-ET--Y--KG-ELKGDLNTA-NGR---S
+
+>SFC17_S7_L001_Contig1225 frame_3_NTSB domNum1 
+---------------------------------------------------------------K-----SA---KEVLDEFGQQVYK-E--V-K-NDad-------A-EK--Y--KE-ALTGQLSLA-S-----T
+
+>SFC17_S7_L001_Contig1986  {|7(0)|}frame_-2_NTSB domNum1 
+Gn-G-Gg----------------G---------------------------------N-D-Y-S-----DA---KDLLDKIGQQVYE-Q--V-K-KEad-------A-KK--Y--IK-ELEGYLQKA-NGY---S
+
+>SFC17_S7_L001_Contig1980  {|3(0)|}frame_1_NTSB domNum1 
+Q--G-Sg----------------Gggedd----------------------------I-D-H-K-----SV---KHLLDSIGEKVYN-T--F-H-TA---------A-LK--Y--EN-ELHGFLSQA-TYS---R
+
+>SFC17_S7_L001_Contig1981  {|6(0)|}frame_1_NTSB domNum1 
+Q--K-Tg----------------Gggr------------------------------I-E-D-T-----TA---KHIFDRIGKDVYE-T--V-E-KD---------A-LP--Y--EN-ELHGSLKDA-IFE---E
+
+>SFC17_S7_L001_Contig1354  {|9(0)|}frame_-3_NTSB domNum1 
+P--P-Aapd--------------Y---------------------------------S-S-A-K-----DA---KDLFDMIGKDVHD-Q--V-Q-SD---------A-KT--Y--KQ-ALKGNLTSS-TIF---D
+
+>SFC17_S7_L001_Contig2017  {|7(0)|}frame_1_NTSB domNum1 
+-----------------------------------------------------------D-Y-S-----DA---KDFLDKIGQQVYK-Ek-V-Q-SD---------A-ET--Y--KE-ALTGQLSLA-SIW---G
+
+>SFC17_S7_L001_Contig2014  {|6(0)|}frame_-3_NTSB domNum1 
+G--S-Gg----------------Ggggndy---------------------------K-D-A-S-----DA---KDLLDRIGEDIYK-I--A-N-KD---------A-LT--Rs-RS-RLKGFLTSA-KFS---D
+
+>SFC17_S7_L001_Contig1747  {|3(0)|}frame_3_NTSB domNum1 
+G--G-Sg----------------GgrgagrgrggrqwrqgvrlvrrgrgrggggedgI-E-D-K-----DA---KHMFDRIGEKVYD-E--V-H-GE---------A-KN--Y--ID-DLKGDLKKA-KGM---G
+
+>SFC17_S7_L001_Contig1745  {|2(0)|}frame_-1_NTSB domNum1 
+G--S-Gg----------------G---------------------------------E-E---------DA---KHVLDKIGQQVYE-Ek-V-K-KE---------A-AN--Y--RG-ELHGRLSDA-TFN---K
+
+>SFC17_S7_L001_Contig1365  {|2(0)|}frame_-2_NTSB domNum1 
+Q--R-A---------------------------------------------------T-Q-D-E-----DA---KHMFDRIGAEVQD-I--A-H-SA---------A-VD--Y--IN-ELKGNLRNV-RFK---D
+
+>SFC17_S7_L001_5477_soapGraphK61  {|6(0)|}frame_-2_NTSB domNum1 
+Q--P-Kvrpd-------------Y---------------------------------S-D-A-N-----DA---KDLLDKIGQQVYD-Et-V-K-KV---------A-DN--Y--SS-QLKGTLSQA-TFE---G
+
+>SFC17_S7_L001_Contig2002  {|5(0)|}frame_1_NTSB domNum1 
+-------------------------------------------------------------D-A-----TA---KHIFDRIGRTIHQ-Q--V-N-KV---------A-KK--Y--YD-DLHGRLSEA-TFE---K
+
+>SFC17_S7_L001_Contig1750  {|7(0)|}frame_1_NTSB domNum1 
+S--S-Srasgpk-----------Y---------------------------------D-Q-A-T-----SA---KELFDMIGETVQE-K--V-H-DA---------A-NK--Y--YT-DLHGDLSKA-RFD---R
+
+>SFC17_S7_L001_5639_soapGraphK61  {|7(0)|}frame_2_NTSB domNum1 
+G--G-Gg----------------G---------------------------------S-SvE-E-----DA---KHVLDEFGQQVYK-Ek-V-E-KDgad------A-ET--Y--KG-ELKGDLNTA-NGR---S
+
+>SFC17_S7_L001_Contig1996  {|7(0)|}frame_1_NTSB domNum1 
+Ql-D-Ttvnd-------------Y---------------------------------T-L-A-S-----DV---KHLLDRIGEDIYK-I--A-K-ND---------E-ND--F--RE-KLKGTLSQA-TYP---R
+
+>SFC17_S7_L001_Contig1994  {|10(0)|}frame_-1_NTSB domNum1 
+G--D-Gg----------------G---------------------------------SpQ-D-D-----DA---KYMFDRIGANVHE-E--V-K-KE---------A-QT--Y--KG-ELEGNLSFA-SIF---G
+
+>SFC17_S7_L001_5537_soapGraphK61  {|2(0)|}frame_-2_NTSB domNum1 
+G--G-Sg----------------G---------------------------------T-K---K-----TA---KEVLDEFGQQVHK-E--V-K-NGg--------A-EK--Y--FD-ELHGSLKDA-IFE---E
+
+>SFC17_S7_L001_Contig1338  {|6(0)|}frame_-1_NTSB domNum1 
+P--P-Repr--------------Y---------------------------------D-E-A-T-----SA---KDFLDQIGETVQK-E--V-Q-SD---------A-LP--Y--NK-YLQGDLSKV-EFS---N
+
+>SFC17_S7_L001_5661_soapGraphK61  {|2(0)|}frame_-2_NTSB domNum1 
+G--S-Gg----------------G---------------------------------E-E---------DA---KHVLDKIGQQVYE-Ek-V-K-KE---------A-AN--Y--RG-ELHGRLSDA-TFN---K
+
+>SFC17_S7_L001_Contig1734  {|2(0)|}frame_-1_NTSB domNum1 
+G--G-Sg----------------G---------------------------------T-K---K-----TA---KEVLDEFGQQVHK-E--V-K-NGg--------A-EK--Y--FD-ELHGSLKDA-IFE---E
+
+>SFC17_S7_L001_Contig1422  {|2(0)|}frame_-2_NTSB domNum1 
+---S-Ag----------------M---------------------------------N-G-Y-S-----DA---KDFLDKIGQKVYE-Ek-V-E-KDad-------A-EK--Y--KE-ALKGNLQAA-KGI---G
+
+>SFC17_S7_L001_Contig1424  {|10(0)|}frame_-1_NTSB domNum1 
+T--S-Sg----------------G---------------------------------T-K---K-----GA---KEVLDEFGQQVHE-Q--V-K-TE---------A-EQ--Rs-NG-ELKGNLTDS-TIF---G
+
+>SFC17_S7_L001_5645_soapGraphK61  {|7(0)|}frame_2_NTSB domNum1 
+S--S-Srasgpk-----------Y---------------------------------D-Q-A-T-----SA---KELFDMIGETVQE-K--V-H-DA---------A-NK--Y--YT-DLHGDLSKA-RFD---R
+
+>IFM23_S4_Contig587_frm1_orf2_NTSB  {|17(0)|}domNum1 
+---------------------------------------------------------------N-----DA---KDLLDQIGEKIQE-Q--A-H-AA---------A-LK--Rs-YK-DLHGDLSRA-TYP---K
+
+>IFM57_S30_L002_Contig788_frm-1_orf2_NTSB  {|6(0)|}domNum1 
+Q--R-Ae----------------D---------------------------------S-N---K-----SA---KEVLDEYGEQIQK-E--A-H-KS---------A-VH--Y--GN-VLRGLLSNV-VFS---N
+
+>IFM57_S30_L002_Contig1709_frm-3_orf5_NTSB  {|4(0)|}domNum1 
+G--G-G-----------------------------------------------------T-D-K-----SA---KHVLDEFGQQVYR-Ek-V-Q-SD---------A-EA--Y--KD-DLKGNLQEA-VTT---T
+
+>IFM57_S30_L002_Contig1291_frm1_orf3_NTSB  {|6(0)|}domNum1 
+G--G-Gg----------------G---------------------------------S-G-E-E-----DA---KNMFDRIGQQVHE-Q--V-K-TE---------A-EQ--Rs-KG-KLKGTLSQV-S-T---I
+
+>IFM061_S15_Contig767_frm-3_orf3_NTSB  {|3(0)|}domNum1 
+P--G-Ggqvg-------------Gdd-------------------------------I-D-E-R-----SA---KHLLDSIGKKVHK-E--V-K-NA---------A-ND--F--RE-KLKGDLKKA-AST---N
+
+>IFM061_S15_Contig541_frm3_orf3_NTSB  {|3(0)|}domNum1 
+G--G-T-------------------------------------------------------D-K-----SA---KEVLDEIGGIIQQ-Q--A-K-SD---------A-EQ--H--GS-ELKGNLSNV-KFS---N
+
+>IFM061_S15_Contig537_frm-3_orf3_NTSB  {|1(0)|}domNum1 
+---G-Sa----------------G---------------------------------T-K-D-D-----DA---KYMFDRIGKDVYE-T--V-E-KE---------A-ER--Rs-NG-ELKGLLTSA-TLL---G
+
+>IFC63_S16_L001_Contig1913_frm3_orf3_NTSB  {|1(0)|}domNum1 
+---G-Sa----------------G---------------------------------T-K-D-D-----DA---KYMFDRIGKDVYE-T--V-E-KE---------A-ER--Rs-NG-ELKGLLTSA-TLL---G
+
+>IFC63_S16_L001_Contig1120_frm1_orf2_NTSB  {|2(0)|}domNum1 
+K--G-G-----------------G---------------------------------S-P---Q-----DA---KHLLDSIGEKVYK-E--V-K-KGv--------A-ET--Y--KE-ALKGDLKKA-AST---S
+
+>IFM050_S11_Contig3383_frm3_orf4_NTSB  {|3(0)|}domNum1 
+G--S-Ageed-------------G---------------------------------I-E-D-T-----TA---KHLLDSIGKKVHD-Q--V-K-NGg--------A-EK--Y--KD-ELRGNLQEA-ASS---H
+
+>IFM050_S11_Contig3413_frm-2_orf3_NTSB  {|7(0)|}domNum1 
+Q--SrSg----------------Gagsvdkdd-------------------------I-D-E-R-----SA---KHLLDSIGEKVYK-Ek-V-Q-SE---------A-EN--Y--ID-DLKGKLKEA-KGM---G
+
+>IFM050_S11_Contig2856_frm1_orf8_NTSB  {|3(0)|}domNum1 
+G--N-Gg----------------Gdsskekedky-----------------------K-N-A-T-----NV---KELLDMIGEHIYK-E--V-H-KK---------D-AD--Y--RS-SLQGRLRQV-TYP---K
+
+>IFM050_S11_Contig1106_frm2_orf6_NTSB  {|2(0)|}domNum1 
+G--R-Aa----------------S---------------------------------S-Q---------SA---RDALDEIGKQIQK-Q--A-T-RE---------AtNE--H--RK-ELKGNLALA-KFL---N
+
+>IFM050_S11_Contig3783_frm-2_orf3_NTSB  {|20(0)|}domNum1 
+G--G-Sg----------------G---------------------------------T-Q---------DA---KHALDRIGANVQK-I--A-H-QK---------A-LD--Y--IK-DLQGDLGKV-KFF---K
+
+>IFM050_S11_Contig1146_frm-2_orf1_NTSB  {|12(0)|}domNum1 
+G--G-Gg----------------Ged-------------------------------I-D-K-T-----SA---KHLLDSIGKRVHA-Q--V-Q-NE---------A-AG--Rg-GS-ELKGLLSLA-TFS---S
+
+>IFM050_S11_8338_soapGraphK61_frm3_orf8_NTSB  {|2(0)|}domNum1 
+G--G-Gdsskekedk--------Y---------------------------------K-N-A-T-----NV---KELLDMIGEHIYK-E--V-H-KK---------D-AD--Y--RS-SLQGRLRQV-TYP---K
+
+>IFM050_S11_8386_soapGraphK61_frm-1_orf0_NTSB  {|6(0)|}domNum1 
+G--G-Sg----------------Gtqe------------------------------E-K-D-KykyvsDA---KHLLDIIGKDVHE-K--A-K-KN---------A-EQ--Y--FN-ELHGTLSKA-TFE---K
+
+>IFM050_S11_Contig3722_frm3_orf2_NTSB  {|3(0)|}domNum1 
+-----------------------Y---------------------------------I-E-D-E-----SA---KHLLDSIGEKVYK-Ei-VgK-KAdgt------A-NK--Y--IE-ELKGKLQEA-VST---S
+
+>IFM050_S11_Contig3438_frm3_orf5_NTSB  {|6(0)|}domNum1 
+-----------------------Y---------------------------------D-Q-A-T-----SA---KELFDMIGETVQK-K--V-H-GD---------A-QQ--Y--FS-ELHGDLSLA-TFK---N
+
+>IFM050_S11_Contig342_frm2_orf4_NTSB  {|5(0)|}domNum1 
+-----------------------Y---------------------------------S-K-A-T-----NV---KDLLEDIGEEVQK-I--A-H-NA---------A-LE--R--KG-NLHGLLSSV-KYT---N
+
+>IFM050_S11_Contig2883_frm-3_orf5_NTSB  {|3(0)|}domNum1 
+A--G-Sg----------------G---------------------------------Q-G----------A---RDVLEEFGKKIQD-E--A-T-RT---------A-NN--Y--RQ-SLHADLNRA-TYP---N
+
+>IFM047_S10_Contig677_frm-1_orf1_NTSB  {|12(0)|}domNum1 
+G--G-Gg----------------Ged-------------------------------I-D-K-T-----SA---KHLLDSIGKRVHA-Q--V-Q-NE---------A-AG--Rg-GS-ELKGLLSLA-TFS---S
+
+>IFM047_S10_Contig1031_frm-3_orf3_NTSB  {|3(0)|}domNum1 
+G--G-T-------------------------------------------------------D-K-----SA---KEVLDEIGGIIQQ-Q--A-K-SD---------A-EQ--H--GS-ELKGNLSNV-KFS---N
+
+>IFM047_S10_Contig1549_frm3_orf4_NTSB  {|15(0)|}domNum1 
+-----------------------G---------------------------------I-E-D-T-----TA---KHALDKIGEKVYK-Ek-V-E-KD---------A-EQ--Y--FN-ELHGNLSQA-TFE---E
+
+>IFM047_S10_Contig1475_frm-2_orf3_NTSB  {|1(0)|}domNum1 
+---G-Grag--------------G---------------------------------T-K-D-D-----DA---KNMFDRIGKDVYD-Ei-V-K-NGadgt-----A-KN--Y--IG-DLKGNLKEA-KVM---G
+
+>IFM047_S10_Contig1666_frm3_orf0_NTSB  {|1(0)|}domNum1 
+-----------------------------------------------------------Q-D-D-----DA---KNMFDRIGKDVYK-T--V-K-NE---------S-EQ--Rs-NG-DLKGNLTDS-TIF---G
+
+>IFM047_S10_Contig1660_frm-2_orf1_NTSB  {|7(0)|}domNum1 
+Q--K-Aaapn-------------Y---------------------------------K-D-A-Q-----DA---KHLLDMIGEDIYK-K--A-Q-RD---------A-LE--Hs-NS-ELQGHLSKA-TYP---N
+
+>IFM047_S10_Contig1435_frm-3_orf3_NTSB  {|25(0)|}domNum1 
+G--G-Rg----------------Gggdd-----------------------------I-E-D-A-----TA---KHLLDSIGKIVHD-K--V-K-SE---------A-EK--Rs-NG-DLKAYVSFA-TLS---G
+
+>IFM047_S10_Contig1641_frm-3_orf0_NTSB  {|5(0)|}domNum1 
+P--T-Apd---------------Y---------------------------------S-N-V-N-----NA---KDLFDEVGKFIKE-E--L-N-RK---------S-MT--Y--QS-ELLGYLSSA-TFK---D
+
+>IFM047_S10_Contig233_frm-3_orf4_NTSB  {|5(0)|}domNum1 
+S--T-T-------------------------------------------------------Y-S-----SA---KDFLDSIGKKVHD-Ei-V-E-KGv--------A-ET--Y--KE-ALKGKLQEA-KVM---G
+
+>IFD8_S2_Contig1049_frm1_orf3_NTSB  {|1(0)|}domNum1 
+---G-Grag--------------G---------------------------------T-K-D-D-----DA---KNMFDRIGKDVYD-Ei-V-K-NGadgt-----A-KN--Y--IG-DLKGNLKEA-KVM---G
+
+>IFM12_S16_Contig416_frm1_orf2_NTSB  {|7(0)|}domNum1 
+G--G-Gg----------------G---------------------------------S-SvE-E-----DA---KHVLDEFGQQVYK-Ek-V-E-KDgad------A-ET--Y--KG-ELKGDLNTA-NGR---S
+
+>IFM12_S16_Contig838_frm-2_orf2_NTSB  {|5(0)|}domNum1 
+-----------------------------------------------------------Q-D-E-----DA---KHMFDRIGAEVQD-I--A-H-SA---------A-VD--Y--IN-ELKGNLRNV-RFK---D
+
+>IFM12_S16_Contig839_frm-1_orf3_NTSB  {|9(0)|}domNum1 
+Q--G-Gged--------------Gieda-----------------------------E-K-Y-K-----NA---KDFLDKIGQQVHD-Ei-V-K-KDg--------A-ET--Y--KE-ALKGDLKKA-KVS---G
+
+>IFM12_S16_Contig532_frm3_orf3_NTSB  {|1(0)|}domNum1 
+---G-Sa----------------G---------------------------------T-K-D-D-----DA---KYMFDRIGKDVYE-T--V-E-KE---------A-ER--Rs-NG-ELKGLLTSA-TLL---G
+
+>IFM26_S8_Contig432_frm1_orf3_NTSB  {|1(0)|}domNum1 
+---G-Sa----------------G---------------------------------T-K-D-D-----DA---KYMFDRIGKDVYE-T--V-E-KE---------A-ER--Rs-NG-ELKGLLTSA-TLL---G
+
+>IFM26_S8_Contig604_frm3_orf3_NTSB  {|4(0)|}domNum1 
+G--R-Rg----------------Gagssg----------------------------E-E-D-K-----DA---KYMFDRIGKKVHE-K--A-E-NE---------A-KQ--Rs-NG-ELKGNLTIS-TIF---D
+
+>IFM21_S3_Contig898_frm-1_orf3_NTSB  {|4(0)|}domNum1 
+G--N-Gg----------------G---------------------------------G-S-S-Q-----DA---KHVLDSIGEEVYK-E--V-K-SE---------S-NG--F--KD-DLKGDLNTA-NNS---S
+
+>IFM21_S3_Contig478_frm2_orf4_NTSB domNum1 
+G--G-Sg----------------Gs--------------------------------T-Q-D-E-----DA---KNMFDRIGKDVYD-Q--V-K-TE---------A-KE--Rs-NG-ELKGSLTSA-TEG---S
+
+>IFM56_S15_Contig1233_frm-1_orf4_NTSB  {|2(0)|}domNum1 
+A--G-S-----------------N---------------------------------T-Q-D-E-----SA---KHMFDRIGKIVHK-K--V-R-GD---------A-LQ--Y--NS-QLLGHLSLA-KFR---E
+
+>IFM56_S15_Contig1566_frm-3_orf3_NTSB  {|7(0)|}domNum1 
+Q--SrSg----------------Gagsvdkdd-------------------------I-D-E-R-----SA---KHLLDSIGEKVYK-Ek-V-Q-SE---------A-EN--Y--ID-DLKGKLKEA-KGM---G
+
+>IFM53_S14_L001_Contig2476_frm1_orf5_NTSB  {|3(0)|}domNum1 
+---G-Gg----------------G---------------------------------Q-G----------A---RDVLEQFGAIIQE-Q--A-K-AE---------A-VQ--H--RK-DLEGRLSNV-IFS---N
+
+>IFM53_S14_L001_Contig2124_frm-1_orf3_NTSB  {|7(0)|}domNum1 
+---------------------------------------------------------------K-----SA---KEVLDEFGQQVYE-Q--V-K-KDvg-------A-EA--Y--KE-ALKGDLQKA-AST---S
+
+>IFM054_S12_Contig388_frm1_orf2_NTSB  {|2(0)|}domNum1 
+G--G-Sg----------------G---------------------------------S-T---Q-----DA---KHVLDKFGQQVLD-K--V-H-DA---------A-KT--Y--EG-ELKGNLQKA-ATT---T
+
+>IFM054_S12_Contig1099_frm2_orf3_NTSB  {|1(0)|}domNum1 
+---G-Grag--------------G---------------------------------T-K-D-D-----DA---KNMFDRIGKDVYD-Ei-V-K-NGadgt-----A-KN--Y--IG-DLKGNLKEA-KVM---G
+
+>IFM14_S7_Contig295_frm1_orf7_NTSB  {|9(0)|}domNum1 
+P--P-Aapd--------------Y---------------------------------S-S-A-K-----DA---KDLFDMIGKDVHD-Q--V-Q-SD---------A-KT--Y--KQ-ALKGNLTSS-TIF---D
+
+>IFD6_S1_Contig977_frm-2_orf2_NTSB  {|5(0)|}domNum1 
+G--G-Gg----------------Gndy------------------------------S-K-A-T-----DA---KHLFDMIGKDVHD-Q--V-K-SE---------A-ET--Y--KD-ALKGKLSFG-T-----T
+
+>IFD6_S1_Contig745_frm3_orf1_NTSB  {|7(0)|}domNum1 
+G--G-Gg----------------G---------------------------------S-SvE-E-----DA---KHVLDEFGQQVYK-Ek-V-E-KDgad------A-ET--Y--KG-ELKGDLNTA-NGR---S
+
+>IFM24_S5_Contig646_frm3_orf3_NTSB  {|1(0)|}domNum1 
+---G-Sa----------------G---------------------------------T-K-D-D-----DA---KYMFDRIGKDVYE-T--V-E-KE---------A-ER--Rs-NG-ELKGLLTSA-TLL---G
+
+>IFM24_S5_Contig983_frm2_orf1_NTSB  {|8(0)|}domNum1 
+T--G-Ge----------------Gr--------------------------------I-E-D-A-----TA---KHLLDSIGKKVYD-K--V-H-SE---------V-DA--Y--RD-KLKGTLSKA-TYP---K
+
+>IFM24_S5_Contig916_frm-3_orf2_NTSB  {|3(0)|}domNum1 
+P--G-Ggqvg-------------Gdd-------------------------------I-D-E-R-----SA---KHLLDSIGKKVHK-E--V-K-NA---------A-ND--F--RE-KLKGDLKKA-AST---N
+
+>IFM24_S5_Contig666_frm-2_orf1_NTSB  {|10(0)|}domNum1 
+-------------------------------------------------------------Y-N-----SA---KDLLEDIGKSIQK-E--A-H-TE---------A-SQ--H--ER-SLKGSLSQV-EFK---E
+
+>IFM-049_S6_Contig40890_frm-3_orf2_NTSB  {|6(0)|}domNum1 
+S--G-Sgd---------------G---------------------------------I-D-E-R-----SA---KHLLDSIGEKVYK-Ek-V-Q-SE---------A-NQ--Y--KD-DLKGNLASA-TTN---W
+
+>IFM-049_S6_Contig40892_frm3_orf4_NTSB  {|6(0)|}domNum1 
+-----------------------Y---------------------------------D-Q-A-T-----SA---KELFDMIGETVQK-K--V-H-GD---------A-QQ--Y--FS-ELHGDLSLA-TFK---N
+
+>IFM-049_S6_Contig40786_frm-3_orf3_NTSB  {|7(0)|}domNum1 
+G--G-Ged---------------G---------------------------------I-D-D-K-----DA---KHLLDSIGKIVHK-K--V-H-SE---------A-QT--Y--KQ-ALTGQLSFA-TLS---G
+
+>IFM-049_S6_Contig40790_frm-2_orf3_NTSB  {|18(0)|}domNum1 
+A--G-Ss----------------G---------------------------------A-E-D-K-----DA---KYMFDRIGQQVYK-E--V-E-NA---------A-NV--F--RD-YLKGDLKKA-KGS---G
+
+>IFM-049_S6_Contig40827_frm-3_orf1_NTSB  {|6(0)|}domNum1 
+Q--K-Tg----------------Gggr------------------------------I-E-D-T-----TA---KHIFDRIGKDVYE-T--V-E-KV---------A-EQ--Y--RS-QLKGTLSQA-TFE---K
+
+>IFM-049_S6_Contig33584_frm1_orf2_NTSB  {|3(0)|}domNum1 
+P--G-Ggqvg-------------Gdd-------------------------------I-D-E-R-----SA---KHLLDSIGKKVHK-E--V-K-NA---------A-ND--F--RE-KLKGDLKKA-AST---N
+
+>IFC66_S31_L002_Contig708_frm3_orf3_NTSB  {|6(0)|}domNum1 
+P--G-Svgedk------------Y---------------------------------K-S-A-P-----DA---KHLLDIIGKDVHD-K--V-K-EE---------A-KQ--Y--KE-ALTGQLSFA-TIF---G
+
+>IFC66_S31_L002_Contig1828_frm-3_orf3_NTSB  {|3(0)|}domNum1 
+G--G-Sg----------------Ggggg-----------------------------N-D-Y-K-----DA---KELLDKIGQKVHD-Ei-V-K-ND---------A-ET--Y--KG-ELEGKLSQV-SVK---S
+
+>IFC66_S31_L002_Contig1571_frm-3_orf14_NTSB  {|4(0)|}domNum1 
+Q--S-Gg----------------G---------------------------------SpQ-D-E-----SA---KHALDRIGEEVYK-E--V-K-SK---------S-NG--F--KD-ELKGDLNTA-NGS---G
+
+>IFC66_S31_L002_Contig1791_frm-3_orf3_NTSB domNum1 
+G--G-Sg----------------Gs--------------------------------T-Q-D-E-----DA---KNMFDRIGKDVYD-Q--V-K-TE---------A-KE--Rs-NG-ELKGSLTSA-TEG---S
+
+>IFC66_S31_L002_Contig1586_frm2_orf3_NTSB  {|3(0)|}domNum1 
+G--G-Gd----------------G---------------------------------I-E-D-A-----TA---KHVLDKFGQEVYK-Ek-V-E-KD---------A-KN--Y--IE-ELKGDLKKA-TYP---N
+
+>IFC66_S31_L002_5292_soapGraphK61_frm-2_orf3_NTSB  {|3(0)|}domNum1 
+G--G-Gd----------------G---------------------------------I-E-D-A-----TA---KHVLDKFGQEVYK-Ek-V-E-KD---------A-KN--Y--IE-ELKGDLKKA-TYP---N
+
+>IFC66_S31_L002_5172_soapGraphK61_frm1_orf14_NTSB  {|4(0)|}domNum1 
+Q--S-Gg----------------G---------------------------------SpQ-D-E-----SA---KHALDRIGEEVYK-E--V-K-SK---------S-NG--F--KD-ELKGDLNTA-NGS---G
+
+>IFC66_S31_L002_Contig1542_frm-2_orf3_NTSB  {|8(0)|}domNum1 
+-----------------------Y---------------------------------T-N-V-K-----DA---KELLDLIGQTVHA-K--V-H-SE---------A-LD--Hs-KS-ELHGFLSKV-VFS---G
+
+>IFC66_S31_L002_4996_soapGraphK61_frm-2_orf6_NTSB  {|3(0)|}domNum1 
+Q--R-A---------------------------------------------------T-Q-D-E-----DA---KNMFDRIGKKVHD-Q--V-K-TE---------A-QK--Rs-NG-ELKGSLSQV-STS---S
+
+>IFC66_S31_L002_Contig1757_frm1_orf5_NTSB  {|7(0)|}domNum1 
+G--G-Gg----------------Gsgda-----------------------------E-K-Y-K-----DAtnvKDLLDMIGKDVHE-E--V-E-KE---------A-AG--Rg-GS-DLKGFLTST-TIF---G
+
+>IFC66_S31_L002_5336_soapGraphK61_frm2_orf7_NTSB  {|10(0)|}domNum1 
+G--G-Gg----------------Gvdkdv----------------------------I-D-E-T-----SA---KNLLDSIGKKVYD-Q--V-K-NGad-------A-EK--Y--KG-ELKGDLQEAaKGM---G
+
+>IFC66_S31_L002_Contig1727_frm-1_orf4_NTSB  {|14(0)|}domNum1 
+-----D-----------------Y---------------------------------S-D-A-K-----DA---KDLLDKIGEKIQK-Q--V-R-DE---------A-LG--Rs-GS-DLQGRLSSA-TFR---E
+
+>IFC66_S31_L002_Contig1839_frm-1_orf4_NTSB  {|7(0)|}domNum1 
+G--S-Ggassgendadk------Y---------------------------------K-N-A-E-----DA---KHLLDMIGEDIYK-K--A-K-EA---------A-LP--Y--NN-ALHGLLTRA-TYP---R
+
+>IFC66_S31_L002_Contig1519_frm-3_orf4_NTSB  {|2(0)|}domNum1 
+N--S-Ag----------------M---------------------------------N-G-Y-S-----DA---KDFLDKMGEKVYR-Ek-V-Q-SD---------A-KT--Y--KE-ALKGDLASA-TED---S
+
+>IFC66_S31_L002_Contig1563_frm1_orf3_NTSB  {|5(0)|}domNum1 
+-----------------------Y---------------------------------N-N-V-N-----NA---KDLFDEIGKHIKH-Q--V-N-KE---------A-LT--Y--QP-KLLGRLKQA-EFS---N
+
+>IFM058_S13_Contig1095_frm3_orf1_NTSB  {|4(0)|}domNum1 
+S--G-Grged-------------Y---------------------------------I-E-E-T-----TA---KHLLDSIGKRVHD-Q--V-K-NGad-------A-KN--Y--IE-ELKACVSQA-PIL---S
+
+>IFM27_S9_Contig630_frm-2_orf2_NTSB  {|2(0)|}domNum1 
+S--P-Tptvnk------------Y---------------------------------T-W-A-S-----DA---KNLLEEIGEDIYK-K--A-K-EA---------A-LG--Rg-GN-KLQGDLSKA-RFK---D
+
+>IFM27_S9_Contig420_frm1_orf3_NTSB  {|3(0)|}domNum1 
+G--G-Rqg---------------Gk--------------------------------D-K-Y-D-----DA---KYMFDRIGKDVYD-K--V-K-GE---------A-QT--Y--KD-DLKAYVSFA-SIF---G
+
+>IFM27_S9_Contig357_frm-1_orf3_NTSB  {|3(0)|}domNum1 
+G--G-Gqvg--------------Ggssg-----------------------------E-E-D-K-----DA---KHLLDSIGKIVHD-Q--M-K-NE---------S-EQ--Rs-NG-DLKGFLTST-TIL---G
+
+>IFM27_S9_Contig527_frm3_orf6_NTSB  {|3(0)|}domNum1 
+G--G-Sg----------------Gahgsgdaeky-----------------------K-N-A-T-----NV---KDLLDMIGADVYN-E--V-K-SE---------A-NQ--Y--KE-ALTGQLSLA-SIW---K
+
+>IFM27_S9_Contig594_frm-3_orf3_NTSB  {|7(0)|}domNum1 
+Q--SrSg----------------Gagsvdkdd-------------------------I-D-E-R-----SA---KHLLDSIGEKVYK-Ek-V-Q-SE---------A-EN--Y--ID-DLKGKLKEA-KGM---G
+
+>IFM27_S9_Contig290_frm3_orf0_NTSB  {|2(0)|}domNum1 
+-------------------------------------------------------------Y-S-----SA---KEFLDLIGETVQK-N--V-K-HA---------A-KQ--Y--YS-ELHGDLSKA-TYP---G
+
+>SFC13_S23_L002_Contig2098_frm1_orf2_NTSB  {|6(0)|}domNum1 
+T--S-Sg----------------G---------------------------------T-D---K-----SA---KHMFDRIGAEVQQ-K--V-H-TA---------A-LQ--Y--NS-QLLGRLTGA-TFS---D
+
+>SFC13_S23_L002_Contig2419_frm3_orf3_NTSB  {|3(0)|}domNum1 
+-------------------------------------------------------------D-T-----TA---KNIFDRIGKKVHE-K--A-K-KN---------A-EQ--Y--FN-ELHGSLKDA-IFE---K
+
+>SFC13_S23_L002_Contig2757_frm-1_orf9_NTSB  {|3(0)|}domNum1 
+G--N-Gg----------------G---------------------------------T-K-D-E-----DA---KNMFDRIGKEVYE-Q--V-K-GE---------A-VD--Y--RS-ALQGRLSDA-RFP---H
+
+>SFC13_S23_L002_Contig2422_frm3_orf3_NTSB  {|3(0)|}domNum1 
+P--G-Ggqvg-------------Gdd-------------------------------I-D-E-R-----SA---KHLLDSIGKKVHK-E--V-K-NA---------A-ND--F--RE-KLKGDLKKA-AST---N
+
+>SFC13_S23_L002_Contig2699_frm-1_orf3_NTSB  {|7(0)|}domNum1 
+Q--SrSg----------------Gagsvdkdd-------------------------I-D-E-R-----SA---KHLLDSIGEKVYK-Ek-V-Q-SE---------A-EN--Y--ID-DLKGKLKEA-KGM---G
+
+>SFU-3_S21_L002_Contig1699_frm-1_orf3_NTSB  {|5(0)|}domNum1 
+G--S-Gg----------------D---------------------------------S-SrD-E-----SV---KDLFDRIGKKVYE-K--T-E-KI---------A-KR--Y--TT-ELHGDLSKA-TYP---K
+
+>SFU2_S5_L001_Contig1469_frm2_orf7_NTSB  {|7(0)|}domNum1 
+G--G-Ged---------------G---------------------------------I-D-D-K-----DA---KHLLDSIGKIVHK-K--V-H-SE---------A-QT--Y--KQ-ALTGQLSFA-TLS---G
+
+>SFU2_S5_L001_Contig1889_frm-1_orf9_NTSB  {|2(0)|}domNum1 
+S--G-Sg----------------D---------------------------------P-Q-D-E-----SA---KNMFDRIGQQVHD-K--V-K-GE---------A-EK--Rs-KG-KLQGVLEKA-TYK---N
+
+>SFU2_S5_L001_Contig1447_frm-2_orf7_NTSB  {|9(0)|}domNum1 
+Q--G-Gged--------------Gieda-----------------------------E-K-Y-K-----NA---KDFLDKIGQQVHD-Ei-V-K-KDg--------A-ET--Y--KE-ALKGDLKKA-KVS---G
+
+>SFU2_S5_L001_Contig1471_frm3_orf3_NTSB  {|1(0)|}domNum1 
+---G-Sa----------------G---------------------------------T-K-D-D-----DA---KYMFDRIGKDVYE-T--V-E-KE---------A-ER--Rs-NG-ELKGLLTSA-TLL---G
+
+>SXC2_S4_L001_20990_soapGraphK31_frm-2_orf6_NTSB  {|3(0)|}domNum1 
+G--G-Gd----------------G---------------------------------T-Q-D-A-----SA---KHMFDRIGEEVYK-E--V-K-SE---------A-EN--Y--IS-ELAGLLSQA-PIL---G
+
+>SXC2_S4_L001_Contig1676_frm2_orf3_NTSB  {|3(0)|}domNum1 
+-------------------------------------------------------------D-T-----TA---KNIFDRIGKKVHE-K--A-K-KN---------A-EQ--Y--FN-ELHGSLKDA-IFE---K
+
+>SXC2_S4_L001_Contig1677_frm3_orf3_NTSB  {|9(0)|}domNum1 
+G--G-Rg----------------Gqggkdky--------------------------D-D-A-Q-----DA---KELLDRIGKDVHD-Q--V-K-NDe--------A-KK--Y--ID-ELHGDLQKA-VTT---T
+
+>SXC2_S4_L001_Contig1279_frm1_orf3_NTSB  {|3(0)|}domNum1 
+G--G-T-------------------------------------------------------D-K-----SA---KEVLDEIGGIIQQ-Q--A-K-SD---------A-EQ--H--GS-ELKGNLSNV-KFS---N
+
+>SXC2_S4_L001_Contig1897_frm-1_orf1_NTSB  {|9(0)|}domNum1 
+P--S-Avtd--------------Y---------------------------------S-D-A-N-----DA---KELLDKIGQQVHD-Q--V-Q-TD---------A-KT--Y--DS-YLKGNLARS-SIF---V
+
+>SXC2_S4_L001_8133_soapGraphK51_frm3_orf4_NTSB  {|3(0)|}domNum1 
+G--G-Gd----------------G---------------------------------T-Q-D-A-----SA---KHMFDRIGEEVYK-E--V-K-SE---------A-EN--Y--IS-ELAGLLSQA-PIL---G
+
+>SXC2_S4_L001_Contig1892_frm3_orf4_NTSB  {|3(0)|}domNum1 
+G--G-Gd----------------G---------------------------------T-Q-D-A-----SA---KHMFDRIGEEVYK-E--V-K-SE---------A-EN--Y--IS-ELAGLLSQA-PIL---G
+
+>SXC2_S4_L001_Contig1876_frm3_orf2_NTSB  {|10(0)|}domNum1 
+G--G-Gg----------------G---------------------------------N-D-Y-N-----DA---KDFLDKIGQKVHD-E--V-K-NGe--------A-KT--F--KG-ELEGKLSLA-TIF---D
+
+>SFM-1_S11_L001_Contig1884_frm3_orf5_NTSB  {|5(0)|}domNum1 
+R--G-Gg----------------K---------------------------------D-D-Y-K-----DA---RELLDKIGKTVHE-K--L-K-GD---------A-EK--Y--SS-QLKGNLSLA-KGS---G
+
+>SFM-1_S11_L001_Contig1613_frm1_orf7_NTSB  {|12(0)|}domNum1 
+G--G-Gg----------------Gkddy-----------------------------K-D-A-T-----NV---KELLDKIGQKVYE-Ek-V-E-KDad-------A-EK--Y--KE-ALKGNLQAA-KGI---G
+
+>SFM-1_S11_L001_Contig1614_frm2_orf36_NTSB  {|4(0)|}domNum1 
+S--T-T-------------------------------------------------------Y-S-----SA---KDLLDKIGETIQQ-Q--A-R-KA---------A-LN--H--IN-DLQGDLGKV-KFS---N
+
+>SFM-1_S11_L001_Contig1614_frm-3_orf31_NTSB  {|6(0)|}domNum1 
+Gn-G-Gg----------------G---------------------------------N-D-Y-S-----DA---KDLLDKIGQQVYE-Q--V-K-KEad-------A-KK--Y--IK-ELEGYLQKA-NGY---S
+
+>SFC19_S24_L002_Contig1158_frm1_orf1_NTSB  {|4(0)|}domNum1 
+G--G-Rqgdg-------------Ged-------------------------------I-D-H-Q-----SA---KHLLDSIGKRVHA-Q--V-Q-NE---------A-AG--Rg-GS-ELKGLLSLA-IFS---S
+
+>SFC19_S24_L002_Contig2097_frm1_orf3_NTSB  {|5(0)|}domNum1 
+-----------------------Y---------------------------------D-N-V-K-----DA---KDLLDRIGQDVYK-K--V-K-GD---------S-EQ--Y--RE-KLEGKLQEA-TSS---H
+
+>SFC19_S24_L002_Contig1561_frm1_orf3_NTSB  {|12(0)|}domNum1 
+Q--S-Sg----------------Ggrgsggr--------------------------T-Q-D-D-----DA---KNMFDRIGGIIQN-E--A-H-KK---------A-LE--Sg-KD-KLQGFISHA-KYN---D
+
+>SFM-6_S3_L001_Contig1867_frm-2_orf2_NTSB  {|3(0)|}domNum1 
+G--S-V---------------------------------------------------E-E-D-E-----DA---KHMFDRIGEEVYK-E--V-H-SE---------A-QT--Y--KQ-ALTGQLSFA-TLS---G
+
+>SFM-6_S3_L001_Contig1740_frm-3_orf3_NTSB  {|9(0)|}domNum1 
+Q--G-Gged--------------Gieda-----------------------------E-K-Y-K-----NA---KDFLDKIGQQVHD-Ei-V-K-KDg--------A-ET--Y--KE-ALKGDLKKA-KVS---G
+
+>SFM-10_S1_L001_Contig2203_frm3_orf3_NTSB  {|9(0)|}domNum1 
+Q--G-Gged--------------Gieda-----------------------------E-K-Y-K-----NA---KDFLDKIGQQVHD-Ei-V-K-KDg--------A-ET--Y--KE-ALKGDLKKA-KVS---G
+
+>SFM-10_S1_L001_Contig1855_frm2_orf3_NTSB  {|1(0)|}domNum1 
+---G-Sa----------------G---------------------------------T-K-D-D-----DA---KYMFDRIGKDVYE-T--V-E-KE---------A-ER--Rs-NG-ELKGLLTSA-TLL---G
+
+>SFM-10_S1_L001_Contig1386_frm-1_orf4_NTSB  {|4(0)|}domNum1 
+A--S-Tt----------------Y---------------------------------S-S----------A---KDLLEKIGKQVQE-E--A-T-KV---------S-ID--Y--RN-SLRGILSSV-TYP---N
+
+>SFM-10_S1_L001_Contig2526_frm-3_orf3_NTSB  {|3(0)|}domNum1 
+G--G-Gd----------------G---------------------------------T-Q-D-A-----SA---KHMFDRIGEEVYK-E--V-K-SE---------A-EN--Y--IS-ELAGLLSQA-PIL---G
+
+>SFM-8_S8_L001_Contig2507_frm-2_orf2_NTSB  {|3(0)|}domNum1 
+Q--G-Sg----------------Ggggqggkddy-----------------------K-D-A-T-----NV---KDLLDKIGQQVYD-Et-V-K-KGvad------A-KN--Y--IG-ELKGKLKEA-KGI---R
+
+>SFM-8_S8_L001_Contig2472_frm2_orf16_NTSB  {|3(0)|}domNum1 
+Q--G-Ggqvggd-----------G---------------------------------I-D-H-A-----SA---KHLLDSIGEKVYK-E--V-K-NGg--------A-EA--Y--KE-ALKGNLNTA-SGS---G
+
+>SFM-8_S8_L001_Contig3603_frm2_orf3_NTSB  {|6(0)|}domNum1 
+G--G-Gg----------------G---------------------------------S-G-E-E-----DA---KNMFDRIGQQVHE-Q--V-K-TE---------A-EQ--Rs-KG-KLKGTLSQV-S-T---I
+
+>SFM-8_S8_L001_Contig3572_frm1_orf5_NTSB  {|27(0)|}domNum1 
+A--S-Tt----------------Y---------------------------------S-S----------V---KDLLEDIGKSIQK-Q--A-H-DA---------A-LG--Rs-GS-DLHGLLSRA-KFN---G
+
+>SFM-8_S8_L001_Contig2444_frm-2_orf3_NTSB  {|23(0)|}domNum1 
+G--G-Gg----------------G---------------------------------N-D-Y-S-----DA---KDFLDKIGEEVYK-E--V-K-NGg--------A-ET--Y--KD-DLKGNLQEA-AST---S
+
+>SFC16_S6_L001_Contig1633_frm3_orf4_NTSB  {|2(0)|}domNum1 
+G--G-Sg----------------G---------------------------------G-G---Q-----DA---KHVLDEFGQQVYK-E--V-E-KE---------A-KQ--Y--IE-ELKGNLNTA-SGS---S
+
+>SFC22_S9_L001_Contig1467_frm2_orf3_NTSB  {|6(0)|}domNum1 
+P--G-Svgedk------------Y---------------------------------K-S-A-P-----DA---KHLLDEIGEVVYK-Q--V-K-KE---------A-DGtnY--IN-ELKGSLASA-T-----T
+
+>SFC22_S9_L001_Contig2807_frm2_orf3_NTSB  {|11(0)|}domNum1 
+Q--S-Sg----------------Ggahgs----------------------------S-V-E-E-----DA---KEVLDKIGQQVHD-E--V-K-NGad-------A-KK--Y--KD-ELKGQLSQV-STN---S
+
+>SFC22_S9_L001_Contig3227_frm-3_orf5_NTSB  {|3(0)|}domNum1 
+G--G-T-------------------------------------------------------D-K-----SA---KEVLDEIGGIIQQ-Q--A-K-SD---------A-EQ--H--GS-ELKGNLSNV-KFS---N
+
+>SFC22_S9_L001_8840_soapGraphK61_frm3_orf5_NTSB  {|4(0)|}domNum1 
+G--G-G-----------------------------------------------------T-D-K-----SA---KHVLDEFGQQVYR-Ek-V-Q-SD---------A-EA--Y--KD-DLKGNLQEA-VTT---T
+
+>SFC22_S9_L001_Contig3185_frm-2_orf23_NTSB  {|3(0)|}domNum1 
+Q--G-Ggqvggd-----------G---------------------------------I-D-H-A-----SA---KHLLDSIGEKVYK-E--V-K-NGg--------A-EA--Y--KE-ALKGNLNTA-SGS---G
+
+>SFC22_S9_L001_Contig3212_frm3_orf8_NTSB  {|3(0)|}domNum1 
+G--G-Sg----------------Gdg-------------------------------I-D-K-T-----SA---KHLLDSIGGIIEK-Q--A-K-ED---------A-KI--Y--QK-VLKGNLAEA-QFR---T
+
+>SFC22_S9_L001_Contig3204_frm-2_orf3_NTSB  {|11(0)|}domNum1 
+G--G-Rg----------------Gqggsdggg-------------------------T-K-D-E-----SA---KHVLDKIGQQVYE-Q--V-K-KEvdgt-----A-KK--Y--IE-ALKGDLKKA-TYP---N
+
+>SFC22_S9_L001_Contig2314_frm2_orf4_NTSB  {|23(0)|}domNum1 
+G--G-Gg----------------G---------------------------------N-D-Y-S-----DA---KDFLDKIGEEVYK-E--V-K-NGg--------A-ET--Y--KD-DLKGNLQEA-AST---S
+
+>SFC22_S9_L001_Contig3229_frm-2_orf3_NTSB  {|10(0)|}domNum1 
+A--D-Apd---------------Y---------------------------------S-N-V-N-----NV---KDLFDEVGKYIEK-K--V-R-GD---------A-LT--Rs-HS-KLKGDLSSV-KFY---T
+
+>SFM-7_S13_L001_Contig1529_frm1_orf4_NTSB  {|9(0)|}domNum1 
+G--G-Rg----------------Gqggkdky--------------------------D-D-A-Q-----DA---KELLDRIGKDVHD-Q--V-K-NDe--------A-KK--Y--ID-ELHGDLQKA-VTT---T
+
+>SFM-7_S13_L001_Contig1062_frm-1_orf3_NTSB  {|3(0)|}domNum1 
+G--G-T-------------------------------------------------------D-K-----SA---KEVLDEIGGIIQQ-Q--A-K-SD---------A-EQ--H--GS-ELKGNLSNV-KFS---N
+
+>SFM-7_S13_L001_Contig2138_frm-1_orf3_NTSB  {|1(0)|}domNum1 
+---G-Sa----------------G---------------------------------T-K-D-D-----DA---KYMFDRIGKDVYE-T--V-E-KE---------A-ER--Rs-NG-ELKGLLTSA-TLL---G
+
+>SFM-7_S13_L001_Contig1080_frm2_orf4_NTSB  {|17(0)|}domNum1 
+S--T-S---------------------------------------------------T-T-Y-S-----SV---KDLLEKIGQSIQQ-K--A-T-IS---------A-KG--Y--RQ-YLHGNLKKA-EYP---K
+
+>SFC-18_S20_L002_Contig1155_frm3_orf3_NTSB  {|2(0)|}domNum1 
+G--G-Sg----------------G---------------------------------G-G---Q-----DA---KHVLDEFGQQVYK-E--V-E-KE---------A-KQ--Y--IE-ELKGNLNTA-SGS---S
+
+>SFC-18_S20_L002_Contig1729_frm-1_orf4_NTSB  {|3(0)|}domNum1 
+G--G-Gqggedk-----------Y---------------------------------K-N-A-T-----NV---KDLLDMIGKDVYE-T--V-K-KE---------A-QT--Y--KD-DLEACVSFA-TAS---G
+
+>SFC15-CM_S29_L002_Contig1953_frm-1_orf4_NTSB  {|3(0)|}domNum1 
+G--G-T-------------------------------------------------------D-K-----SA---KEVLDEIGGIIQQ-Q--A-K-SD---------A-EQ--H--GS-ELKGNLSNV-KFS---N
+
+>SFC15-CM_S29_L002_Contig1928_frm-1_orf5_NTSB  {|7(0)|}domNum1 
+Q--SrSg----------------Gagsvdkdd-------------------------I-D-E-R-----SA---KHLLDSIGEKVYK-Ek-V-Q-SE---------A-EN--Y--ID-DLKGKLKEA-KGM---G
+
+>SFC15-CM_S29_L002_Contig1950_frm-3_orf4_NTSB  {|3(0)|}domNum1 
+G--G-G-----------------------------------------------------T-D-K-----SA---KHVLDEFGQQVHD-K--V-K-SE---------A-NQ--Y--KV-ALTGQLSLA-TYS---K
+
+>SFC15-CM_S29_L002_Contig923_frm-2_orf3_NTSB  {|1(0)|}domNum1 
+---G-Sa----------------G---------------------------------T-K-D-D-----DA---KYMFDRIGKDVYE-T--V-E-KE---------A-ER--Rs-NG-ELKGLLTSA-TLL---G
+
+>SFC15-CM_S29_L002_Contig1962_frm-1_orf3_NTSB  {|9(0)|}domNum1 
+Q--G-Gged--------------Gieda-----------------------------E-K-Y-K-----NA---KDFLDKIGQQVHD-Ei-V-K-KDg--------A-ET--Y--KE-ALKGDLKKA-KVS---G
+
+>SFC15-CM_S29_L002_Contig1961_frm1_orf4_NTSB  {|6(0)|}domNum1 
+P--G-Sa----------------G---------------------------------T-Q-D-E-----DA---KHMFDRIGAEVQN-E--A-H-RE---------A-LD--R--IN-DLKGFISHA-TYN---G
+
+>SFC15-CM_S29_L002_Contig1483_frm-3_orf4_NTSB  {|5(0)|}domNum1 
+-----------------------Y---------------------------------S-S-A-N-----DI---KELFDLIGETVHK-K--V-Q-AKaeva-----S-KK--Y--FD-ELHGLLSEA-TYP---N
+
+>SFC15-CM_S29_L002_Contig1476_frm-2_orf6_NTSB  {|10(0)|}domNum1 
+-------------------------------------------------------------Y-N-----SA---KDLLEDIGKSIQK-E--A-H-TE---------A-SQ--H--ER-SLKGSLSQV-EFK---E
+
+>SFC-21_S22_L002_Contig2368_frm-1_orf4_NTSB  {|5(0)|}domNum1 
+G--G-Sg----------------Gggged----------------------------I-D-H-T-----SA---KNLLDSIGKKVYR-Ek-V-Q-SD---------G-ET--Y--KN-KLKGKLQEA-ART---I
+
+>SFC-21_S22_L002_Contig2054_frm1_orf6_NTSB  {|10(0)|}domNum1 
+-----------------------------------------------------------Q-D-D-----DA---KNMFDRIGKDVYD-Q--V-K-KD---------T-ND--F--RD-DLKGNLQEA-ASS---H
+
+>SFC-21_S22_L002_Contig1720_frm1_orf3_NTSB  {|2(0)|}domNum1 
+S--S-Gg----------------D---------------------------------A-N---K-----SA---KEVFDEIGKTIQE-Q--A-K-RE---------A-EE--H--GS-ELKGDLSNV-RFT---N
+
+>SFM-3_S12_L001_Contig2004_frm2_orf3_NTSB  {|10(0)|}domNum1 
+G--G-Gg----------------Gvdkdv----------------------------I-D-E-T-----SA---KNLLDSIGKKVYD-Q--V-K-NGad-------A-EK--Y--KG-ELKGDLQEAaKGM---G
+
+>SFM-3_S12_L001_Contig1880_frm-3_orf3_NTSB  {|3(0)|}domNum1 
+-------------------------------------------------------------D-T-----TA---KNIFDRIGKKVHE-K--A-K-KN---------A-EQ--Y--FN-ELHGSLKDA-IFE---K
+
+>SFM-3_S12_L001_Contig2000_frm-1_orf4_NTSB  {|14(0)|}domNum1 
+S--T-S---------------------------------------------------T-T-Y-S-----SV---KDLLEKIGQSIQQ-K--A-T-IS---------A-KG--Y--RQ-YLHGNLKKA-EYP---K
+
+>SFC14_S17_L001_Contig441_frm2_orf2_NTSB  {|8(0)|}domNum1 
+-----------------------Y---------------------------------T-N-V-K-----DA---KELLDLIGQTVHA-K--V-H-TA---------S-KK--Y--FD-ELHGDLSKA-TFS---S
+
+>SFC14_S17_L001_Contig1719_frm1_orf3_NTSB  {|1(0)|}domNum1 
+---G-Sa----------------G---------------------------------T-K-D-D-----DA---KYMFDRIGKDVYE-T--V-E-KE---------A-ER--Rs-NG-ELKGLLTSA-TLL---G
+
+>SFC14_S17_L001_6263_soapGraphK61_frm-2_orf2_NTSB  {|8(0)|}domNum1 
+-----------------------Y---------------------------------T-N-V-K-----DA---KELLDLIGQTVHA-K--V-H-TA---------S-KK--Y--FD-ELHGDLSKA-TFS---S
+
+>SFC14_S17_L001_Contig616_frm2_orf4_NTSB  {|11(0)|}domNum1 
+T--G-Tqeqedk-----------Y---------------------------------K-S-A-P-----DA---KHLFDIIGKDVYE-T--V-E-KD---------A-ET--C--KG-ELEGNLKKA-K-----D
+
+>SFC14_S17_L001_Contig2411_frm2_orf1_NTSB  {|5(0)|}domNum1 
+S--T-T-------------------------------------------------------Y-S-----SA---KDFLDSIGKKVHD-Ei-V-E-KGv--------A-ET--Y--KE-ALKGKLQEA-KVM---G
+
+>SFC17_S7_L001_Contig1172_frm-3_orf6_NTSB  {|7(0)|}domNum1 
+G--S-Ggassgendadk------Y---------------------------------K-N-A-E-----DA---KHLLDMIGEDIYK-K--A-K-EA---------A-LP--Y--NN-ALHGLLTRA-TYP---R
+
+>SFC17_S7_L001_Contig1740_frm2_orf5_NTSB  {|3(0)|}domNum1 
+S--T-T-------------------------------------------------------Y-S-----SA---KDLLEDIGESVQK-E--A-K-KQ---------A-LG--Rs-GS-DLQGRLSEA-RYN---G
+
+>SFC17_S7_L001_Contig1998_frm3_orf3_NTSB  {|3(0)|}domNum1 
+G--G-T-------------------------------------------------------D-K-----SA---KEVLDEIGGIIQQ-Q--A-K-SD---------A-EQ--H--GS-ELKGNLSNV-KFS---N
+
+>SFC17_S7_L001_Contig1724_frm-1_orf3_NTSB  {|3(0)|}domNum1 
+P--G-Ggqvg-------------Gdd-------------------------------I-D-E-R-----SA---KHLLDSIGKKVHK-E--V-K-NA---------A-ND--F--RE-KLKGDLKKA-AST---N
+
+>IFM57_S30_L002_Contig1314  {|6(0)|}frame_2_NTSpam domNum1 
+--------------------------------------------------------------------------------IGDKIEE-Y--L-K-EK---------S-NE--SniDQ-SLKADPSEV-QYY---G
+
+>IFM054_S12_Contig492  {|6(0)|}frame_1_NTSpam domNum1 
+--------------------------------------------------------------------------------IANKIEE-YlgA-K-SD---------D-SN--I--EQ-SLKADPSEV-EYY---R
+
+>IFC66_S31_L002_Contig1799  {|6(0)|}frame_1_NTSpam domNum1 
+--------------------------------------------------------------------------------IANKIEA-Y--L-E-KK---------S-NE--SdiDQ-SLQADPSEV-EYY---R
+
+>SFC13_S23_L002_Contig1612  {|4(0)|}frame_1_NTSpam domNum1 
+--------------------------------------------------------------------------------IANKIEE-YlgA-K-SD---------D-SN--I--EQ-SLKADPSEV-EYY---R
+
+>SFM-8_S8_L001_Contig3581  {|6(0)|}frame_-1_NTSpam domNum1 
+--------------------------------------------------------------------------------IAEKIEA-Y--L-E-KK---------S-NE--SniEQ-SLKADPSEV-EYY---R
+
+>SFM-3_S12_L001_Contig1960  {|6(0)|}frame_-1_NTSpam domNum1 
+--------------------------------------------------------------------------------IANKIEA-Y--L-E-KK---------S-ND--SkiEQ-SLKADPSKV-QYY---G
+
+>SFC17_S7_L001_Contig982  {|10(0)|}frame_2_NTSpam domNum1 
+--------------------------------------------------------------------------------FGGD-------------------------------GS-YLK--------NN---I
+
+>IFM047_S10_Contig664_frm-2_orf1_NTSpam  {|6(0)|}domNum1 
+--------------------------------------------------------------------------------IANKIEE-YlgA-K-SD---------D-SN--I--EQ-SLKADPSEV-EYY---R
+
+>SXC2_S4_L001_Contig610_frm-3_orf4_NTSpam  {|6(0)|}domNum1 
+--------------------------------------------------------------------------------IANKIEA-Y--L-E-KK---------S-NE--SdiDQ-SLKADPSEV-EYY---R
+
+>SFM-8_S8_L001_Contig3595_frm-3_orf4_NTSpam  {|6(0)|}domNum1 
+--------------------------------------------------------------------------------IGDKIEE-Y--L-K-EK---------S-NE--SniDQ-SLKADPSEV-QYY---G
+
+>SFM-7_S13_L001_Contig597_frm2_orf3_NTSpam  {|6(0)|}domNum1 
+--------------------------------------------------------------------------------IANKIEE-Y--L-E-KK---------S-NE--SdiEQ-SLKADPSEV-EYY---R
+
+>SFM-3_S12_L001_Contig1765_frm3_orf3_NTSpam  {|6(0)|}domNum1 
+--------------------------------------------------------------------------------IANKIEE-YlgA-K-SD---------D-SN--I--EQ-SLKADPSEV-EYY---R
+
+>SFC14_S17_L001_Contig654_frm1_orf2_NTSpam  {|6(0)|}domNum1 
+--------------------------------------------------------------------------------IANKIEE-YlgA-K-SN---------D-SN--I--EQ-SLKADPSEV-EYY---R
+
