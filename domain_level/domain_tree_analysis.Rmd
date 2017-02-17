@@ -626,3 +626,8 @@ kable(final, digits=3)
 # write.table(sig, file="/home/users/allstaff/tonkin-hill.g/var_differential_analysis/domain_level/tree_figures/sig_clusters.csv", sep=",", row.names=FALSE, quote = FALSE)
 
 ```
+
+##Session Information
+```{r}
+sessionInfo()
+```

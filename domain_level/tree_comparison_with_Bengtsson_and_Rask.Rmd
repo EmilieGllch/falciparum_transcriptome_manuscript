@@ -16,10 +16,8 @@ knitr::opts_chunk$set(fig.width=12, fig.height=8,
 
 ##Load libraries
 ```{r}
-library(ggtree)
 library(ggplot2)
 library(ape)
-wd = "/home/users/allstaff/tonkin-hill.g/var_differential_analysis/domain_level/data"
 ```
 
 #Phylogentic method
@@ -34,9 +32,7 @@ Bengtsson et al. found that DC4 may be related to PfEMP1 proteins binding to ICA
 
 Lavsten et al 2012 also found DBLb3 to be more expressed in children with severe malaria.
 ```{r}
-setwd(wd)
-
-dbl_b3 <- read.tree("./compare_DBLb3/combined_vardom_severe_DBLb3.phylip")
+dbl_b3 <- read.tree("./data/compare_DBLb3/combined_vardom_severe_DBLb3.phylip")
 
 labels <- "black"
 labels[grepl("\\.s\\.1", dbl_b3$tip.label)] <- "#4daf4a"
@@ -65,9 +61,7 @@ The DBLd1 domains from DC8 containing proteins of Rask et al are failry well dis
 Severe clusters DBLd1.s.1 and DBLd1.s.2 also have DC8 DBLd1 domains nearby but are more closely clustered to a number of non DC8 DBLd1 domains.
 
 ```{r}
-setwd(wd)
-
-tree <- read.tree("./compare_DC8/MA_combined_raskDBLd1_DBLd1s.fasta.phy")
+tree <- read.tree("./data/compare_DC8/MA_combined_raskDBLd1_DBLd1s.fasta.phy")
 
 labels <- "black"
 labels[grepl("\\.s\\.1", tree$tip.label)] <- "#f781bf"
@@ -94,9 +88,7 @@ The tree below is not very informative due to the very high level of conservatio
 
 
 ```{r}
-setwd(wd)
-
-tree <- read.tree("./compare_DC8/MA_combined_raskDBLb12_DBLb12s.fasta.phy")
+tree <- read.tree("./data/compare_DC8/MA_combined_raskDBLb12_DBLb12s.fasta.phy")
 
 labels <- "black"
 labels[grepl("\\.s\\.1", tree$tip.label)] <- "#ff7f00"
@@ -120,9 +112,7 @@ legend(1, -1, legend=c("DBLb12", "DBLb12", "DBLb12 from DC8"),
 The severe CIDRb1 domain clusters together with one DC8 CIDRb1 domain from Rask et al. The remaining CIDRb1 domains from proteins that conatin DC8 in Rask et al are distributed across the remianing CIDRb1 domains from Rask et al and don't form a disctinct group.
 
 ```{r}
-setwd(wd)
-
-tree <- read.tree("./compare_DC8/MA_combined_raskCIDRb1_CIDRb1s.fasta.phy")
+tree <- read.tree("./data/compare_DC8/MA_combined_raskCIDRb1_CIDRb1s.fasta.phy")
 
 labels <- "black"
 labels[grepl("\\.s\\.1", tree$tip.label)] <- "#ff7f00"
