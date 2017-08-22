@@ -126,6 +126,27 @@ colData$disease <- NULL
 pheatmap(log2.norm.counts, cluster_rows=TRUE, show_rownames=TRUE, cluster_cols=TRUE, annotation_col=colData, annotation_colors = anno_colors)
 ```
 
+A similar plot but in a different format
+```{r}
+tran_counts <- counts(dds, normalized=TRUE)
+sigUp_norm_counts <- tran_counts[rownames(tran_counts) %in% rownames(SigUp),]
+
+percent_counts <- t(t(sigUp_norm_counts)/colSums(tran_counts))
+
+sigUp_norm_counts_df <- melt(percent_counts)
+colnames(sigUp_norm_counts_df) <- c("Transcript Clusters", "Isolate", "Proportion of expression")
+sigUp_norm_counts_df$disease[grepl("^S.*",sigUp_norm_counts_df$Isolate)]<-"severe"
+sigUp_norm_counts_df$disease[!grepl("^S.*",sigUp_norm_counts_df$Isolate)]<-"non-severe"
+colnames(sigUp_norm_counts_df) <- c("Transcript Clusters", "Isolate", "Proportion of VAR expression", "Phenotype")
+
+gg <- ggplot(sigUp_norm_counts_df, aes(x=Phenotype, y=`Proportion of VAR expression`
+                                       , colour=Phenotype))
+gg <- gg + geom_boxplot(outlier.shape = NA) + geom_jitter(width = 0.2, height = 0)
+gg <- gg + facet_wrap(~`Transcript Clusters`, scales = "free_y") + theme_bw()
+gg <- gg + scale_colour_manual(values = colors)
+gg
+```
+
 ##Heatmap of down-regulated transcripts
 The larger number of clusters that are reported as downregulated may be a result of the increased diversity in the non-severe transcripts. The heatmap suggests there are a number of transcript clusters that are not present very often in the severe samples.
 

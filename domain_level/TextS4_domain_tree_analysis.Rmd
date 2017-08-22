@@ -43,7 +43,15 @@ colors <- c("#0571b0","#ca0020")
 
 
 ##Get read counts for each domain
-Used featureCounts allowing for overlap. That is, if a read overlaps more than one segment it is counted as a hit for both segments.
+The assembled VAR DNA transcripts are first translated into protein sequence. This is done by translating each sequence into all six reading frames and keeping the frame with the lowest number of stop codons. If all of the six frames had more than 2 stop codons present the open reading frames of each of the six translations were taken and searched against the homology block models of Rask et al. An ORF was kept if it had at least two distinct homology blocks present. This approach accurately translated over 99% of the sequences. Upon manual inspection of the differentially expressed transcripts for the combined assembly, transcript 258591_soapGraphK61 was found to be translated in the reverse frame. This did not affect the domain analysis as the seperate assembly transcripts were used.
+
+Reads are aligned to the de novo assembled transcripts which are annotated according to the alignment of domain models with the respective protein transcripts. The VAR domains of Rask et al were aligned to the protein sequences using HMMER v3.1b1.
+
+```
+hmmsearch --nonull --noali --max -E 1e-8 --domtblout rask_domain_hmmerSearch.txt all_protein_exon1_domain_HMMs.hmm  ./data/seperate_assembly_transcipts_PROTEIN.fasta
+```
+
+An SAF file was created from the HMMER alignments and read counts were obtained using featureCounts allowing for overlap. That is, if a read overlaps more than one segment it is counted as a hit for both segments.
 ```{r}
 setwd(wd)
 # files <- Sys.glob("/home/users/allstaff/tonkin-hill.g/gene_level_var_analysis/alignments_seperate_assemblies_best1/*.sam")
@@ -95,7 +103,6 @@ categories <- as.factor(substring(rownames(x_domains$samples),1,1))
 A total of `r dim(x_domains)[1]` domains from the those of Rask et al are identified in the samples.
 
 ##A PCA plot of normalised counts for domains of Rask et al
-Reads are annotated to the de novo assembled transcripts which are annotated with the hidden Markov model domains profiles of Rask et al.
 ```{r}
 plotPCA(cpm(x_domains,normalized.lib.sizes=TRUE, log=T, prior.count=0.5), col=colors[categories], cex=0.8, isLog=TRUE)
 title("VAR PCA - Previous Domains")
@@ -137,6 +144,27 @@ annotData$phenotype[annotData$disease=="S"] <- "severe"
 # annotData <- annotData[annotData$disease=="S",]
 annotData$disease <- NULL
 pheatmap(log2.norm.counts, cluster_rows=TRUE, show_rownames=TRUE, cluster_cols=TRUE, annotation_col=annotData, annotation_colors = anno_colors)
+```
+
+A similar plot but in a different format
+```{r}
+norm_dom_counts <- counts(dds_dom, normalized=TRUE)
+sigUp_norm_counts <- norm_dom_counts[rownames(norm_dom_counts) %in% rownames(resSigLFC),]
+
+percent_counts <- t(t(sigUp_norm_counts)/colSums(norm_dom_counts))
+
+sigUp_norm_counts_df <- melt(percent_counts)
+colnames(sigUp_norm_counts_df) <- c("Domain Cluster", "Isolate", "Proportion of expression")
+sigUp_norm_counts_df$disease[grepl("^S.*",sigUp_norm_counts_df$Isolate)]<-"severe"
+sigUp_norm_counts_df$disease[!grepl("^S.*",sigUp_norm_counts_df$Isolate)]<-"non-severe"
+colnames(sigUp_norm_counts_df) <- c("Domain Cluster", "Isolate", "Proportion of VAR expression", "Phenotype")
+
+gg <- ggplot(sigUp_norm_counts_df, aes(x=Phenotype, y=`Proportion of VAR expression`
+                                       , colour=Phenotype))
+gg <- gg + geom_boxplot(outlier.shape = NA) + geom_jitter(width = 0.2, height = 0)
+gg <- gg + facet_wrap(~`Domain Cluster`) + theme_bw()
+gg <- gg + scale_colour_manual(values = colors)
+gg
 ```
 
 ##Boxplot of NTSA and NTSB domains
@@ -386,7 +414,7 @@ plot_tree <- function(node, edges, p.vals, return_script=FALSE){
 
 ##Get significant nodes in trees
 
-From those nodes that are found to be significant after multiple testing correction we keep only the most signifcant from one path through the tree. That is if a node has an ancestor or child that has a smaller p-value, it will not be considered. This is achieved by iteratively selecting the most significant node and removing it's ancestors and children from the list of signifcant nodes.
+From those nodes that are found to be significant after multiple testing correction we keep only the most significant from one path through the tree. That is if a node has an ancestor or child that has a smaller p-value, it will not be considered. This is achieved by iteratively selecting the most significant node and removing it's ancestors and children from the list of significant nodes.
 
 ```{r}
 setwd(wd)
@@ -503,6 +531,28 @@ pheatmap(log2.norm.counts, cluster_rows=FALSE, show_rownames=TRUE, cluster_cols=
          , annotation_row=rowsAnnot, fontsize_row=7)
 ```
 
+The boxplot indicating the same information in a different format.
+
+```{r}
+norm_counts <- counts(dds, normalized=TRUE)
+sigUp_norm_counts <- norm_counts[rownames(norm_counts) %in% rownames(resUp),]
+
+percent_counts <- t(t(sigUp_norm_counts)/colSums(norm_dom_counts))
+
+sigUp_norm_counts_df <- melt(percent_counts)
+colnames(sigUp_norm_counts_df) <- c("Domain Cluster", "Isolate", "Proportion of expression")
+sigUp_norm_counts_df$disease[grepl("^S.*",sigUp_norm_counts_df$Isolate)]<-"severe"
+sigUp_norm_counts_df$disease[!grepl("^S.*",sigUp_norm_counts_df$Isolate)]<-"non-severe"
+colnames(sigUp_norm_counts_df) <- c("Domain Cluster", "Isolate", "Proportion of VAR expression", "Phenotype")
+
+gg <- ggplot(sigUp_norm_counts_df, aes(x=Phenotype, y=`Proportion of VAR expression`
+                                       , colour=Phenotype))
+gg <- gg + geom_boxplot(outlier.shape = NA) + geom_jitter(width = 0.2, height = 0)
+gg <- gg + facet_wrap(~`Domain Cluster`) + theme_bw()
+gg <- gg + scale_colour_manual(values = colors)
+gg
+```
+
 ##Heatmap of down-regulated clusters
 
 ```{r}
@@ -571,7 +621,7 @@ kable(final, digits=3)
 #     closeAllConnections()
 # #     close(paste(paste(directory,node,sep="_"), "_tree.html"))
 # }
-# plot_tree("670_X0.6", edges, p.vals, return_script=F)
+# plot_tree("780_X0.6", edges, p.vals, return_script=F)
 # writeTree("670_X0.6", "/home/users/allstaff/tonkin-hill.g/Dropbox/Var transcriptome manuscript/Figures/VAR differential analysis (4)/domainTrees/", edges, p.vals)
 # lapply(rownames(final), writeTree, "/home/users/allstaff/tonkin-hill.g/var_differential_analysis/domain_level/tree_figures/", edges, p.vals)
 ```
