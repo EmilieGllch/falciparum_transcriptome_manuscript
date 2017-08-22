@@ -162,7 +162,7 @@ colnames(sigUp_norm_counts_df) <- c("Domain Cluster", "Isolate", "Proportion of 
 gg <- ggplot(sigUp_norm_counts_df, aes(x=Phenotype, y=`Proportion of VAR expression`
                                        , colour=Phenotype))
 gg <- gg + geom_boxplot(outlier.shape = NA) + geom_jitter(width = 0.2, height = 0)
-gg <- gg + facet_wrap(~`Domain Cluster`) + theme_bw()
+gg <- gg + facet_wrap(~`Domain Cluster`, scales = "free_y") + theme_bw()
 gg <- gg + scale_colour_manual(values = colors)
 gg
 ```
@@ -548,7 +548,7 @@ colnames(sigUp_norm_counts_df) <- c("Domain Cluster", "Isolate", "Proportion of 
 gg <- ggplot(sigUp_norm_counts_df, aes(x=Phenotype, y=`Proportion of VAR expression`
                                        , colour=Phenotype))
 gg <- gg + geom_boxplot(outlier.shape = NA) + geom_jitter(width = 0.2, height = 0)
-gg <- gg + facet_wrap(~`Domain Cluster`) + theme_bw()
+gg <- gg + facet_wrap(~`Domain Cluster`, scales = "free_y") + theme_bw()
 gg <- gg + scale_colour_manual(values = colors)
 gg
 ```
