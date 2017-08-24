@@ -545,22 +545,27 @@ pheatmap(log2.norm.counts, cluster_rows=FALSE, show_rownames=TRUE, cluster_cols=
 The boxplot indicating the same information in a different format.
 
 ```{r}
-norm_counts <- counts(dds, normalized=TRUE)
-sigUp_norm_counts <- norm_counts[rownames(norm_counts) %in% rownames(resUp),]
+rpkm_dom_clus <- counts(dds, normalized=FALSE)
+rpkm_dom_clus <- rpkm_dom_clus[rownames(rpkm_dom_clus) %in% rownames(resUp),]
+dom_length_vector <- domain_length_matrix[cluster_domain_type[rownames(rpkm_dom_clus)],]
+rownames(rpkm_dom_clus) <- paste(rownames(rpkm_dom_clus),
+                           cluster_domain_type[rownames(rpkm_dom_clus)] ,
+                           sep=" - ")
+rpkm_dom_clus <- (t(t(rpkm_dom_clus)/domain_lib_size)/dom_length_vector)*10^9
 
-percent_counts <- t(t(sigUp_norm_counts)/colSums(norm_dom_counts))
+rpkm_dom_clus <- rpkm_dom_clus+1 #to deal with log transformation
+sigUp_norm_counts_clus_df <- melt(rpkm_dom_clus)
+colnames(sigUp_norm_counts_clus_df) <- c("Domain Cluster", "Isolate", "RPKM")
 
-sigUp_norm_counts_df <- melt(percent_counts)
-colnames(sigUp_norm_counts_df) <- c("Domain Cluster", "Isolate", "Proportion of expression")
-sigUp_norm_counts_df$disease[grepl("^S.*",sigUp_norm_counts_df$Isolate)]<-"severe"
-sigUp_norm_counts_df$disease[!grepl("^S.*",sigUp_norm_counts_df$Isolate)]<-"non-severe"
-colnames(sigUp_norm_counts_df) <- c("Domain Cluster", "Isolate", "Proportion of VAR expression", "Phenotype")
+sigUp_norm_counts_clus_df$disease[grepl("^S.*",sigUp_norm_counts_clus_df$Isolate)]<-"severe"
+sigUp_norm_counts_clus_df$disease[!grepl("^S.*",sigUp_norm_counts_clus_df$Isolate)]<-"non-severe"
+colnames(sigUp_norm_counts_clus_df) <- c("Domain Cluster", "Isolate", "RPKM", "Phenotype")
 
-gg <- ggplot(sigUp_norm_counts_df, aes(x=Phenotype, y=`Proportion of VAR expression`
+gg <- ggplot(sigUp_norm_counts_clus_df, aes(x=Phenotype, y=RPKM
                                        , colour=Phenotype))
 gg <- gg + geom_boxplot(outlier.shape = NA) + geom_jitter(width = 0.2, height = 0)
-gg <- gg + facet_wrap(~`Domain Cluster`, scales = "free_y") + theme_bw()
-gg <- gg + scale_colour_manual(values = colors)
+gg <- gg + facet_wrap(~`Domain Cluster`) + theme_bw()
+gg <- gg + scale_colour_manual(values = colors) + scale_y_log10()
 gg
 ```
 
