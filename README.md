@@ -1,8 +1,8 @@
-# Supplemtary material for the *Plasmodium Falciparum* Transcriptome Manuscript
+# Supplementary material for the *Plasmodium Falciparum* Transcriptome Manuscript
 
 This repository contains much of the code and data used to produce the analysis for the *Falciparum Transcriptome* manuscript.
 
-It is organised into four main sections; the all gene differential analysis, the VAR gene transcript analysis, the VAR gene domain analysis and finally the VAR gene homology block and segment analysis. The data required to run these scripts is included in the repositry however where read counts have been obtained from alignments only the count data is included. For the raw read data see ???.
+It is organised into four main sections; the all gene differential analysis, the VAR gene transcript analysis, the VAR gene domain analysis and finally the VAR gene homology block and segment analysis. The data required to run these scripts is included in the repository however where read counts have been obtained from alignments only the count data is included. The raw reads are available from ENA with accesion number E-MTAB-5860 and PRJEB20632.
 
 
 R version 3.2 was used when building the html files.
