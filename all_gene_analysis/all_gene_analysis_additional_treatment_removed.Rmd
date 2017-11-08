@@ -1,0 +1,478 @@
+---
+title: "All Gene Supplementary Material - Additional samples removed."
+author: "Gerry Tonkin-Hill"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    fig_width: 12
+    fig_height: 8
+---
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.width=12, fig.height=8,
+                      echo=TRUE, warning=FALSE, message=FALSE,
+                      tidy=TRUE)
+```
+
+###Load Libraries
+```{r}
+#libraries used for analysis
+library(edgeR)
+library(limma)
+library(quadprog)
+library(ruv)
+
+#libraries required for graphics
+library(ggplot2)
+library(reshape2)
+library(EDASeq)
+library(RColorBrewer)
+library(VennDiagram)
+library(data.table)
+library(dplyr)
+library(stringr)
+library(knitr)
+library(pheatmap)
+
+
+wd = "./"
+colors <- c("#0571b0","#ca0020")
+```
+
+###Load our data
+We first produce a matrix of read counts after aligning to both the Human and Plasmodium falciparum 3D7 reference genome.
+Subread's featureCounts program is then used to allocate reads to gene features using the gff file PlasmoDB-12.0_Pfalciparum3D7.gff from PlasmoDB. 
+For both Subread programs the default options are used.
+```{r}
+setwd(wd)
+# # Next subreads featureCounts was used to allocate reads to genes. This was saved for re-use
+# files <- Sys.glob("/home/users/allstaff/tonkin-hill.g/all_gene_analysis/alignment/*.sam")
+# fc_genes_aligned_w_Pfhuman_withoutVivax <- featureCounts(files, annot.ext = "./data/PlasmoDB-12.0_Pfalciparum3D7.gff"
+#                          , isPairedEnd=TRUE, isGTFAnnotationFile=TRUE, GTF.attrType="ID", GTF.featureType="gene"
+#                          , nthreads=15)
+
+#Load gene ID mappings which we use later on.
+geneID_mappings <- fread("./data/geneID_mappings.txt", data.table = FALSE, stringsAsFactors = FALSE)
+trim <- function (x) gsub("^\\s+|\\s+$", "", x)
+s <- str_split(as.character(geneID_mappings$`[Previous ID(s)]`), ',')
+geneID_mappings <- data.frame(current=rep(geneID_mappings$`[Gene ID]`, sapply(s, FUN=length)), old=unlist(s))
+geneID_mappings$old <- str_trim(geneID_mappings$old)
+
+#Load read counts (if featureCounts has been run previously)
+load("./data/fc_genes_with_all_samples_aligned_human_Pf_WithOutVivax_subread_uH.RData")
+fc2 <- fc_genes_aligned_w_Pfhuman_withoutVivax
+t <- fc2$counts
+
+#Rename samples to something more sensible
+# colnames(t) <- gsub("alignment\\.sam","",colnames(t))
+# colnames(t) <- gsub(".*vivax\\.","",colnames(t))
+# colnames(t) <- gsub("_S.*","", colnames(t))
+fc2$counts <- t
+
+x <- DGEList(counts=fc2$counts, genes=fc2$annotation)
+```
+
+###Initial filter
+We next filter out genes that do not have sufficient coverage across our samples for reliable estimates to be made. 
+```{r}
+setwd(wd)
+before <- nrow(x$counts)
+keep <- rowSums(cpm(x)>2) >= 10
+x <- x[keep,,keep.lib.sizes=FALSE]
+```
+We require that there are at least 2 reads per million for at least 10 samples in order for a gene to be included in the analysis. This reduced the number of genes being considered from `r before` to `r nrow(x$counts)`.
+
+###Remove low depth samples
+```{r}
+setwd(wd)
+bplot <- melt(colSums(x$counts))
+colnames(bplot) <- c("Read.Counts")
+bplot$Sample <- rownames(bplot)
+
+gg <- ggplot(bplot, aes(x=factor(Sample), y=Read.Counts)) + geom_bar(stat = "identity")
+gg <- gg + theme_bw() + scale_y_sqrt(breaks=c(0,10000,1000000,10000000,100000000))
+gg <- gg + theme(axis.text.x = element_text(size=12, angle = 90)
+                 , axis.text.y = element_text(size=12, angle = 0)
+                 , axis.title=element_text(size=14,face="bold"))
+gg <- gg + labs(x='Sample', y='Read Count') 
+gg <- gg + geom_hline(aes(yintercept=1000000), col="red")
+
+x$counts <- x$counts[,!grepl("SFD1|SFM9|SFC\\.025", colnames(x$counts))]
+filt.annnotation <- fc2$annotation[fc2$annotation$GeneID %in% rownames(x$counts),]
+dge <- DGEList(counts=x$counts, genes=filt.annnotation)
+
+gg
+```
+Samples SFD1, SFM9 and SFC.025 were not sequenced to a sufficient depth to be reliable and thus are removed.
+
+###Remove drug treated samples
+Samples SFU2 and SFU3 were drug treated and are removed. We repeated the analysis of the all gene DGE omitting a few patients who had anti-malarial treatments in preceding months. The patients omitted are: SFM 007, SFC 023, IFM 012 and IFM 021.
+```{r}
+x$counts <- x$counts[,!grepl("SFU2|SFU\\.3", colnames(x$counts))]
+x$counts <- x$counts[,!grepl("SFM\\.7|SFC\\.023|IFM12|IFM21", colnames(x$counts))]
+filt.annnotation <- fc2$annotation[fc2$annotation$GeneID %in% rownames(x$counts),]
+dge <- DGEList(counts=x$counts, genes=filt.annnotation)
+```
+
+Now we take the log transform of our sample counts (RPKM) to estimate the proportion of different stages present.
+```{r}
+setwd(wd)
+our_log_rpkm <- rpkm(dge)
+our_log_rpkm <- log2(1+our_log_rpkm)
+```
+
+##Estimate Contributions from Different Life-cycle Stages
+
+###Load Data
+To estimate the proportion of different life-cycle stages in each of our samples we require a reference data set. Su et al provide such a reference. They performed RNA-seq at two gametocyte stages, an ookinete stage and four time points of erythrocytic stages representing ring, early trophozoite, late trophozoite, and schizont. As we do not expect any ookinete stage parasites we discarded this reference. The data was downloaded from PlasmoDB and as such read counts were reported in RPKM. To handle outlying counts in a sensible manner a log2 transformation of the RPKM values was performed. This was also done for our gene counts. By next fitting a mixture model we can estimate the proportion of different parasite stages that make up our samples.
+```{r}
+setwd(wd)
+su_rpkm <- read.csv("./data/ rpkm_7SexualAndAsexualLifeStages_suetal.csv", header=TRUE, sep=",")
+
+#ignore the Ookinete profile as this should be absent from our data.
+su_rpkm$Ookinete <- NULL
+rownames(su_rpkm) <- su_rpkm$ID
+su_rpkm$ID <- NULL
+
+#take the log transform of the data which helps to manage outlier genes.
+su_log_rpkm <- log2(1+su_rpkm)
+```
+
+###Mixture Model
+Given a set of stages $S$ and a set of genes $g_i: i\in \{1,...,N\}$ we want to minimise
+
+$$
+\sum_{i=1}^N \left( g_{i,sample} -  \sum_{s \in S} \pi_s g_{i,s} \right)^2
+$$
+
+Subject to constraints
+
+$$
+\sum_{s\in S} \pi_s = 1
+$$
+
+$$
+\pi_s > 0
+$$
+
+Here $\pi_s$ is proportion of stage $s$ that is attributed to having contributed to our sample. This model was fit using R's solve.QP function.
+
+```{r}
+setwd(wd)
+findMix <- function(Y, X){  
+ X[is.na(X)] <- t(replicate(ncol(X), apply(X,1,mean, na.rm=T)))[is.na(X)]
+ Rinv <- solve(chol(t(X) %*% X))
+ C <- cbind(rep(1,ncol(X)), diag(ncol(X)))
+ b <- c(1,rep(0,ncol(X)))
+ d <- t(Y) %*% X  
+ qp <- solve.QP(Dmat = Rinv, factorized = TRUE, dvec = d, Amat = C, bvec = b, meq=1)
+ sol <- qp$solution
+ sol[sol<1e-10] <- 0
+ return(sol)
+}
+```
+
+###Calculate Sample Life-Cycle Profiles
+We fit this mixture model to each of our samples in turn. The results are then plotted. A column represents each sample in the plot below. As we are fitting proportion parameters each columns values must add to 1 over the 5 stages. Note that we have also combined the estimated proportions for the gametocyte samples into one gametocyte variable. The columns are coloured by phenotype.
+```{r, fig.height=7, fig.width=12}
+setwd(wd)
+#First get the intersection of the genes for the two datasets and order them by rowname.
+inter <- intersect(rownames(our_log_rpkm), rownames(su_log_rpkm))
+
+O <- our_log_rpkm[rownames(our_log_rpkm) %in% inter, ]
+O <- O[order(rownames(O)),]
+S <- su_log_rpkm[rownames(su_log_rpkm) %in% inter, ]
+S <- S[order(rownames(S)), ]
+
+#Now lets fit some samples!
+ourPlotData <- data.frame()
+for (i in 1:ncol(O)){
+  mix <- findMix(O[,i], as.matrix(S))
+  ourPlotData <- rbind(ourPlotData, data.frame(sample=rep(colnames(O)[i], ncol(S)), stage=colnames(S), proportion=mix))
+}
+
+#Organise the results.
+ourPlotData$stage <- gsub("Gametocyte.*","Gametocyte",ourPlotData$stage)
+ourPlotData <- aggregate(proportion~sample+stage,data=ourPlotData,FUN=sum)
+ourPlotData <- within(ourPlotData, stage <- factor(stage, levels=c("Ring", "Early.Trophozoite", "Late.Trophozoite", "Schizont","Gametocyte")))
+ourPlotData$phenotype <- ifelse(substring(ourPlotData$sample,1,1)=="I" ,"non-severe", "severe")
+
+#Make a pretty plot.
+gg <- ggplot(ourPlotData, aes(x=factor(sample), y=proportion, fill=factor(phenotype))) + geom_bar(stat="identity")
+gg <- gg + scale_fill_manual(values = c("non-severe" = "#2c7bb6", "severe" = "#d7191c"))
+gg <- gg + facet_wrap(~ stage, ncol = 1)
+gg <- gg + theme_bw()
+gg <- gg + theme(axis.text.x = element_text(size=12, angle = 90)
+                 , axis.text.y = element_text(size=12, angle = 0)
+                 , axis.title=element_text(size=14,face="bold")
+                 , strip.text.x = element_text(size = 16, face="bold"))
+gg <- gg + labs(x='Sample', y='Proportion', fill='Stage')
+gg <- gg + theme(legend.text=element_text(size=14))
+gg <- gg + theme(legend.key.size =  unit(0.25, "in"))
+gg <- gg + theme(legend.title = element_text(size=16, face="bold"))
+gg <- gg + guides(fill=guide_legend(title="Phenotype"))
+gg
+```
+
+##Investigate Differential Expression
+We now perform the Voom transformation on our count matrix. Prior to the transformation we use TMM normalisation to account for the different library sizes present in our sample. TMM was chosen as it is more robust to outliers. 
+From the Voom variance trend it is evident that there are a number of genes that have both high variability and high expression.
+After looking at some of the main offenders these were identified to be influenced by staging in the parasite. Consequently it is important to account for life-cycle stage when conducting the differential expression analysis.
+```{r}
+options(width=150)
+setwd(wd)
+categories<- as.factor(substring(rownames(dge$samples),1,1))
+dge <- calcNormFactors(dge, method="TMM")
+dge$samples$group <- categories
+design <- model.matrix(~group, data=dge$samples)
+
+v <- voom(dge, design=design, plot=TRUE)
+```
+
+
+###PCA Normalising for Library Size
+
+The PCA plot below indicates that accounting for library size alone does not cope with the impact of life-cycle stages. Notably SFC21 is clearly an outlier and was identified in the mixture model as containing later stage parasites as well as gametocytes. IFM14 is also slightly separate in the PCA plot and was identified as having a proportion of Schizont stage parasite present.
+```{r}
+setwd(wd)
+plotPCA(v$E, col=colors[categories], cex=0.8, isLog=TRUE)
+```
+
+Further the Relative Log Expression (RLE) plot below suggests that there is something different about SFC21 as well as highlighting IFM060 as being different.
+```{r}
+setwd(wd)
+plotVoomRLE <- function(E, colours){
+  mn <- apply(E, 1, median) 
+  rle <- data.frame(sweep(E, MARGIN=1, STATS=mn, FUN='-')) 
+  boxplot(rle,col=colours, outline=FALSE, las=2, ylim=c(-7,7))
+  abline(h = 0, col = "black")
+}
+plotVoomRLE(v$E, colors[categories])
+```
+
+
+###PCA Normalising for Library Size, Ring, Gametocyte and Schizont effects.
+To investigate the impact of life-cycle stages in our analysis we fit a linear model using limma's removeBatchEffect. Initially ring, gametocyte and schizont parameters were fit along with the disease phenotype factor. This was because for the most part the Trophozoite stages could be represented by accounting for these stages as they would be present implicitly in the model.
+
+The PCA indicates that we have dealt with the outlying SFC21 sample as well as other less outlying samples such as IFM14 which showed a proportion of Schizont stage parasites in the mixture model. Unfortunately due to the low number of samples that have proportions of Schizont and Gametocytes estimating differential differential expression in severe disease becomes impossible. This is because there is insufficient data to estimate these stage parameters and consequently the uncertainty in the model is too high to find significant differences between severe and non-severe disease.  
+
+```{r}
+setwd(wd)
+covs <- data.frame(v$design[,2])
+ourPlotData$phenotype <- NULL
+c <-  dcast(ourPlotData, sample ~ ..., value.var="proportion")
+covs <- merge(covs, c, by.x=0, by.y="sample")
+
+colnames(covs) <- c("sample", "disease", colnames(c)[2:ncol(c)])
+rownames(covs) <- covs$sample
+covs$sample <- NULL
+covs <- covs[match(colnames(v$E), rownames(covs)),]
+stopifnot(colnames(v$E)==rownames(covs))
+# head(covs)
+
+covs <- covs[,c(1,2,5,6)]
+# head(covs)
+
+mod = model.matrix(
+  as.formula(paste("~", paste(colnames(covs), collapse=" + "), sep="")), data=covs)
+
+norm_counts_ring <- removeBatchEffect(v$E, covariates=mod[,3:ncol(mod)], design=mod[,1:2])
+plotPCA(norm_counts_ring, col=colors[categories], cex=0.8, isLog=TRUE)
+```
+
+The RLE plot also suggests we have dealt with SFC21 however accounting for these stages does not seem to have accounted for the differences we see in the IFM060 sample. The mixture model did not identify IFM060 as being noticeably different from  the other samples and consequently it is likely that there is some other unknown factor impacting on its expression.
+```{r}
+setwd(wd)
+plotVoomRLE(norm_counts_ring, col=colors[categories])
+```
+
+###PCA Normalising for Library Size and Ring Stage Effects
+
+We then investigate the impact of only accounting for the Ring stage parameter in the model. This gives us more power with which to identify differential expression related to severe disease. However, from the PCA plot below it is clear that accounting for Ring stage alone is insufficient and fails to adequately deal with SFC21.
+```{r}
+setwd(wd)
+covs <- covs[,c(1,2)]
+
+mod = model.matrix(
+  as.formula(paste("~", paste(colnames(covs), collapse=" + "), sep="")), data=covs)
+
+norm_counts_ring <- removeBatchEffect(v$E, covariates=mod[,3:ncol(mod)], design=mod[,1:2])
+plotPCA(norm_counts_ring, col=colors[categories], cex=0.8, isLog=TRUE)
+```
+
+We are however able to identify differentially expressed genes in this less parameterised model. The summary of results accounting only for the Ring stage variable are given below. This test was performed using the limma-Voom pipeline. Ideally we would be able to keep both the power in out tests and account for the remaining unwanted factors. To achieve this we make use of RUV-4 to estimate dummy variables that represent multiple unknown factors of unwanted variation.
+```{r}
+setwd(wd)
+stopifnot(colnames(dge)==rownames(mod))
+v2 <- voom(dge, design=mod, plot=FALSE)
+fit <- lmFit(v2, mod)
+fit <- eBayes(fit, robust=TRUE)
+
+summary(de1<-decideTests(fit, adjust.method="BH", p.value=0.05))
+```
+
+###Estimate Unwanted Factors of Variation
+To cope with the outlier samples such as SFC21 whilst retaining statistical power we estimate factors of unwanted variation using RUV-4.\
+RUV-4 requires a set of control genes which are believed to be relatively unaffected by the condition of interest, in our case this is disease severity. RUV-4 is however fairly robust to the choice of control genes.\
+We chose to use the 1000 genes found to have the highest p-values in the experiment of Vignali et al as controls. The experiment of Vignali et al looked at differences in expression between pregnancy associated malaria and childhood malaria. Although this is not the same association we are investigating it was considered close enough to perform adequately as a source of control genes. Further an analysis using SVA which does not require controls and rather estimates them empirically was found to produce similar results with only 5 out of 119 genes found using SVA missing from the RUV-4 approach. Further RUV-4 attempts to recover some variation that may be lost in the vanilla SVA approach when the factor of interest (severe disease) correlates with an unwanted factor. Consequently it leads to a higher number of differentially expressed genes being found. It was also thought that having an independently sourced set of control genes was preferable to empirically deriving such a set.
+
+```{r}
+setwd(wd)
+contol_genes_vignali <- read.table("./data/contol_genes_vignali.txt", quote="\"")
+
+ctrl_vignali <- geneID_mappings$current[geneID_mappings$old %in% contol_genes_vignali$V1]
+length(ctrl_vignali)
+empirical_controls <- ctrl_vignali[0:length(ctrl_vignali)]
+empirical_controls <- rownames(v$E) %in% empirical_controls
+
+categoriesRUV <- categories
+categoriesRUV <- data.matrix(as.numeric(categoriesRUV=="S"))
+ring <- data.matrix(mod[,c(1,3)])
+genes <- data.matrix(t(v$E))
+
+ruv <- RUV4(genes, categoriesRUV, empirical_controls, 3, Z=ring)
+
+modRUV = cbind(mod,ruv$W)
+
+norm_counts_ring_ruv <- removeBatchEffect(v$E, covariates=modRUV[,3:ncol(modRUV)], design=modRUV[,1:2])
+```
+Note that although we used 1000 genes from the experiment of Vignali et al only `r sum(empirical_controls)` were found in our reduced expression matrix.\
+\
+The PCA plot below indicates that we have dealt with most of the problems due to staging. Here we have included the Ring stage proportion from the mixture model as well as three factors of unwanted variation estimated using RUV-4. 
+```{r}
+setwd(wd)
+plotPCA(norm_counts_ring_ruv, col=colors[categories], cex=0.8, isLog=TRUE)
+```
+
+The RLE plot also indicates that we have succesfully dealt with most of the staging issues. Both SFC21 and IFM14 have reasonable box plots. Moreover, IFM060 has a nicer boxplot indicating that in using RUV-4, not only have we dealt with staging issues, we have also accounted for some other unknown confounding factors that would have impacted our results. The variation in each sample has also been reduced which is indicated in the reduced height of the boxplot whiskers. Finally, the results were found to be relatively robust to the removal of the outlier samples such as SFC21 and IFM14. Consequently, this approach seems to succesfully deal with both life-cycle staging issues and other unknown impacting factors.
+
+```{r}
+setwd(wd)
+plotVoomRLE(norm_counts_ring_ruv, colors[categories])
+```
+
+
+###Identify DE Genes using Limma and Voom
+We now use the limma-voom pipeline, with the robust ebayes option which handles dispersion outliers. This was done to further ensure our results were less likely to be affected by outlier samples. Multiple testing correction was performed using the Benjamini-Hochberg approach.
+
+```{r}
+setwd(wd)
+stopifnot(colnames(dge)==rownames(modRUV))
+v2 <- voom(dge, design=modRUV, plot=F)
+fit <- lmFit(v2, modRUV)
+fit <- eBayes(fit, robust=TRUE)
+s <- summary(de2<-decideTests(fit, adjust.method="BH", p.value=0.05))
+s
+```
+
+Overall `r sum(s[c(1,3),2])` genes were found to be differentially expressed between severe and non-severe cases of malaria with a false dicovery rate threshold of 0.05.\
+\
+A good check for validity of our model it to look at the distribution of the resulting p-values. If everything is okay we would expect a uniform distribution except near $p=0$ where we would hope to see a spike. The barplot below indicates this is what we see which is helpful in affirming that we have done okay in removing unwanted variation without negatively impacting on the variation due to the variable of interest (diseas severity).
+```{r}
+setwd(wd)
+top_ring_ruv <- topTable(fit, coef=2, p.value=0.1, sort.by="p", number=Inf, adjust.method="BH", confint=TRUE)
+hist<- data.frame(topTable(fit, coef=2, number=Inf))
+gg <- ggplot(hist, aes(x=P.Value)) + geom_histogram(binwidth = 0.01)
+gg <- gg + theme_bw()
+gg <- gg + theme(axis.text.x = element_text(size=12)
+                 , axis.text.y = element_text(size=12, angle = 0)
+                 , axis.title=element_text(size=12,face="bold"))
+gg <- gg + labs(x='P value', y='Count')
+gg
+```
+
+###Results table
+Below is a table of genes that were found to be differentially expressed, ordered by their respective p-values. The 95% confidence intervals are given with the estimated LFC as well as the BH adjusted p-values and  the log-odds that the gene is differentially expressed. Here we report for interest sake all genes up to a adjusted p-value threshold of 0.1.
+```{r kable}
+setwd(wd)
+#Load additional gene information
+GeneAnnotationPlasmoDB <- fread("./data/GeneAnnotationPlasmoDB.txt"
+                                , data.table = FALSE, na.strings = "N/A")
+
+#First lets import some additional gene information to make a nicer table
+GeneAnnotationPlasmoDB <- GeneAnnotationPlasmoDB[, colnames(GeneAnnotationPlasmoDB) %in% c("[Gene ID]", "[Product Description]",	"[Gene Name or Symbol]")]
+top_ring_ruv <- merge(top_ring_ruv, GeneAnnotationPlasmoDB, by.x=0, by.y="[Gene ID]", all.x=TRUE)
+top_ring_ruv <- top_ring_ruv[with(top_ring_ruv, order(adj.P.Val)), ]
+
+#Now print the table
+top_ring_ruv$P.Value <- format(top_ring_ruv$P.Value, scientific=TRUE, digits=3)
+top_ring_ruv$adj.P.Val <- format(top_ring_ruv$adj.P.Val, scientific=TRUE, digits=3)
+kable(top_ring_ruv[,c(2:4,6:ncol(top_ring_ruv))], digits=3)
+```
+
+##Heatmap of deregulated genes
+```{r}
+col_annot <- data.frame(row.names=colnames(v$E), stringsAsFactors = F)
+col_annot$phenotype[substring(colnames(v$E),1,1)=="I"] <- "non-severe"
+col_annot$phenotype[substring(colnames(v$E),1,1)=="S"] <- "severe"
+col_annot$phenotype <- as.factor(col_annot$phenotype)
+
+pheatmap(v2$E[rownames(v$E) %in% top_ring_ruv$GeneID,]
+        , show_rownames = FALSE
+        , scale = "row"
+        , annotation_col = col_annot
+        , annotation_colors = list(phenotype=c(`non-severe`=colors[1], `severe`=colors[2])))
+```
+
+##Gene sets from Daily et al and Shock et al
+
+We now test using roast and camera for deregulation of gene sets obtained from the papers:
+
+Daily, J. P., D. Scanfeld, N. Pochet, K. Le Roch, D. Plouffe, M. Kamal, O. Sarr, et al. 2007. “Distinct Physiological States of Plasmodium Falciparum in Malaria-Infected Patients.” Nature 450 (7172): 1091–95.
+
+Shock, Jennifer L., Kael F. Fischer, and Joseph L. DeRisi. 2007. “Whole-Genome Analysis of mRNA Decay in Plasmodium Falciparum Reveals a Global Lengthening of mRNA Half-Life during the Intra-Erythrocytic Development Cycle.” Genome Biology 8 (7): R134.
+
+```{r}
+setwd(wd)
+
+#Load gene lists from Daily et al and Shock et al
+daily_figure2 <- fread("./data/daily_expression_figure2.csv"
+                          , data.table = FALSE, header=TRUE)
+
+JLshock <- c("PF3D7_0320800","PF3D7_0410400","PF3D7_0507600","PF3D7_0520300","PF3D7_0720000","PF3D7_0811300","PF3D7_0819900","PF3D7_0909400","PF3D7_0909900","PF3D7_1006100","PF3D7_1032100","PF3D7_1103800","PF3D7_1106300","PF3D7_1107000","PF3D7_1124400","PF3D7_1128600","PF3D7_1209200","PF3D7_1224300","PF3D7_1235300","PF3D7_1307000","PF3D7_1308900","PF3D7_1325000","PF3D7_1340100","PF3D7_1364500","PF3D7_1427800","PF3D7_1443300","PF3D7_1443500","PF3D7_1449700","PF3D7_0519500")
+
+#Load entrex geneID mappings
+entrez_geneID_mappings <- fread("./data/geneID_mappings.txt", data.table = FALSE, stringsAsFactors = FALSE)
+
+upcluster2 <- daily_figure2$Gene[daily_figure2$`Up regulated in Cluster 2?`=="Y"]
+upcluster1 <- daily_figure2$Gene[daily_figure2$`Up regulated in Cluster 2?`=="N"]
+glycolisis <- daily_figure2$Gene[daily_figure2$type=="Glycolisis"]
+tricarboxylic <- daily_figure2$Gene[daily_figure2$type=="Tricarboxylic acid cycle"]
+fatty_acid <- daily_figure2$Gene[daily_figure2$type=="Fatty acid metabolism"]
+
+upcluster2 <- as.vector(geneID_mappings$current[geneID_mappings$old %in% upcluster2])
+upcluster1 <- as.vector(geneID_mappings$current[geneID_mappings$old %in% upcluster1])
+glycolisis <- as.vector(geneID_mappings$current[geneID_mappings$old %in% glycolisis])
+tricarboxylic <- as.vector(geneID_mappings$current[geneID_mappings$old %in% tricarboxylic])
+fatty_acid <- as.vector(geneID_mappings$current[geneID_mappings$old %in% fatty_acid])
+
+indices <- ids2indices(list(up_in_starvation=upcluster1, up_int_vitro=upcluster2, glycolisis=glycolisis, tricarboxylic=tricarboxylic, fatty_acid=fatty_acid, mRNA_degradation=JLshock), rownames(v2$E))
+mroast(v2, index=indices, design=modRUV, contrast=2, nrot=10000, set.statistic="floormean")
+camera(v2, index=indices, design=modRUV, contrast=2)
+```
+
+
+##KEGG analysis
+```{r}
+# setwd(wd)
+# 
+# entrez_de <- entrez_geneID_mappings$`[Entrez Gene ID]`[entrez_geneID_mappings$`[Gene ID]` %in% top_ring_ruv$GeneID]
+# entrez_de <- entrez_de[entrez_de!="null"]
+# entrez_de <- str_split_fixed(entrez_de, pattern = ",", n = 2)[,1]
+# 
+# kegg <- kegga(entrez_de, species.KEGG="pfa", convert=TRUE)
+# kable(topKEGG(kegg, n=Inf))
+```
+
+##GO analysis
+```{r}
+# go <- goana(entrez_de, species.KEGG="pfa", convert=TRUE)
+# kable(topGO(go, n=100))
+```
+
+####System Information
+```{r}
+setwd(wd)
+sessionInfo()
+```
+
