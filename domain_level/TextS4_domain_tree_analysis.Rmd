@@ -561,11 +561,17 @@ sigUp_norm_counts_clus_df$disease[grepl("^S.*",sigUp_norm_counts_clus_df$Isolate
 sigUp_norm_counts_clus_df$disease[!grepl("^S.*",sigUp_norm_counts_clus_df$Isolate)]<-"non-severe"
 colnames(sigUp_norm_counts_clus_df) <- c("Domain Cluster", "Isolate", "RPKM", "Phenotype")
 
-gg <- ggplot(sigUp_norm_counts_clus_df, aes(x=Phenotype, y=RPKM
+combined_rask_new_df <- rbind(sigUp_norm_counts_clus_df, sigUp_norm_counts_df)
+
+gg <- ggplot(combined_rask_new_df, aes(x=Phenotype, y=RPKM
                                        , colour=Phenotype))
-gg <- gg + geom_boxplot(outlier.shape = NA) + geom_jitter(width = 0.2, height = 0)
-gg <- gg + facet_wrap(~`Domain Cluster`) + theme_bw()
+gg <- gg + geom_boxplot(outlier.shape = NA) + geom_jitter(width = 0.05, height = 0)
+gg <- gg + facet_wrap(~`Domain Cluster`, nrow=1)
 gg <- gg + scale_colour_manual(values = colors) + scale_y_log10()
+gg <- gg + theme_bw()
+gg <- gg +  theme(axis.text.x=element_blank(), axis.ticks.x=element_blank())
+gg <- gg + theme(panel.spacing.x=unit(0, "lines"),panel.spacing.y=unit(1, "lines"))
+gg <- gg + theme(strip.text.x = element_text(angle = 90))
 gg
 ```
 

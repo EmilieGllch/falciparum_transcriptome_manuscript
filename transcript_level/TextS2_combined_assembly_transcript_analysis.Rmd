@@ -196,22 +196,37 @@ pheatmap(log2.norm.counts, cluster_rows=TRUE, show_rownames=T, cluster_cols=TRUE
 
 A similar plot but in a different format
 ```{r}
-tran_counts <- counts(dds, normalized=TRUE)
-sigUp_norm_counts <- tran_counts[rownames(tran_counts) %in% rownames(resUp),]
+combined_length_df <- fread("./data/combined_assembly_transcript_lengths.csv"
+                            , data.table = FALSE)
+combined_length_matrix <- matrix(combined_length_df[,2], ncol=1,
+                               dimnames = list(row=combined_length_df[,1],
+                                               col="len"))
+rpkm_combined <- counts(dds, normalized=FALSE)
+combined_length_vector <- combined_length_matrix[rownames(rpkm_combined),]
+combined_lib_size <- colSums(rpkm_combined)
+rpkm_combined <- (t(t(rpkm_combined)/combined_lib_size)/combined_length_vector)*10^9
+rpkm_combined <-  rpkm_combined[rownames(rpkm_combined) %in% rownames(resUp),]
+rpkm_combined <- rpkm_combined + 1
+# combined_rask_new_df <- counts(dds, normalized=TRUE)
+# sigUp_norm_counts <- tran_counts[rownames(tran_counts) %in% rownames(resUp),]
+# 
+# percent_counts <- t(t(sigUp_norm_counts)/colSums(tran_counts))
 
-percent_counts <- t(t(sigUp_norm_counts)/colSums(tran_counts))
-
-sigUp_norm_counts_df <- melt(percent_counts)
-colnames(sigUp_norm_counts_df) <- c("Transcript", "Isolate", "Proportion of expression")
+sigUp_norm_counts_df <- melt(rpkm_combined)
+colnames(sigUp_norm_counts_df) <- c("Transcript", "Isolate", "RPKM")
 sigUp_norm_counts_df$disease[grepl("^S.*",sigUp_norm_counts_df$Isolate)]<-"severe"
 sigUp_norm_counts_df$disease[!grepl("^S.*",sigUp_norm_counts_df$Isolate)]<-"non-severe"
-colnames(sigUp_norm_counts_df) <- c("Transcript", "Isolate", "Proportion of VAR expression", "Phenotype")
+colnames(sigUp_norm_counts_df) <- c("Transcript", "Isolate", "RPKM", "Phenotype")
 
-gg <- ggplot(sigUp_norm_counts_df, aes(x=Phenotype, y=`Proportion of VAR expression`
+gg <- ggplot(sigUp_norm_counts_df, aes(x=Phenotype, y=RPKM
                                        , colour=Phenotype))
-gg <- gg + geom_boxplot(outlier.shape = NA) + geom_jitter(width = 0.2, height = 0)
-gg <- gg + facet_wrap(~Transcript, scales = "free_y") + theme_bw()
-gg <- gg + scale_colour_manual(values = colors)
+gg <- gg + geom_boxplot(outlier.shape = NA) + geom_jitter(width = 0.05, height = 0)
+gg <- gg + facet_wrap(~Transcript, nrow=1)
+gg <- gg + scale_colour_manual(values = colors) + scale_y_log10()
+gg <- gg + theme_bw()
+gg <- gg +  theme(axis.text.x=element_blank(), axis.ticks.x=element_blank())
+gg <- gg + theme(panel.spacing.x=unit(0, "lines"),panel.spacing.y=unit(1, "lines"))
+gg <- gg + theme(strip.text.x = element_text(angle = 90))
 gg
 ```
 
