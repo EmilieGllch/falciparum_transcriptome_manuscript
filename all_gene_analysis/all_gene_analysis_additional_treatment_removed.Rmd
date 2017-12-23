@@ -446,13 +446,20 @@ indices <- ids2indices(go.gene.sets, rownames(v2), remove.empty=TRUE)
 go_mr <- mroast(v2, index=indices, design=modRUV, contrast=2,
                 nrot=10000, set.statistic="floormean")
 go_cam <- camera(v2, index=indices, design=modRUV, contrast=2)
+
+go_mr$PValue <- format(go_mr$PValue, scientific=TRUE, digits=3)
+go_mr$FDR <- format(go_mr$FDR, scientific=TRUE, digits=3)
+go_mr$PValue.Mixed <- format(go_mr$PValue.Mixed, scientific=TRUE, digits=3)
+go_mr$FDR.Mixed <- format(go_mr$FDR.Mixed, scientific=TRUE, digits=3)
 kable(go_mr, digits=3)
 ```
 
 Also test using limma's camera
 
 ```{r}
-kable(go_cam, digits=3)
+go_cam$PValue <- format(go_cam$PValue, scientific=TRUE, digits=3)
+go_cam$FDR <- format(go_cam$FDR, scientific=TRUE, digits=3)
+kable(go_cam)
 ```
 
 Now KEGG pathway enrichment again making use of mroast and camera.
@@ -461,12 +468,19 @@ indices <- ids2indices(kegg.gene.sets, rownames(v2))
 keg_mr <- mroast(v2, index=indices, design=modRUV, contrast=2, nrot=10000,
                  set.statistic="floormean")
 keg_cam <- camera(v2, index=indices, design=modRUV, contrast=2)
+
+keg_mr$PValue <- format(keg_mr$PValue, scientific=TRUE, digits=3)
+keg_mr$FDR <- format(keg_mr$FDR, scientific=TRUE, digits=3)
+keg_mr$PValue.Mixed <- format(keg_mr$PValue.Mixed, scientific=TRUE, digits=3)
+keg_mr$FDR.Mixed <- format(keg_mr$FDR.Mixed, scientific=TRUE, digits=3)
 kable(keg_mr, digits=3)
 ```
 
 Also test using limma's camera
 
 ```{r}
+keg_cam$PValue <- format(keg_cam$PValue, scientific=TRUE, digits=3)
+keg_cam$FDR <- format(keg_cam$FDR, scientific=TRUE, digits=3)
 kable(keg_cam, digits=3)
 ```
 
