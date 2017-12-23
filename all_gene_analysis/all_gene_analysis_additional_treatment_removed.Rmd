@@ -106,10 +106,11 @@ gg
 Samples SFD1, SFM9 and SFC.025 were not sequenced to a sufficient depth to be reliable and thus are removed.
 
 ###Remove drug treated samples
-Samples SFU2 and SFU3 were drug treated and are removed. We repeated the analysis of the all gene DGE omitting a few patients who had anti-malarial treatments in preceding months. The patients omitted are: SFM 007, SFC 023, IFM 012 and IFM 021.
+Samples SFU2 and SFU3 were drug treated and are removed. We repeated the analysis of the all gene DGE omitting a few patients who had anti-malarial treatments in preceding months. The patients omitted are: SFC 023, SFM007, IFM 012 and IFM 021.
+
 ```{r}
 x$counts <- x$counts[,!grepl("SFU2|SFU\\.3", colnames(x$counts))]
-x$counts <- x$counts[,!grepl("SFM\\.7|SFC\\.023|IFM12|IFM21", colnames(x$counts))]
+x$counts <- x$counts[,!grepl("SFC\\.023|SFM\\.7|IFM12|IFM21", colnames(x$counts))]
 filt.annnotation <- fc2$annotation[fc2$annotation$GeneID %in% rownames(x$counts),]
 dge <- DGEList(counts=x$counts, genes=filt.annnotation)
 ```
@@ -414,6 +415,61 @@ pheatmap(v2$E[rownames(v$E) %in% top_ring_ruv$GeneID,]
         , annotation_colors = list(phenotype=c(`non-severe`=colors[1], `severe`=colors[2])))
 ```
 
+##Gene set analysis
+
+First GO set enrichment using limma's mroast.
+
+```{r}
+# genesets <- AnnotationDbi::select(org.Pf.plasmo.db, keys=top_ring_ruv$GeneID, keytype="ALIAS", 
+#        columns = c("GO","PATH"))
+# go.gene.sets <- lapply(split.data.frame(genesets,genesets$GO), function(x) as.vector(x$ALIAS))
+# kegg.gene.sets <- lapply(split.data.frame(genesets,genesets$PATH), function(x) as.vector(x$ALIAS))
+MIN_SET_SIZE <- 3
+
+go.gene.df <- fread("./data/go_gene_lists.txt", sep="\t", data.table = FALSE)
+go.gene.sets <- lapply(go.gene.df$Genes, function(x) {
+  x <- unlist(str_split(x, ","))
+  x <- x[x!=""]
+  })
+names(go.gene.sets) <- go.gene.df$GO_ID
+go.gene.sets <- go.gene.sets[unlist(lapply(go.gene.sets, length))>=MIN_SET_SIZE]
+
+kegg.gene.df <- fread("./data/kegg_gene_lists.txt", sep="\t", data.table = FALSE)
+kegg.gene.sets <- lapply(kegg.gene.df$Genes, function(x) {
+  x <- unlist(str_split(x, ","))
+  x <- x[x!=""]
+  })
+names(kegg.gene.sets) <- kegg.gene.df$KEGG_ID
+kegg.gene.sets <- kegg.gene.sets[unlist(lapply(kegg.gene.sets, length))>=MIN_SET_SIZE]
+
+indices <- ids2indices(go.gene.sets, rownames(v2), remove.empty=TRUE)
+go_mr <- mroast(v2, index=indices, design=modRUV, contrast=2,
+                nrot=10000, set.statistic="floormean")
+go_cam <- camera(v2, index=indices, design=modRUV, contrast=2)
+kable(go_mr, digits=3)
+```
+
+Also test using limma's camera
+
+```{r}
+kable(go_cam, digits=3)
+```
+
+Now KEGG pathway enrichment again making use of mroast and camera.
+```{r}
+indices <- ids2indices(kegg.gene.sets, rownames(v2))
+keg_mr <- mroast(v2, index=indices, design=modRUV, contrast=2, nrot=10000,
+                 set.statistic="floormean")
+keg_cam <- camera(v2, index=indices, design=modRUV, contrast=2)
+kable(keg_mr, digits=3)
+```
+
+Also test using limma's camera
+
+```{r}
+kable(keg_cam, digits=3)
+```
+
 ##Gene sets from Daily et al and Shock et al
 
 We now test using roast and camera for deregulation of gene sets obtained from the papers:
@@ -449,25 +505,6 @@ fatty_acid <- as.vector(geneID_mappings$current[geneID_mappings$old %in% fatty_a
 indices <- ids2indices(list(up_in_starvation=upcluster1, up_int_vitro=upcluster2, glycolisis=glycolisis, tricarboxylic=tricarboxylic, fatty_acid=fatty_acid, mRNA_degradation=JLshock), rownames(v2$E))
 mroast(v2, index=indices, design=modRUV, contrast=2, nrot=10000, set.statistic="floormean")
 camera(v2, index=indices, design=modRUV, contrast=2)
-```
-
-
-##KEGG analysis
-```{r}
-# setwd(wd)
-# 
-# entrez_de <- entrez_geneID_mappings$`[Entrez Gene ID]`[entrez_geneID_mappings$`[Gene ID]` %in% top_ring_ruv$GeneID]
-# entrez_de <- entrez_de[entrez_de!="null"]
-# entrez_de <- str_split_fixed(entrez_de, pattern = ",", n = 2)[,1]
-# 
-# kegg <- kegga(entrez_de, species.KEGG="pfa", convert=TRUE)
-# kable(topKEGG(kegg, n=Inf))
-```
-
-##GO analysis
-```{r}
-# go <- goana(entrez_de, species.KEGG="pfa", convert=TRUE)
-# kable(topGO(go, n=100))
 ```
 
 ####System Information
