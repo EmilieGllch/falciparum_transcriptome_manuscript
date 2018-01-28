@@ -417,71 +417,84 @@ pheatmap(v2$E[rownames(v$E) %in% top_ring_ruv$GeneID,]
 
 ##Gene set analysis
 
-First GO set enrichment using limma's mroast.
-
+First we can set up the gene sets after downloading the set annotations from PlasmoDB.
 ```{r}
-# genesets <- AnnotationDbi::select(org.Pf.plasmo.db, keys=top_ring_ruv$GeneID, keytype="ALIAS", 
-#        columns = c("GO","PATH"))
-# go.gene.sets <- lapply(split.data.frame(genesets,genesets$GO), function(x) as.vector(x$ALIAS))
-# kegg.gene.sets <- lapply(split.data.frame(genesets,genesets$PATH), function(x) as.vector(x$ALIAS))
 MIN_SET_SIZE <- 3
 
-go.gene.df <- fread("./data/go_gene_lists.txt", sep="\t", data.table = FALSE)
-go.gene.sets <- lapply(go.gene.df$Genes, function(x) {
-  x <- unlist(str_split(x, ","))
-  x <- x[x!=""]
-  })
-names(go.gene.sets) <- go.gene.df$GO_ID
+#GO sets
+go.data <- fread("./data/PlasmoDB-35_Pfalciparum3D7_GO.gaf", skip = 1, sep="\t",
+                         data.table = FALSE)
+go.data <- go.data[go.data$V9=="P",] #Looking at biological processes
+go.terms <- unique(go.data$V5)
+go.gene.sets <- lapply(go.terms, function(go){
+  unique(go.data$V2[grepl(go, go.data$V5, fixed = TRUE)])
+})
+names(go.gene.sets) <- go.terms
 go.gene.sets <- go.gene.sets[unlist(lapply(go.gene.sets, length))>=MIN_SET_SIZE]
 
-kegg.gene.df <- fread("./data/kegg_gene_lists.txt", sep="\t", data.table = FALSE)
-kegg.gene.sets <- lapply(kegg.gene.df$Genes, function(x) {
-  x <- unlist(str_split(x, ","))
-  x <- x[x!=""]
-  })
-names(kegg.gene.sets) <- kegg.gene.df$KEGG_ID
+#KEGG sets
+kegg.annot.data <- fread("./data/KEGG_Metacyc_PlasmoDB.csv", 
+                         data.table = FALSE)
+kegg.annot.data <- kegg.annot.data[kegg.annot.data$`Pathway Source`=="KEGG",]
+kegg.gene.sets <- lapply(kegg.annot.data$Genes, 
+                         function(x) unique(unlist(str_split(x, " \\| "))))
+names(kegg.gene.sets) <- kegg.annot.data$`Pathway Id`
 kegg.gene.sets <- kegg.gene.sets[unlist(lapply(kegg.gene.sets, length))>=MIN_SET_SIZE]
-
-indices <- ids2indices(go.gene.sets, rownames(v2), remove.empty=TRUE)
-go_mr <- mroast(v2, index=indices, design=modRUV, contrast=2,
-                nrot=10000, set.statistic="floormean")
-go_cam <- camera(v2, index=indices, design=modRUV, contrast=2)
-
-go_mr$PValue <- format(go_mr$PValue, scientific=TRUE, digits=3)
-go_mr$FDR <- format(go_mr$FDR, scientific=TRUE, digits=3)
-go_mr$PValue.Mixed <- format(go_mr$PValue.Mixed, scientific=TRUE, digits=3)
-go_mr$FDR.Mixed <- format(go_mr$FDR.Mixed, scientific=TRUE, digits=3)
-kable(go_mr, digits=3)
 ```
 
-Also test using limma's camera
-
+Enrichment analysis
 ```{r}
-go_cam$PValue <- format(go_cam$PValue, scientific=TRUE, digits=3)
-go_cam$FDR <- format(go_cam$FDR, scientific=TRUE, digits=3)
-kable(go_cam)
+total.genes <- sum(grepl("^PF3D7", rownames(fc2$counts))) #Size of universe
+top_genes_set <- top_ring_ruv
+go.test <- as.data.frame(do.call("rbind",lapply(go.gene.sets, function(gset){
+  set.size <- length(gset)
+  gin_all <- gset[gset %in% top_genes_set$GeneID]
+  gin_up <- gset[gset %in% top_genes_set$GeneID[top_genes_set$logFC>0]]
+  gin_down <- gset[gset %in% top_genes_set$GeneID[top_genes_set$logFC<0]]
+  result <- c(set.size=set.size,
+              n.both=length(gin_all),
+              n.up=length(gin_up),
+              n.down=length(gin_down),
+              p.value.both=phyper(length(gin_all)-1, m=length(gset), n=total.genes-length(gset),
+                                k=nrow(top_genes_set), lower.tail = FALSE),
+              p.value.up=phyper(length(gin_up)-1, m=length(gset), n=total.genes-length(gset),
+                                k=sum(top_genes_set$logFC>0), lower.tail = FALSE),
+              p.value.down=phyper(length(gin_down)-1, m=length(gset), n=total.genes-length(gset),
+                                k=sum(top_genes_set$logFC<0), lower.tail = FALSE)
+                 )
+  return(result)
+})))
+go.test <- go.test[order(go.test$p.value.both),]
+
+go.test$p.value.both <- format(go.test$p.value.both, scientific=TRUE, digits=3)
+go.test$p.value.up <- format(go.test$p.value.up, scientific=TRUE, digits=3)
+go.test$p.value.down <- format(go.test$p.value.down, scientific=TRUE, digits=3)
+kable(go.test)
 ```
 
-Now KEGG pathway enrichment again making use of mroast and camera.
 ```{r}
-indices <- ids2indices(kegg.gene.sets, rownames(v2))
-keg_mr <- mroast(v2, index=indices, design=modRUV, contrast=2, nrot=10000,
-                 set.statistic="floormean")
-keg_cam <- camera(v2, index=indices, design=modRUV, contrast=2)
-
-keg_mr$PValue <- format(keg_mr$PValue, scientific=TRUE, digits=3)
-keg_mr$FDR <- format(keg_mr$FDR, scientific=TRUE, digits=3)
-keg_mr$PValue.Mixed <- format(keg_mr$PValue.Mixed, scientific=TRUE, digits=3)
-keg_mr$FDR.Mixed <- format(keg_mr$FDR.Mixed, scientific=TRUE, digits=3)
-kable(keg_mr, digits=3)
-```
-
-Also test using limma's camera
-
-```{r}
-keg_cam$PValue <- format(keg_cam$PValue, scientific=TRUE, digits=3)
-keg_cam$FDR <- format(keg_cam$FDR, scientific=TRUE, digits=3)
-kable(keg_cam, digits=3)
+keg.test <- as.data.frame(do.call("rbind",lapply(kegg.gene.sets, function(gset){
+  set.size <- length(gset)
+  gin_all <- gset[gset %in% top_genes_set$GeneID]
+  gin_up <- gset[gset %in% top_genes_set$GeneID[top_genes_set$logFC>0]]
+  gin_down <- gset[gset %in% top_genes_set$GeneID[top_genes_set$logFC<0]]
+  result <- c(set.size=set.size,
+              n.both=length(gin_all),
+              n.up=length(gin_up),
+              n.down=length(gin_down),
+              p.value.both=phyper(length(gin_all)-1, m=length(gset), n=total.genes-length(gset),
+                                k=nrow(top_genes_set), lower.tail = FALSE),
+              p.value.up=phyper(length(gin_up)-1, m=length(gset), n=total.genes-length(gset),
+                                k=sum(top_genes_set$logFC>0), lower.tail = FALSE),
+              p.value.down=phyper(length(gin_down)-1, m=length(gset), n=total.genes-length(gset),
+                                k=sum(top_genes_set$logFC<0), lower.tail = FALSE)
+                 )
+  return(result)
+})))
+keg.test <- keg.test[order(keg.test$p.value.both),]
+keg.test$Pathway <- kegg.annot.data$Pathway[match(rownames(keg.test),
+                                                  kegg.annot.data$`Pathway Id`)]
+kable(keg.test, digits = 4)
 ```
 
 ##Gene sets from Daily et al and Shock et al
@@ -519,6 +532,22 @@ fatty_acid <- as.vector(geneID_mappings$current[geneID_mappings$old %in% fatty_a
 indices <- ids2indices(list(up_in_starvation=upcluster1, up_int_vitro=upcluster2, glycolisis=glycolisis, tricarboxylic=tricarboxylic, fatty_acid=fatty_acid, mRNA_degradation=JLshock), rownames(v2$E))
 mroast(v2, index=indices, design=modRUV, contrast=2, nrot=10000, set.statistic="floormean")
 camera(v2, index=indices, design=modRUV, contrast=2)
+```
+
+###Summary Gene Set Plot
+```{r}
+summary.set.data <- fread("./data/genes_in_set_for_figure2.csv",
+                          data.table = FALSE)
+gg <- ggplot(summary.set.data, aes(x=Gene, y=`adj-p`, fill=logFC))
+# gg <- gg + geom_col() + facet_wrap(~SetName, ncol=1, scales = "free_y", 
+#                                                   strip.position = "left")
+gg <- gg + geom_col() + facet_grid(SetName ~ ., space = "free_y", scales = "free_y", switch = "y")
+gg <- gg + coord_flip() 
+gg <- gg + scale_fill_gradient2(low="#0571b0", high = "#ca0020", mid="#ffffff")
+gg <- gg + scale_y_continuous(limits = c(0, 0.15))
+gg <- gg + theme_bw(base_size = 8) + theme(strip.text.y=element_text(angle=180))
+gg <- gg + theme(axis.text.y=element_text(size=4))
+gg
 ```
 
 ####System Information
