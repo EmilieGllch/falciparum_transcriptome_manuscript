@@ -104,12 +104,15 @@ with open(prefix+"_domains.fasta", 'w') as outfas:
     for tran in annotations:
       dna_h = tran.split("_f")[0]
       dna = dna_seqs[dna_h]
+      dom_num=0
       for tup in annotations[tran]:
-        outfas.write(">" + tran + "_" + tup[0] + "\n")
+        dom_num += 1
+        domname = tran + "_" + tup[0] + "_domNum" + str(dom_num)
+        outfas.write(">" + domname + "\n")
         prot = prot_seqs[tran][tup[1]-1:tup[2]]
         outfas.write(prot + "\n")
         dna_pos = findPosition(prot, dna)
-        outSAF.write("\t".join([tran + "_" + tup[0], dna_h, str(dna_pos[0]), str(dna_pos[1]), "-"])+"\n")
+        outSAF.write("\t".join([domname, dna_h, str(dna_pos[0]), str(dna_pos[1]), "-"])+"\n")
 
 
 
