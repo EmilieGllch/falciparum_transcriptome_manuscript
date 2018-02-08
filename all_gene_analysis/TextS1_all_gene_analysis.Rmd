@@ -1,5 +1,5 @@
 ---
-title: "All Gene Supplementary Material"
+title: "All Gene Supplementary Material - Additional samples removed."
 author: "Gerry Tonkin-Hill"
 date: "`r Sys.Date()`"
 output: 
@@ -106,12 +106,13 @@ gg
 Samples SFD1, SFM9 and SFC.025 were not sequenced to a sufficient depth to be reliable and thus are removed.
 
 ###Remove drug treated samples
-Samples SFU2 and SFU3 were drug treated and are removed.
+Samples SFU2 and SFU3 were drug treated and are removed. We repeated the analysis of the all gene DGE omitting a few patients who had anti-malarial treatments in preceding months. The patients omitted are: SFC 023, SFM007, IFM 012 and IFM 021.
+
 ```{r}
 x$counts <- x$counts[,!grepl("SFU2|SFU\\.3", colnames(x$counts))]
+x$counts <- x$counts[,!grepl("SFC\\.023|SFM\\.7|IFM12|IFM21", colnames(x$counts))]
 filt.annnotation <- fc2$annotation[fc2$annotation$GeneID %in% rownames(x$counts),]
 dge <- DGEList(counts=x$counts, genes=filt.annnotation)
-
 ```
 
 Now we take the log transform of our sample counts (RPKM) to estimate the proportion of different stages present.
@@ -414,6 +415,88 @@ pheatmap(v2$E[rownames(v$E) %in% top_ring_ruv$GeneID,]
         , annotation_colors = list(phenotype=c(`non-severe`=colors[1], `severe`=colors[2])))
 ```
 
+##Gene set analysis
+
+First we can set up the gene sets after downloading the set annotations from PlasmoDB.
+```{r}
+MIN_SET_SIZE <- 3
+
+#GO sets
+go.data <- fread("./data/PlasmoDB-35_Pfalciparum3D7_GO.gaf", skip = 1, sep="\t",
+                         data.table = FALSE)
+go.data <- go.data[go.data$V9=="P",] #Looking at biological processes
+go.terms <- unique(go.data$V5)
+go.gene.sets <- lapply(go.terms, function(go){
+  unique(go.data$V2[grepl(go, go.data$V5, fixed = TRUE)])
+})
+names(go.gene.sets) <- go.terms
+go.gene.sets <- go.gene.sets[unlist(lapply(go.gene.sets, length))>=MIN_SET_SIZE]
+
+#KEGG sets
+kegg.annot.data <- fread("./data/KEGG_Metacyc_PlasmoDB.csv", 
+                         data.table = FALSE)
+kegg.annot.data <- kegg.annot.data[kegg.annot.data$`Pathway Source`=="KEGG",]
+kegg.gene.sets <- lapply(kegg.annot.data$Genes, 
+                         function(x) unique(unlist(str_split(x, " \\| "))))
+names(kegg.gene.sets) <- kegg.annot.data$`Pathway Id`
+kegg.gene.sets <- kegg.gene.sets[unlist(lapply(kegg.gene.sets, length))>=MIN_SET_SIZE]
+```
+
+Enrichment analysis
+```{r}
+total.genes <- sum(grepl("^PF3D7", rownames(fc2$counts))) #Size of universe
+top_genes_set <- top_ring_ruv
+go.test <- as.data.frame(do.call("rbind",lapply(go.gene.sets, function(gset){
+  set.size <- length(gset)
+  gin_all <- gset[gset %in% top_genes_set$GeneID]
+  gin_up <- gset[gset %in% top_genes_set$GeneID[top_genes_set$logFC>0]]
+  gin_down <- gset[gset %in% top_genes_set$GeneID[top_genes_set$logFC<0]]
+  result <- c(set.size=set.size,
+              n.both=length(gin_all),
+              n.up=length(gin_up),
+              n.down=length(gin_down),
+              p.value.both=phyper(length(gin_all)-1, m=length(gset), n=total.genes-length(gset),
+                                k=nrow(top_genes_set), lower.tail = FALSE),
+              p.value.up=phyper(length(gin_up)-1, m=length(gset), n=total.genes-length(gset),
+                                k=sum(top_genes_set$logFC>0), lower.tail = FALSE),
+              p.value.down=phyper(length(gin_down)-1, m=length(gset), n=total.genes-length(gset),
+                                k=sum(top_genes_set$logFC<0), lower.tail = FALSE)
+                 )
+  return(result)
+})))
+go.test <- go.test[order(go.test$p.value.both),]
+
+go.test$p.value.both <- format(go.test$p.value.both, scientific=TRUE, digits=3)
+go.test$p.value.up <- format(go.test$p.value.up, scientific=TRUE, digits=3)
+go.test$p.value.down <- format(go.test$p.value.down, scientific=TRUE, digits=3)
+kable(go.test)
+```
+
+```{r}
+keg.test <- as.data.frame(do.call("rbind",lapply(kegg.gene.sets, function(gset){
+  set.size <- length(gset)
+  gin_all <- gset[gset %in% top_genes_set$GeneID]
+  gin_up <- gset[gset %in% top_genes_set$GeneID[top_genes_set$logFC>0]]
+  gin_down <- gset[gset %in% top_genes_set$GeneID[top_genes_set$logFC<0]]
+  result <- c(set.size=set.size,
+              n.both=length(gin_all),
+              n.up=length(gin_up),
+              n.down=length(gin_down),
+              p.value.both=phyper(length(gin_all)-1, m=length(gset), n=total.genes-length(gset),
+                                k=nrow(top_genes_set), lower.tail = FALSE),
+              p.value.up=phyper(length(gin_up)-1, m=length(gset), n=total.genes-length(gset),
+                                k=sum(top_genes_set$logFC>0), lower.tail = FALSE),
+              p.value.down=phyper(length(gin_down)-1, m=length(gset), n=total.genes-length(gset),
+                                k=sum(top_genes_set$logFC<0), lower.tail = FALSE)
+                 )
+  return(result)
+})))
+keg.test <- keg.test[order(keg.test$p.value.both),]
+keg.test$Pathway <- kegg.annot.data$Pathway[match(rownames(keg.test),
+                                                  kegg.annot.data$`Pathway Id`)]
+kable(keg.test, digits = 4)
+```
+
 ##Gene sets from Daily et al and Shock et al
 
 We now test using roast and camera for deregulation of gene sets obtained from the papers:
@@ -451,23 +534,20 @@ mroast(v2, index=indices, design=modRUV, contrast=2, nrot=10000, set.statistic="
 camera(v2, index=indices, design=modRUV, contrast=2)
 ```
 
-
-##KEGG analysis
+###Summary Gene Set Plot
 ```{r}
-# setwd(wd)
-# 
-# entrez_de <- entrez_geneID_mappings$`[Entrez Gene ID]`[entrez_geneID_mappings$`[Gene ID]` %in% top_ring_ruv$GeneID]
-# entrez_de <- entrez_de[entrez_de!="null"]
-# entrez_de <- str_split_fixed(entrez_de, pattern = ",", n = 2)[,1]
-# 
-# kegg <- kegga(entrez_de, species.KEGG="pfa", convert=TRUE)
-# kable(topKEGG(kegg, n=Inf))
-```
-
-##GO analysis
-```{r}
-# go <- goana(entrez_de, species.KEGG="pfa", convert=TRUE)
-# kable(topGO(go, n=100))
+summary.set.data <- fread("./data/genes_in_set_for_figure2.csv",
+                          data.table = FALSE)
+gg <- ggplot(summary.set.data, aes(x=Gene, y=`adj-p`, fill=logFC))
+# gg <- gg + geom_col() + facet_wrap(~SetName, ncol=1, scales = "free_y", 
+#                                                   strip.position = "left")
+gg <- gg + geom_col() + facet_grid(SetName ~ ., space = "free_y", scales = "free_y", switch = "y")
+gg <- gg + coord_flip() 
+gg <- gg + scale_fill_gradient2(low="#0571b0", high = "#ca0020", mid="#ffffff")
+gg <- gg + scale_y_continuous(limits = c(0, 0.15))
+gg <- gg + theme_bw(base_size = 8) + theme(strip.text.y=element_text(angle=180))
+gg <- gg + theme(axis.text.y=element_text(size=4))
+gg
 ```
 
 ####System Information
