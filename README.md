@@ -8,5 +8,5 @@ It is organised into four main sections; the all gene differential analysis, the
 R version 3.2 was used when building the html files.
 
 Questions about the code should be directed to:
-tonking-hill.g@wehi.edu.au
+gqt20@cam.ac.uk
 
